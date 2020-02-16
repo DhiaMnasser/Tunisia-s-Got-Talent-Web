@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block signin %}
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+    <div id="small-dialog" class="mfp-hide">
+        <h3>Login</h3>
+        <div class="social-sits">
+            <div class="facebook-button">
+                <a href="#">Connect with Facebook</a>
+            </div>
+            <div class="chrome-button">
+                <a href="#">Connect with Google</a>
+            </div>
+            <div class="button-bottom">
+                <p>New account? <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Signup</a></p>
+            </div>
+        </div>
+        <div class="signup">
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                {% if csrf_token %}
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" placeholder="Nom User"  pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?">
+                <input type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="Password"   ><br>
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >
+            </form>
+            <div class="forgot">
+                <a href="#">Forgot password ?</a>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+{% endblock %}
+
