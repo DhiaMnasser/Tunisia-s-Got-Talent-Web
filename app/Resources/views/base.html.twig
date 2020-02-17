@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="upload.html">Upload</a>
                 </div>
                 <div class="signin">
-                    <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Sign Up</a>
+                    <a href="{{ path('fos_user_registration_register') }}" class="">Sign Up 99</a>
                     <!-- pop-up-box -->
                     <script type="text/javascript" src="{{ asset('js/modernizr.custom.min.js')}}"></script>
                     <link href="{{ asset('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -65,11 +65,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <p>Already have an account? <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Login</a></p>
                             </div>
                         </div>
-                        <div class="signup">
-                            {% block signup %}
 
+                            {% block signup %}
+                                <div class="signup">
+                                    <form>
+                                        <input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
+                                    </form>
+                                    <div class="continue-button">
+                                        <a href="#small-dialog3" class="hvr-shutter-out-horizontal play-icon popup-with-zoom-anim">CONTINUE</a>
+                                    </div>
+                                </div>
                             {% endblock %}
-                        </div>
+
                         <div class="clearfix"> </div>
                     </div>
                     <script>
@@ -91,6 +98,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="signin">
                     {% block signin %}
+
+
                     {% endblock %}
                 </div>
                 <div class="clearfix"> </div>

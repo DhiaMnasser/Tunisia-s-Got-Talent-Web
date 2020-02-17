@@ -1,10 +1,34 @@
+stock_produit:
+    resource: "@StockBundle/Controller/ProduitController.php"
+    type:     annotation
+
+achat_panier:
+    resource: "@AchatBundle/Controller/PanierController.php"
+    type:     annotation
+
+achat_ligne_commande:
+    resource: "@AchatBundle/Controller/LigneCommandeController.php"
+    type:     annotation
+
+achat_commande:
+    resource: "@AchatBundle/Controller/CommandeController.php"
+    type:     annotation
+
+stock:
+    resource: "@StockBundle/Resources/config/routing.yml"
+    prefix:   /stock
+
+achat:
+    resource: "@AchatBundle/Resources/config/routing.yml"
+    prefix:   /achat
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /user
 
 evaluation:
     resource: "@EvaluationBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /evaluation
 
 app:
     resource: '@AppBundle/Controller/'

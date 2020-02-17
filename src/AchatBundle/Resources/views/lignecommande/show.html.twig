@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Lignecommande</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ligneCommande.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomproduit</th>
+                <td>{{ ligneCommande.nomproduit }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ ligneCommande.quantite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lignecommande_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('lignecommande_edit', { 'id': ligneCommande.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
