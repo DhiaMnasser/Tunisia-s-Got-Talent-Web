@@ -2,13 +2,14 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block signin %}
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a>
     <div id="small-dialog" class="mfp-hide">
         <h3>Login</h3>
         <div class="social-sits">
-            TGT
+            <h2>TGT</h2>
             <div class="button-bottom">
                 <p>New account? <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Signup</a></p>
             </div>
@@ -31,4 +32,3 @@
         <div class="clearfix"> </div>
     </div>
 {% endblock %}
-
