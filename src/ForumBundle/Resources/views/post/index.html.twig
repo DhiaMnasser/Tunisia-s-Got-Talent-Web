@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Posts list</h1>
+
+    <div>
+
+        <div id="myTable">
+        {% for post in posts %}
+            <div id="tr">
+                <div>user:       {{ post.user }}</div>
+
+                <div>Id:         {{ post.id }}</div>
+
+                <div>Titre:      {{ post.titre }}</div>
+                <div>contenu:    {{ post.contenu }}</div>
+                <div>Lienfich:    <img src="{{ post.lienFich }}" width="{{ 220 }}">
+
+                </div>
+                <div>
+                    <div>
+
+                        <div>
+                            Actions:
+                            <a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+
+
+                        <a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a>
+
+
+                            <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
+
+
+                            <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a>
+
+                    </div>
+                </div>
+            </div>
+            <div>Date{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+        {% endfor %}
+
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <a href="{{ path('post_new') }}">Create a new post</a>
+        </div>
+    </div>
+        
+    </div>
+{% endblock %}
+
