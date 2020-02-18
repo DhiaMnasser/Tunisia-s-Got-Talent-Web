@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- upload -->
+    <div id="small-dialog" class="">
+            <form class="user">
+                <div class="form-group" >
+                    {{ form_widget(form.titre, { 'attr': {'class': 'form-control form-control-user','placeholder': 'Nom'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.description, { 'attr': {'class': 'form-control form-control-user','placeholder': 'Descition'}}) }}
+
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.categorie, { 'attr': {'class': 'form-control form-control-user','placeholder': 'Catégorie'}}) }}
+
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.lien) }}
+                </div>
+                {{ form_widget(form.ajouter, { 'attr': {'class': 'btn btn-primary btn-user btn-block'}}) }}
+                <hr>
+            </form>
+            <div class="forgot">
+                <a href="#">Forgot password ?</a>
+            </div>
+
+        <div class="clearfix"> </div>
+        <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+    </div>
+<!-- //upload -->
+{% endblock %}

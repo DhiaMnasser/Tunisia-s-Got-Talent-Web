@@ -1,3 +1,9 @@
 evaluation_homepage:
     path:     /
     defaults: { _controller: EvaluationBundle:Default:index }
+
+publication_add:
+    path:     /upPub
+    defaults: { _controller: EvaluationBundle:Publication:up }
+
+

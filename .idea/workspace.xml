@@ -2,126 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.af.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ar.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.bg.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.bn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.bn_BD.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ca.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.cs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.da.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.de.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.el.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.eo.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.es.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.et.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.eu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.fa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.fi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.fr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.gl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.he.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.hr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.hu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.id.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.it.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ja.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ky.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.lb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.lt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.lv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.mn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.nb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.nl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.pl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.pt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.pt_BR.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ro.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.ru.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.sk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.sl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.sr_Latn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.sv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.th.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.tr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.uk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.vi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.zh_CN.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ar.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.bg.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.bn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.bn_BD.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ca.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.cs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.da.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.de.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.el.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.eo.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.es.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.eu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.fa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.fi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.fr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.he.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.hr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.hu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.id.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.it.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ja.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ky.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.lb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.lt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.lv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.nb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.nl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.pl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.pt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.pt_BR.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ro.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.ru.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.sk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.sl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.sr_Latn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.sv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.th.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.tr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.uk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.vi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/validators.zh_CN.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig" afterDir="false" />
+<<<<<<< Updated upstream
+      <change afterPath="$PROJECT_DIR$/src/EvaluationBundle/Controller/PublicationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Publication/upload.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/ChangePassword/change_password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/ChangePassword/change_password.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/ChangePassword/change_password_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/ChangePassword/change_password_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/edit_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/list_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/list_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/new_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/new_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Group/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Group/show_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Profile/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Profile/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Registration/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/check_email.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Registration/email.txt.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/email.txt.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Registration/register_content.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/check_email.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/email.txt.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/email.txt.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/request.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/request_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/request_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/reset.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Resetting/reset_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Resetting/reset_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Security/login_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgt.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tgt.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EvaluationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +83,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSUserBundle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/EvaluationBundle/Form" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -198,13 +94,19 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\TGTOf\app\Resources\FOSUserBundle" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TGTOf\src\EvaluationBundle\Form" />
+      <recent name="C:\wamp64\www\TGTOf\src\EvaluationBundle\Resources\views" />
       <recent name="C:\wamp64\www\TGTOf\app\Resources\FOSUserBundle" />
       <recent name="C:\wamp64\www\TGTOf\app\Resources\views" />
       <recent name="C:\wamp64\www\TGTOf\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+<<<<<<< Updated upstream
+      <recent name="C:\wamp64\www\TGTOf\src\PublicationBundle\Resources\views" />
+=======
+>>>>>>> Stashed changes
+      <recent name="C:\wamp64\www\TGTOf\app\Resources\FOSUserBundle" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -212,8 +114,14 @@
       <command value="c require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="c require: friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="s doctrine:schema:update --force" />
-      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
       <command value="c dump-autoload" />
+<<<<<<< Updated upstream
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:generate:form EvaluationBundle:Publication" />
+=======
+      <command value="s generate:bundle" />
+>>>>>>> Stashed changes
     </option>
   </component>
   <component name="RunDashboard">
