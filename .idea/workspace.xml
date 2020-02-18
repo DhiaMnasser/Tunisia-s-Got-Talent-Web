@@ -2,44 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Entity/Discussion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Entity/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Form/DiscussionType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Form/PostType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/ForumBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Repository/DiscussionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Repository/PostRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/discussion.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/post.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Tests/Controller/DiscussionControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Tests/Controller/PostControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ForumBundle/Controller/DefaultControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_15_02_2020_22_33_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_15_02_2020_22_33_c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_15_02_2020_22_34_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_17_02_2020_1_45_PM_s.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/forum/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery-min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Form/DiscussionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Form/DiscussionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +85,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TGT" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -139,6 +116,7 @@
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:crud" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s debug:router" />
     </option>
   </component>
   <component name="RunDashboard">

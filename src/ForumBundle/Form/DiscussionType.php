@@ -13,7 +13,7 @@ class DiscussionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('texte')->add('lienImg')->add('user');
+        $builder->add('titre')->add('texte')->add('lienImg');
     }/**
  * {@inheritdoc}
  */

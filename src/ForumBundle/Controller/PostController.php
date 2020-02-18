@@ -37,6 +37,8 @@ class PostController extends Controller
     public function newAction(Request $request)
     {
         $post = new Post();
+$user = $this->getUser();
+$post->setUser($user);
         $post->setDate(new \DateTime('now'));
         $form = $this->createForm('ForumBundle\Form\PostType', $post);
         $form->handleRequest($request);

@@ -2066,6 +2066,8 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		float: none !important;
 		margin: 0;
 		width: 100%;
+
+
 	}
 	.show-grid-left {
 		float: left;
@@ -2200,6 +2202,10 @@ background: url(../images/social.png) no-repeat 0px 0px;
 	}
 	.footer {
 		padding: 2em 0;
+        position: fixed;
+        buttom:0;
+        width: 100%;
+
 	}
 	.footer-grids {
 		padding: 0 2em;
@@ -2761,4 +2767,8 @@ background: url(../images/social.png) no-repeat 0px 0px;
 	.footer-bottom ul li a.f-history {
 		padding: .52em 1em .52em 3em;
 	}
+    .ok{
+        text-align: left;
+        background-color: #0b0b0b;
+    }
 }

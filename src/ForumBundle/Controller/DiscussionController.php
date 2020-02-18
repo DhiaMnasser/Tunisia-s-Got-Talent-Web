@@ -33,9 +33,13 @@ class DiscussionController extends Controller
      *
      */
     public function newAction(Request $request,$id)
-    {$em = $this->getDoctrine()->getManager();
+
+    {
+        $em = $this->getDoctrine()->getManager();
         $post = $em->getRepository('ForumBundle:Post')->find($id);
         $discussion = new Discussion();
+        $user = $this->getUser();
+        $discussion->setUser($user);
         $discussion->setDate(new \DateTime('now'));
 
         $discussion->setPost($post);

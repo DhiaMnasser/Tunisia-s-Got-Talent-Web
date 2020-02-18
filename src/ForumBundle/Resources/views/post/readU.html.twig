@@ -1,4 +1,7 @@
+{% extends 'base.html.twig' %}
+{% block body %}
 <div>
+
     <h1><b>discussion</b></h1>
 <div>
 <table>
@@ -26,8 +29,8 @@
 
             <td><img src="{{ u.lienImg }}" width="{{ 220 }}"></td>
 
-            <td><a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a></td>
-            <td><a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a></td>
+            <td> {% if app.user.username == u.user %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</td>
+            <td>{% if app.user.username == u.user %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</td>
 
         </tr>
         {% endfor %}
@@ -40,3 +43,4 @@
 </div>
 
 </div>
+{% endblock %}

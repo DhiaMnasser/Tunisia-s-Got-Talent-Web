@@ -1,45 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Posts list</h1>
-
-    <div>
-
-        <div id="myTable">
-        {% for post in posts %}
-            <div id="tr">
-                <div>user:       {{ post.user }}</div>
-
-                <div>Id:         {{ post.id }}</div>
-
-                <div>Titre:      {{ post.titre }}</div>
-                <div>contenu:    {{ post.contenu }}</div>
-                <div>Lienfich:    <img src="{{ post.lienFich }}" width="{{ 220 }}">
-
-                </div>
-                <div>
-                    <div>
-
-                        <div>
-                            Actions:
-                            <a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+    <link href="{{ asset('css/forum/index.css') }}" rel='stylesheet' type='text/css' media="all" />
 
 
-                        <a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a>
+    <div class="index">
+        <h1 >Posts list</h1>
+        <input id="myInput" type="text" placeholder="Search..">
 
+<div id="myTable">
 
-                            <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
-
-
-                            <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a>
-
-                    </div>
-                </div>
-            </div>
-            <div>Date{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+{% for post in posts %}
+<div class="post">
+ <div class="user">{{ post.user }}</div>
+ <div class="titre">{{ post.titre }}</div>
+ <div class="contenu">{{ post.contenu }}</div>
+ <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
+ <div><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+     {% if app.user.username == post.user %} <a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a>{% endif %}
+     {% if app.user.username == post.user %}  <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>{% endif %}
+           <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a> </div>
+ <div>date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+</div>
         {% endfor %}
-
-        </div>
+</div>
+        <script src="{{ asset('js/jquery-min.js') }}"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable .post").filter(function() {
+                        $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1 );
+                    });
+                });
+            });
+        </script>
     </div>
 
     <div>
