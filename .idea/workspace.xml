@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/src/EvaluationBundle/Controller/PublicationController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Publication/upload.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -12,6 +13,11 @@
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EvaluationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EvaluationBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +102,10 @@
       <recent name="C:\wamp64\www\TGTOf\web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< Updated upstream
       <recent name="C:\wamp64\www\TGTOf\src\PublicationBundle\Resources\views" />
+=======
+>>>>>>> Stashed changes
       <recent name="C:\wamp64\www\TGTOf\app\Resources\FOSUserBundle" />
     </key>
   </component>
@@ -105,10 +114,14 @@
       <command value="c require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="c require: friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="s doctrine:schema:update --force" />
-      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
       <command value="c dump-autoload" />
+<<<<<<< Updated upstream
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:form EvaluationBundle:Publication" />
+=======
+      <command value="s generate:bundle" />
+>>>>>>> Stashed changes
     </option>
   </component>
   <component name="RunDashboard">
