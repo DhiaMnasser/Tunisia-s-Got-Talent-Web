@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-=======
-plublication:
-    resource: "@PlublicationBundle/Resources/config/routing.yml"
-    prefix:   /
-
-user:
-    resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /
-
->>>>>>> Stashed changes
 evaluation:
     resource: "@EvaluationBundle/Resources/config/routing.yml"
     prefix:   /
