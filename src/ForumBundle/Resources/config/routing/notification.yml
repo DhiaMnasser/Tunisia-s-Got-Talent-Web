@@ -1,0 +1,6 @@
+notification_show:
+  path:     /notif
+  defaults: { _controller: "ForumBundle:Notification:notif" }
+notification_display:
+  path:     /display
+  defaults: { _controller: "ForumBundle:Notification:display" }

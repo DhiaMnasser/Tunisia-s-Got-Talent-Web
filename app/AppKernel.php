@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new EvaluationBundle\EvaluationBundle(),
             new UserBundle\UserBundle(),
             new ForumBundle\ForumBundle(),
+            new SBC\NotificationsBundle\NotificationsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <link href="{{ asset('css/forum/index.css') }}" rel='stylesheet' type='text/css' media="all" />
+    <link href="{{ asset('css/forum/inde.css') }}" rel='stylesheet' type='text/css' media="all" />
 
 
     <div class="index">
@@ -17,10 +17,12 @@
  <div class="contenu">{{ post.contenu }}</div>
  <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
  <div><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+
      {% if app.user.username == post.user %} <a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a>{% endif %}
      {% if app.user.username == post.user %}  <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>{% endif %}
+     <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
            <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a> </div>
- <div>date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+ <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
 </div>
         {% endfor %}
 </div>
@@ -42,7 +44,7 @@
             <a href="{{ path('post_new') }}">Create a new post</a>
         </div>
     </div>
-        
+
     </div>
 {% endblock %}
 

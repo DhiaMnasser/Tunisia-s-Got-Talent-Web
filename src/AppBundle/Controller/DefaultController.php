@@ -18,4 +18,16 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+    /**
+     * @Route("/idk", name="idk")
+     */
+    public function idkAction(Request $request){
+return $this->render('default/idk.html.twig');
+    }
+    /**
+     * @Route("/view", name="view")
+     */
+    public function viewAction(Request $request){
+        return $this->render('default/view.html.twig');
+    }
 }

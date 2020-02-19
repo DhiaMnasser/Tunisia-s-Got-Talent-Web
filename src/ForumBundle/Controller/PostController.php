@@ -1,7 +1,7 @@
 <?php
 
 namespace ForumBundle\Controller;
-
+use ForumBundle\Entity\Notification;
 use ForumBundle\Entity\Discussion;
 use ForumBundle\Entity\Post;
 use ForumBundle\ForumBundle;
@@ -125,4 +125,14 @@ $post->setUser($user);
         return $this->render('@Forum/post/readU.html.twig', array('discussion'=>$discussion,'id'=>$id));
 
     }
+    public function showAction(Post $post)
+    {
+
+
+        return $this->render('@Forum/post/show.html.twig', array(
+            'post' => $post,
+
+        ));
+    }
+
 }

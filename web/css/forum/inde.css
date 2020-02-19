@@ -1,0 +1,61 @@
+#myTable{
+    text-align: center;
+
+}
+.post{
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    border-radius: 30px;
+    width:50%;
+    background-color: #0078FF;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+
+    position: center;
+    padding: 7px;
+    margin-bottom: 10px;
+
+}
+.user{
+    color: greenyellow;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+
+    text-align: center;
+    width: 15%;
+
+}
+.titre{
+    color: black;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+
+    width: 20%;
+    margin-left:15px;
+}
+.contenu{
+    color: white;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+.img{
+    max-width: 100%;
+    text-align: center;
+}
+.date{
+
+    text-align: right;
+}
+a{
+    color: white;
+}

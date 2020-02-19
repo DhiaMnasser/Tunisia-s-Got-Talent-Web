@@ -1,0 +1,36 @@
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+
+    <h1>Post</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ post.id }}</td>
+        </tr>
+        <tr>
+            <th>Titre</th>
+            <td>{{ post.titre }}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Lienfich</th>
+            <td>{{ post.lienFich }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('post_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('post_edit', { 'id': post.id }) }}">Edit</a>
+        </li>
+
+    </ul>
+{% endblock %}

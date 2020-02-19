@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/css/forum/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/idk.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/view.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/NotificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Entity/Notification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Repository/NotificationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/notification.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notification.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notifview.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/forum/inde.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TGTOf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TGTOf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Form/DiscussionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Form/DiscussionType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Form/PostType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/post.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/post.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/forum/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/forum/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,6 +87,9 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XrPhZbB15lQiOWx5SHhy6GcnZC" />
@@ -113,10 +128,10 @@
       <command value="c update" />
       <command value="s generate:bundle" />
       <command value="s doctrine:database:create" />
-      <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:crud" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s debug:router" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">

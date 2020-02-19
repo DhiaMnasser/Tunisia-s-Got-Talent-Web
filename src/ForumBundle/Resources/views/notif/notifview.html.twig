@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<head>
+    <title>Pusher Test</title>
+
+
+</head>
+<body>
+<h1>notification</h1>
+
+
+
+<li>{{ render(controller('ForumBundle:Notification:display')) }}</li>
+
+
+
+
+{{ notifications_assets() }}
+<script>
+    /**
+     * After calling notifications_assets() "pusher" is now available
+     * and you can use it this way
+     */
+
+        // select the channel you want to listen to
+    var channel = pusher.subscribe("notifications");// notifications channel
+    channel.bind("my-event", function(data) {
+        console.log('from notifications channel', data);
+    });
+
+    var channel = pusher.subscribe("messages");// messages channel
+    channel.bind("my-event", function(data) {
+        console.log('from messages channel', data);
+    });
+</script>
+<script>
+    function onNotificationsPushed(data){
+        console.log('data',data);
+        data.forEach(function (item) {
+            let li=`
+        <tr>
+
+            <td> `+item.title+` </td>
+
+            <td> `+item.description+` </td>
+
+            <td> <a href="`+item.fullUrl+`">see</a></td>
+
+            </tr>`;
+            $('#notifications').append(li);
+
+        });
+    }
+</script>
+</body>
+{% endblock %}
+

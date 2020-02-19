@@ -21,3 +21,7 @@ post_readU:
     path:     /readU/{id}
     defaults: { _controller: "ForumBundle:Post:readU" }
     methods:  GET
+post_show:
+    path:     /{id}
+    defaults: { _controller: "ForumBundle:Post:show" }
+    methods:  GET

@@ -82,3 +82,11 @@ fos_user:
     from_email:
         address: gthadrien111@gmail.com
         sender_name: gth
+# NotificationsBundle configuration
+notifications:
+    app_id:     950031
+    app_key:    3fb09df8419f822705ea
+    app_secret: 9c044d250a1644aa1fdd
+    cluster:    mt1
+
+

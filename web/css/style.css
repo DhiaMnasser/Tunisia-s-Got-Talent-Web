@@ -2772,3 +2772,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
         background-color: #0b0b0b;
     }
 }
+#notif{
+    text-align: center;
+    background-color: whitesmoke;
+}

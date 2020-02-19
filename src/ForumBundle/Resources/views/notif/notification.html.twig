@@ -1,0 +1,20 @@
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+
+
+<table id="notifications">
+    {% for u in notifications %}
+        <tr>
+
+            <td> {{  u.title }} </td>
+
+            <td> {{  u.description }} </td>
+
+           <td> <a href="{{ path(u.route, u.parameters) }}">see</a></td>
+
+        </tr>
+    {% else %}
+        list is empty
+    {% endfor %}
+    </table>
+{% endblock %}

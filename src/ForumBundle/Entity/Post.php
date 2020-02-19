@@ -8,13 +8,16 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\JoinColumn;
+use SBC\NotificationsBundle\Builder\NotificationBuilder;
+use SBC\NotificationsBundle\Model\NotifiableInterface;
+
 /**
  * Post
  *
  * @ORM\Table(name="post")
  * @ORM\Entity(repositoryClass="ForumBundle\Repository\PostRepository")
  */
-class Post
+class Post implements NotifiableInterface, \JsonSerializable
 {
     /**
      * @var int
@@ -194,6 +197,66 @@ class Post
     public function setUser($user)
     {
         $this->user = $user;
+    }
+
+    /**
+     * Build notifications on entity creation
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnCreate(NotificationBuilder $builder)
+    {
+        $notification = new Notification();
+        $notification
+            ->setTitle('New post')
+            ->setDescription($this->getTitre())
+            ->setRoute('post_show',array('id' => $this->id))// I suppose you have a show route for your entity
+            ->setParameters(array('id' => $this->id))
+        ;
+        $builder->addNotification($notification);
+
+        return $builder;
+    }
+
+    /**
+     * Build notifications on entity update
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnUpdate(NotificationBuilder $builder)
+    {
+        $notification = new Notification();
+        $notification
+            ->setTitle('update post')
+            ->setDescription($this->getTitre())
+            ->setRoute('post_show',array('id' => $this->id))// I suppose you have a show route for your entity
+            ->setParameters(array('id' => $this->id))
+        ;
+        $builder->addNotification($notification);
+
+        return $builder;
+    }
+
+    /**
+     * Build notifications on entity delete
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnDelete(NotificationBuilder $builder)
+    {
+        return $builder;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
     }
 }
 
