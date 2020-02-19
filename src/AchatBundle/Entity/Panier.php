@@ -83,4 +83,7 @@ class Panier
     {
         $this->prixtotal = $prixtotal;
     }
+    public function __toString() {
+        return (string)"panier ".$this->id;
+    }
 }

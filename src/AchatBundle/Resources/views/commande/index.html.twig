@@ -19,14 +19,12 @@
                 <td>{% if commande.date %}{{ commande.date|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if commande.etat %}Yes{% else %}No{% endif %}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('commande_show', { 'id': commande.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('commande_edit', { 'id': commande.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                            <button><a href="{{ path('commande_show', { 'id': commande.id }) }}">show</a></button>
+                            <button><a href="{{ path('commande_edit', { 'id': commande.id }) }}">edit</a></button>
+                            <button><form name="form" method="post" action="/commande/{{ commande.id }}/delete"><input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" value="Delete">
+                                    <input type="hidden" id="form__token" name="form[_token]" value="-ebgIJT7urprPOsNAUgDxfuujCMquPx3s1nELXbVXXQ"></form>
+                            </button>
                 </td>
             </tr>
         {% endfor %}

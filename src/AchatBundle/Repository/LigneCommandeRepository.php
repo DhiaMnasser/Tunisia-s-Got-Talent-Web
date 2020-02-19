@@ -10,4 +10,17 @@ namespace AchatBundle\Repository;
  */
 class LigneCommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findByIdPanier($id){
+        $query = $this->getEntityManager()->createQueryBuilder('n')
+            ->select('c')
+            ->from('ecommerceBundle:LigneCommande','c')
+            ->where('c.idPanier = :id')->setParameter('id',$id);
+        return $query->getQuery();
+
+
+
+        /*("SELECT c , p.image , p.description p.id FROM ecommerceBundle:LigneCommande AS c
+                JOIN ecommerceBundle:Produit AS p WITH c.idproduit=p.id WHERE c.idPanier=:id")*/
+    }
 }

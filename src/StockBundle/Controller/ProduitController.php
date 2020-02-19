@@ -101,7 +101,7 @@ class ProduitController extends Controller
     /**
      * Deletes a produit entity.
      *
-     * @Route("/{id}", name="produit_delete")
+     * @Route("/{id}/delete", name="produit_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Produit $produit)

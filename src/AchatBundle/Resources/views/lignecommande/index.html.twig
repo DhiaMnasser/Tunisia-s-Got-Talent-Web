@@ -1,41 +1,69 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Lignecommandes list</h1>
-
-    <table>
+    <h1>My Cart</h1>
+    <input id="myInput" type="text" placeholder="Search..">
+    <table id="myTable">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nomproduit</th>
-                <th>Quantite</th>
-                <th>Actions</th>
+{#                <th> Id </th>#}
+                <th> Nomproduit </th>
+                <th> Quantite </th>
+                <th> Prix </th>
+                <th> Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for ligneCommande in ligneCommandes %}
-            <tr>
-                <td><a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">{{ ligneCommande.id }}</a></td>
-                <td>{{ ligneCommande.nomproduit }}</td>
-                <td>{{ ligneCommande.quantite }}</td>
+            {% if ligneCommande.idPanier == panier   %}
+            <tr class="lignecommande">
+{#                <td><a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">{{ ligneCommande.id }} </a></td>#}
+                <td>{{ ligneCommande.nomproduit }}  </td>
+                <td>{{ ligneCommande.quantite }}  </td>
+{#                <td> {%  produit.prix * ligneCommande.quantite  %}</td>#}
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('lignecommande_edit', { 'id': ligneCommande.id }) }}">edit</a>
-                        </li>
-                    </ul>
+{#                            <button>#}
+{#                            <a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">show</a>#}
+{#                            </button>#}
+                            <button>
+                                <a href="{{ path('lignecommande_edit', { 'id': ligneCommande.id }) }}">edit</a>
+                            </button>
+                        <a class="btn btn-danger btn-outline" href="{{ path('lignecommande_supprimer',{'id':ligneCommande.id}) }}">Delete</a>
+
+
                 </td>
             </tr>
+            {% endif %}
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('lignecommande_new') }}">Create a new ligneCommande</a>
-        </li>
-    </ul>
+    <div>
+        <h3 id="prix total">
+            Prix Total: {{ panier.prixTotal }}
+        </h3>
+    </div>
+
+    <div>
+        <button>
+            <a class="btn btn-outline" href="{{ path('commande_new',{'panier':panier}) }}">Checkout</a>
+        </button>
+    </div>
+
+
+    <script src="{{ asset('js/jquery-min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable .lignecommande").filter(function() {
+                    $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1 );
+                });
+            });
+        });
+    </script>
+{#            <button>#}
+{#            <a href="{{ path('lignecommande_new') }}">Create a new ligneCommande</a>#}
+{#            </button>#}
+
 {% endblock %}

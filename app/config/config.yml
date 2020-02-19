@@ -74,6 +74,7 @@ sensio_framework_extra:
    router:
         annotations: false
 
+
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
@@ -83,3 +84,6 @@ fos_user:
     from_email:
         address: gthadrien111@gmail.com
         sender_name: gth
+
+flosch_stripe:
+    stripe_api_key: "pk_test_VkxHIqxNUhztx7sLrBe14vNu00HVIf29N2"

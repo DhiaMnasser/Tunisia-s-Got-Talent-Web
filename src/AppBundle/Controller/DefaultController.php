@@ -9,6 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
+     * @Role
+     */
+    /**
      * @Route("/", name="homepage")
      */
     public function indexAction(Request $request)

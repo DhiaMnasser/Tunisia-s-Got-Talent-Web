@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new UserBundle\UserBundle(),
             new AchatBundle\AchatBundle(),
             new StockBundle\StockBundle(),
+            new Flosch\Bundle\StripeBundle\FloschStripeBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -52,6 +53,8 @@ class AppKernel extends Kernel
     {
         return dirname(__DIR__).'/var/logs';
     }
+
+
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {

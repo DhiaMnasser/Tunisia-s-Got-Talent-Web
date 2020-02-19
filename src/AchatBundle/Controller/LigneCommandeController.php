@@ -3,9 +3,14 @@
 namespace AchatBundle\Controller;
 
 use AchatBundle\Entity\LigneCommande;
+use AchatBundle\Entity\Panier;
+use FOS\UserBundle\Model\User;
+use StockBundle\Entity\Produit;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Lignecommande controller.
@@ -22,34 +27,59 @@ class LigneCommandeController extends Controller
      */
     public function indexAction()
     {
+        $user = $this->getUser();
+        $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->findByUser_Id($user);
         $em = $this->getDoctrine()->getManager();
 
         $ligneCommandes = $em->getRepository('AchatBundle:LigneCommande')->findAll();
 
         return $this->render('@Achat/lignecommande/index.html.twig', array(
             'ligneCommandes' => $ligneCommandes,
+            'panier' => $panier
+
         ));
     }
 
     /**
      * Creates a new ligneCommande entity.
      *
-     * @Route("/new", name="lignecommande_new")
+     * @Route("/{id}/new", name="lignecommande_new")
      * @Method({"GET", "POST"})
+
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, $id)
     {
+        $produit=$this->getDoctrine()->getManager()->getRepository('StockBundle:Produit')->find($id);
+
+        $user = $this->getUser();
+
+        $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->findByUser_Id($user);
+
+
+        if () {
+
+        }
+        else{
         $ligneCommande = new Lignecommande();
+        }
+        $ligneCommande->setIdproduit($produit);
+        $ligneCommande->setNomproduit($produit->getNom());
+        $ligneCommande->setIdPanier($panier);
+        $ligneCommande->setQuantite(1);
+        $panier->setPrixtotal($panier->getPrixtotal()+($produit->getPrix()*$ligneCommande->getQuantite()));
         $form = $this->createForm('AchatBundle\Form\LigneCommandeType', $ligneCommande);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($ligneCommande);
-            $em->flush();
-
-            return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
-        }
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->persist($ligneCommande);
+//            $em->flush();
+//            return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
+//        }
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($ligneCommande);
+        $em->flush();
+        return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
 
         return $this->render('@Achat/lignecommande/new.html.twig', array(
             'ligneCommande' => $ligneCommande,
@@ -88,7 +118,7 @@ class LigneCommandeController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('lignecommande_edit', array('id' => $ligneCommande->getId()));
+            return $this->redirectToRoute('lignecommande_index');
         }
 
         return $this->render('@Achat/lignecommande/edit.html.twig', array(
@@ -133,4 +163,33 @@ class LigneCommandeController extends Controller
             ->getForm()
         ;
     }
+
+    /**
+     * Deletes a ligneCommande entity.
+     *
+     * @Route("/{id}/supprimer", name="lignecommande_supprimer")
+     * @Method("DELETE")
+     */
+
+    public function supprimerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $lignecommande = $em->getRepository("AchatBundle:LigneCommande")->find($id);
+
+        $produit=$this->getDoctrine()->getManager()->getRepository('StockBundle:Produit')->find($lignecommande->getIdproduit());
+
+
+        $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->find($lignecommande->getIdPanier());
+        $panier->setPrixtotal($panier->getPrixtotal() - $produit->getPrix());
+
+
+        $em->remove($lignecommande);
+        $em->flush();
+        return $this->redirectToRoute('lignecommande_index');
+
+    }
+
+
+
+
 }

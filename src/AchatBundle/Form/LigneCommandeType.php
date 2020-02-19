@@ -13,7 +13,7 @@ class LigneCommandeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nomproduit')->add('quantite')->add('idPanier')->add('idproduit');
+        $builder->add('quantite');
     }/**
      * {@inheritdoc}
      */

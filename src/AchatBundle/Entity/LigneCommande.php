@@ -97,7 +97,7 @@ class LigneCommande
      * @param mixed $idproduit
      * @return LigneCommande
      */
-    public function setIdproduit(\StockBundle\Entity\ProduitS $idproduit)
+    public function setIdproduit(\StockBundle\Entity\Produit $idproduit)
     {
         $this->idproduit = $idproduit;
         return $this;

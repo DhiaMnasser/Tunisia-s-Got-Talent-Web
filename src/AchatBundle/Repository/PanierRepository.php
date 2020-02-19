@@ -10,4 +10,26 @@ namespace AchatBundle\Repository;
  */
 class PanierRepository extends \Doctrine\ORM\EntityRepository
 {
+    public  function findByUser_Id($user){
+        /*  $query= $this->getEntityManager()->createQueryBuilder()
+          ->select('p')->from('ecommerceBundle:Panier','p')->where('p.user_id= :user')->setParameter('user',"%{$user}%");
+
+              return $query->getResult();
+  */
+
+        $query = $this->getEntityManager()->createQuery("SELECT p FROM  AchatBundle\Entity\Panier AS p WHERE p.user_id=:user ")->setParameter('user',$user);
+
+
+        try {
+            return $query->getSingleResult();
+        } catch (NoResultException $e) {
+
+        } catch (NonUniqueResultException $e) {
+        }
+//        finally {
+//            return 0;
+//        }
+
+
+    }
 }

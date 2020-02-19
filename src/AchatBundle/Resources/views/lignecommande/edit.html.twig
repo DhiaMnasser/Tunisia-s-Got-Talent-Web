@@ -1,21 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Lignecommande edit</h1>
+    <a href="{{ path('lignecommande_index') }}">< Go Back to the list</a>
+    <h1>le produit : {{ ligneCommande.idProduit }}</h1>
+    <br>
+    <br>
+    <br>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Save" />
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('lignecommande_index') }}">Back to the list</a>
-        </li>
-        <li>
+
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
 {% endblock %}

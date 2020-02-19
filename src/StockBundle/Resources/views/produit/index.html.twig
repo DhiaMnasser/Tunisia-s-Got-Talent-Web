@@ -6,24 +6,25 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+{#                <th>Id</th>#}
+{#                <th>photo</th>#}
+                <th>Nom</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for produit in produits %}
             <tr>
-                <td><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></td>
+{#                <td><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></td>#}
+{#                TODO: ajouter image   #}
+{#                <td> <img src="{{ asset('')}}"> </td>#}
+                <td>{{ produit.nom }}  </td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('produit_show', { 'id': produit.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('produit_edit', { 'id': produit.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <button><a href="{{ path('produit_show', { 'id': produit.id }) }}">show</a></button>
+                    <button><a href="{{ path('produit_edit', { 'id': produit.id }) }}">edit</a></button>
+                    <a href="{{ path('lignecommande_new', { 'id': produit.id }) }}">buy</a>
                 </td>
+
             </tr>
         {% endfor %}
         </tbody>

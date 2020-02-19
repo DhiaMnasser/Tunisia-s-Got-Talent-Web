@@ -56,7 +56,22 @@ class CommandeController extends Controller
             'form' => $form->createView(),
         ));
     }
+    /**
+     * Lists all commande entities.
+     *
+     * @Route("/{id}imp", name="commande_imp")
+     * @Method("GET")
+     */
+    public function impAction(Commande $commande)
+    {
+        $em = $this->getDoctrine()->getManager();
 
+        $commandes = $em->getRepository('AchatBundle:Commande')->find($commande);
+
+        return $this->render('@Achat/commande/imp.html.twig', array(
+            'commande' => $commandes,
+        ));
+    }
     /**
      * Finds and displays a commande entity.
      *

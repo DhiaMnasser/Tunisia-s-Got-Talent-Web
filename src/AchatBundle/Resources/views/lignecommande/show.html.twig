@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Lignecommande</h1>
+    <a href="{{ path('lignecommande_index') }}">< Back</a>
+    <h1>Your Order</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ ligneCommande.id }}</td>
-            </tr>
+
             <tr>
                 <th>Nomproduit</th>
                 <td>{{ ligneCommande.nomproduit }}</td>
@@ -21,9 +19,6 @@
     </table>
 
     <ul>
-        <li>
-            <a href="{{ path('lignecommande_index') }}">Back to the list</a>
-        </li>
         <li>
             <a href="{{ path('lignecommande_edit', { 'id': ligneCommande.id }) }}">Edit</a>
         </li>

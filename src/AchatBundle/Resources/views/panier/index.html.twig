@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="panier">
     <h1>Paniers list</h1>
-
     <table>
         <thead>
             <tr>
@@ -17,23 +17,14 @@
                 <td><a href="{{ path('panier_show', { 'id': panier.id }) }}">{{ panier.id }}</a></td>
                 <td>{{ panier.prixtotal }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('panier_show', { 'id': panier.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('panier_edit', { 'id': panier.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                            <button> <a href="{{ path('panier_show', { 'id': panier.id }) }}">show</a></button>
+                            <button><a href="{{ path('panier_edit', { 'id': panier.id }) }}">edit</a></button>
+
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('panier_new') }}">Create a new panier</a>
-        </li>
-    </ul>
+            <button><a href="{{ path('panier_new') }}">Create a new panier</a></button>
+    </div>
 {% endblock %}

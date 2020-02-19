@@ -701,6 +701,9 @@ a.btn.btn-primary.btn-lg.see-button.hvr-shutter-out-horizontal {
 .footer{
     background: #3B4142;
     padding: 2em 3em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 .footer-top-nav ul{
 	padding:0;
@@ -2761,4 +2764,33 @@ background: url(../images/social.png) no-repeat 0px 0px;
 	.footer-bottom ul li a.f-history {
 		padding: .52em 1em .52em 3em;
 	}
+}
+.panier{
+    position: center;
+}
+table{
+    width: 100%;
+}
+table, th{
+    font-size: large;
+    /*margin: 10px;*/
+    padding: 10px;
+}
+th{
+
+}
+tr, td {
+    /*margin: 2px;*/
+    /*padding: 3px;*/
+    /*border-bottom: 1px solid black;*/
+
+}
+tbody tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+tbody tr:nth-child(even){
+    background-color: lightskyblue;
+}
+tbody tr:hover{
+    border: 2px solid lightgreen;
 }
