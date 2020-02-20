@@ -23,6 +23,13 @@ class NotificationController extends Controller
 
         return $this->render('@Forum/notif/notifview.html.twig');
     }
-
+    public function deleteAction($id)
+    {
+        $notification=$this->getDoctrine()->getRepository(Notification::class)->find($id);
+        $em=$this->getDoctrine()->getManager();
+        $em->remove( $notification);
+        $em->flush();
+        return $this->redirectToRoute("notification_show");
+    }
 
 }

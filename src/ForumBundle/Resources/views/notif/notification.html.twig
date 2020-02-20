@@ -1,20 +1,22 @@
 {% block body %}
     <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
-
+    <link href="{{ asset('css/forum/b.css') }}" rel='stylesheet' type='text/css'  />
 
 <table id="notifications">
     {% for u in notifications %}
         <tr>
 
-            <td> {{  u.title }} </td>
+            <td class="t"> {{  u.title }} </td>
 
-            <td> {{  u.description }} </td>
+            <td class="u"> {{  u.description }} </td>
 
-           <td> <a href="{{ path(u.route, u.parameters) }}">see</a></td>
+           <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
+            <td> <button class="delete"><a href="{{ path('notification_delete', { 'id': u.id } )}}">delete</a></button></td>
 
         </tr>
+
     {% else %}
-        list is empty
+        <div>list is empty</div>
     {% endfor %}
     </table>
 {% endblock %}

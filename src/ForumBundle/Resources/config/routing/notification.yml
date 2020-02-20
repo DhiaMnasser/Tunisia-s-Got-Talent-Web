@@ -4,3 +4,6 @@ notification_show:
 notification_display:
   path:     /display
   defaults: { _controller: "ForumBundle:Notification:display" }
+notification_delete:
+  path:     /delete/{id}
+  defaults: { _controller: "ForumBundle:Notification:delete" }

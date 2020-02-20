@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\JoinColumn;
 use SBC\NotificationsBundle\Builder\NotificationBuilder;
 use SBC\NotificationsBundle\Model\NotifiableInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Post
@@ -48,6 +49,8 @@ class Post implements NotifiableInterface, \JsonSerializable
      * @var string
      *
      * @ORM\Column(name="titre", type="string", length=255)
+     *  @Assert\Length(min=3)
+     * @Assert\Length(max=9)
      */
 
     private $titre;
@@ -64,6 +67,8 @@ class Post implements NotifiableInterface, \JsonSerializable
      *
      * @ORM\Column(name="lienFich", type="string", length=255, nullable=true)
      */
+
+
     private $lienFich;
 
 
@@ -208,8 +213,9 @@ class Post implements NotifiableInterface, \JsonSerializable
     {
         $notification = new Notification();
         $notification
-            ->setTitle('New post')
-            ->setDescription($this->getTitre())
+
+            ->setTitle('nouveau post crée par le user ')
+            ->setDescription($this->getUser())
             ->setRoute('post_show',array('id' => $this->id))// I suppose you have a show route for your entity
             ->setParameters(array('id' => $this->id))
         ;

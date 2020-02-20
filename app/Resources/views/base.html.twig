@@ -117,7 +117,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li><a href= "{{path('post_index')}}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Forum</a></li>
    {% else %}
 
+
             <li><a href= "{{path('fos_user_security_login')}}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Forum</a></li>
+            {% endif %}
+            {% if   app.session %}
+            <li><a href= "{{path('notification_show')}}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>notification</a></li>
             {% endif %}
         </ul>
         <!-- script-for-menu -->

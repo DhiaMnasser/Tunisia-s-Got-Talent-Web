@@ -1,35 +1,33 @@
+
 {% block body %}
     <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
-
+    <link href="{{ asset('css/forum/color.css') }}" rel='stylesheet' type='text/css'  />
     <h1>Post</h1>
 
     <table>
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ post.id }}</td>
-        </tr>
-        <tr>
-            <th>Titre</th>
-            <td>{{ post.titre }}</td>
-        </tr>
-        <tr>
-            <th>Date</th>
-            <td>{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-        </tr>
-        <tr>
-            <th>Lienfich</th>
-            <td>{{ post.lienFich }}</td>
-        </tr>
-        </tbody>
+        <div class="post">
+            <div class="user">{{ post.user }}</div>
+            <div class="titre">{{ post.titre }}</div>
+            <div class="contenu">{{ post.contenu }}</div>
+            <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
+
+            <div class="action"><button class="show"><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+                </button>
+                {% if app.user.username == post.user %}
+                    <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
+                    <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
+
+            </div>
+            <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+        </div>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('post_index') }}">Back to the list</a>
+            <a href="{{ path('post_index') }}"class="ok">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('post_edit', { 'id': post.id }) }}">Edit</a>
+            <a href="{{ path('post_edit', { 'id': post.id }) }}" class="ok">Edit</a>
         </li>
 
     </ul>

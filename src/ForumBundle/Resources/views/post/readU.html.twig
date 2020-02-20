@@ -1,46 +1,32 @@
-
-
+{% extends 'base.html.twig' %}
 {% block body %}
+    <link href="{{ asset('css/forum/read.css') }}" rel='stylesheet' type='text/css'  />
 <div>
-
+    <div>{{ render(controller('ForumBundle:Post:show',{'id':id}) ) }}</div>
     <h1><b>discussion</b></h1>
 <div>
-<table>
-    <thead>
-    <tr>
-        <th>user</th>
-        <th>id</th>
-        <th>titre</th>
-        <th>texte</th>
-        <th>date</th>
-        <th>lienimg</th>
-        <th>action</th>
-    </tr>
-    </thead>
 
-    <tbody>
+
+    <div id="yTable">
     {% for u in discussion %}
-        <tr>
-            <td> {{  u.user }} </td>
-            <td> {{  u.id }} </td>
+        <div class="ost">
+            <div class="ser"> {{  u.user }} </div>
+            <div class="itre"> {{  u.titre }} </div>
+            <div class="ontenu"> {{  u.texte}} </div>
+            <div class="mg"><img src="{{ u.lienImg }}" width="{{ 220 }}"></div>
 
-            <td> {{  u.titre }} </td>
-            <td> {{  u.texte}} </td>
-            <td>Date{% if u.date %}{{ u.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-
-            <td><img src="{{ u.lienImg }}" width="{{ 220 }}"></td>
-
-            <td> {% if app.user.username == u.user %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</td>
-            <td>{% if app.user.username == u.user %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</td>
-
-        </tr>
+            <div> {% if app.user.username == u.user %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</div>
+            <div>{% if app.user.username == u.user %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</div>
+            <div class="ate">Date{% if u.date %}{{ u.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+        </div>
         {% endfor %}
 
-    </tbody>
+    </div>
 </table>
 
-    <a href="{{ path('discussion_new',{ 'id': id }) }}">create discussion</a>
-    <a href="{{ path('post_index') }}">retour au post</a>
+    <a href="{{ path('discussion_new',{ 'id': id }) }}" class="k">create discussion</a>
+
+    <a href="{{ path('post_index') }}" class="k">retour au post</a>
 </div>
 
 </div>

@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <link href="{{ asset('css/forum/inde.css') }}" rel='stylesheet' type='text/css' media="all" />
+    <link href="{{ asset('css/forum/color.css') }}" rel='stylesheet' type='text/css'  />
 
 
     <div class="index">
         <h1 >Posts list</h1>
-        <input id="myInput" type="text" placeholder="Search..">
 
+        <input id="myInput" type="text" placeholder="Search..">
+        <div > <a href="#footer"class="oui">create a post</a></div>
 <div id="myTable">
 
 {% for post in posts %}
@@ -16,12 +17,15 @@
  <div class="titre">{{ post.titre }}</div>
  <div class="contenu">{{ post.contenu }}</div>
  <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
- <div><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
 
-     {% if app.user.username == post.user %} <a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a>{% endif %}
-     {% if app.user.username == post.user %}  <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>{% endif %}
-     <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
-           <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a> </div>
+ <div class="action"><button class="show"><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+     </button>
+     {% if app.user.username == post.user %}
+         <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
+     <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
+     <button class="show"> <a href="{{ path('post_show', { 'id': post.id }) }}">show</a></button><button class="show">
+         <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a></button>
+ </div>
  <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
 </div>
         {% endfor %}
@@ -41,8 +45,9 @@
 
     <div>
         <div>
-            <a href="{{ path('post_new') }}">Create a new post</a>
+            <a href="{{ path('post_new') }}" id="footer" class="ok">Create a new post</a>
         </div>
+        <a href="#footer"></a>
     </div>
 
     </div>
