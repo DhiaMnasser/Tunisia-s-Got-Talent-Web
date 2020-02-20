@@ -2,13 +2,19 @@
 
 namespace EvaluationBundle\Entity;
 
+use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\ORM\Mapping as ORM;
+use Gth\UploadBundle\Annotation\Uploadable;
+use Gth\UploadBundle\Annotation\UploadableField;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Publication
  *
  * @ORM\Table(name="publication")
  * @ORM\Entity(repositoryClass="EvaluationBundle\Repository\PublicationRepository")
+ * @Uploadable()
  */
 class Publication
 {
@@ -24,9 +30,35 @@ class Publication
     /**
      * @var string
      *
+     * @Assert\NotBlank()
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="autheur", type="string", length=255)
+     */
+    private $author;
+
+    /**
+     * @return string
+     */
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param string $author
+     * @return Publication
+     */
+    public function setAuthor(string $author): Publication
+    {
+        $this->author = $author;
+        return $this;
+    }
 
     /**
      * @var string
@@ -38,23 +70,46 @@ class Publication
     /**
      * @var string
      *
-     * @ORM\Column(name="lien", type="string", length=255)
+     * @ORM\Column(name="video", type="string", length=255)
+     * @Assert\Valid()
      */
-    private $lien;
+    private $video;
+
+
+    /**
+     * @UploadableField(filename="file",path="uploads")
+     *
+     */
+    private $file;
+
+    /**
+     * @return File/null
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param File $file/null
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateUp", type="datetime")
-     */
-    private $dateUp;
 
 
     /**
@@ -115,29 +170,6 @@ class Publication
         return $this->categorie;
     }
 
-    /**
-     * Set lien
-     *
-     * @param string $lien
-     *
-     * @return Publication
-     */
-    public function setLien($lien)
-    {
-        $this->lien = $lien;
-
-        return $this;
-    }
-
-    /**
-     * Get lien
-     *
-     * @return string
-     */
-    public function getLien()
-    {
-        return $this->lien;
-    }
 
     /**
      * Set description
@@ -164,27 +196,60 @@ class Publication
     }
 
     /**
-     * Set dateUp
+     * Set video
      *
-     * @param \DateTime $dateUp
+     * @param string $video
      *
      * @return Publication
      */
-    public function setDateUp($dateUp)
+    public function setVideo($video)
     {
-        $this->dateUp = $dateUp;
-
-        return $this;
+        $this->video = $video;
     }
 
     /**
-     * Get dateUp
+     * Get video
      *
+     * @return string
+     */
+    public function getVideo()
+    {
+        return $this->video;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVideoFile()
+    {
+        return $this->video;
+    }
+
+    /**
      * @return \DateTime
      */
-    public function getDateUp()
+    public function getUpdatedAt()
     {
-        return $this->dateUp;
+        return $this->updatedAt;
     }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    public function __construct()
+    {
+        $this->updatedAt= new \datetime('now');
+    }
+
+    public function setVideoFile($video)
+    {
+        $this->video = $video;
+    }
+
 }
 

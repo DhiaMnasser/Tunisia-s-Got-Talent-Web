@@ -10,6 +10,8 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    app.path.publication_videos: /uploads/videos/publication
+    upload_directory: '%kernel.project_dir%app/uploads/videos/publication'
 
 framework:
     #esi: ~
@@ -80,5 +82,13 @@ fos_user:
     service:                               # this lines
         mailer: fos_user.mailer.twig_swift # this lines
     from_email:
-        address: gthadrien111@gmail.com
-        sender_name: gth
+        address: "%mailer_user"
+        sender_name: "%sender_name"
+
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        publication_videos:
+            uri_prefix:         '%app.path.publication_videos%'
+            upload_destination: '%kernel.project_dir%/public%app.path.publication_videos%'

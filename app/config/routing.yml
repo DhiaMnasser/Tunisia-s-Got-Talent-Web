@@ -2,6 +2,9 @@ evaluation:
     resource: "@EvaluationBundle/Resources/config/routing.yml"
     prefix:   /
 
+gth_upload:
+    resource: "@GthUploadBundle/Resources/config/routing.yml"
+    prefix:   /
 
 publication:
     resource: "@PublicationBundle/Resources/config/routing.yml"

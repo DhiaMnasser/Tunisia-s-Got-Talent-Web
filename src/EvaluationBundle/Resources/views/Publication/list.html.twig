@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="main-grids">
+        <div class="top-grids">
+            <div class="recommended-info">
+                <h3>Recent Videos</h3>
+            </div>
+            {% for i in pubs %}
+            <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="#"><video controls src="{{i.video}}"></video></a>
+                    <div class="time">
+                        <p>3:04</p>
+                    </div>
+                    <div class="clck">
+                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h3><a href="{{ path("publication_edit",{'id':i.id}) }}" class="title title-info">Titre| {{i.titre}}</a></h3>
+                    <ul>
+                        <li><p class="author author-info"><a href="#" class="author">Autheur|{{i.author}}</a></p></li>
+                        <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
+                        <li class="right-list"><p class="views views-info">categorie|{{i.categorie}}</p></li>
+                    </ul>
+                    <p><a href="{{ path("publication_comment",{'id':i.id}) }}" class="title title-info">commentaires...</a></p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+{% endblock %}

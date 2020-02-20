@@ -25,7 +25,8 @@ class PublicationType extends AbstractType
                     'Illusion'=>'Illusion',
                     'Autre'=>'Autre'
                 )))
-            ->add('lien', FileType::class,  array('label'=>'Votre fichier :',))
+            ->add('video', FileType::class,  array('label'=>'Votre Video :','required' => false
+            ))
             ->add('ajouter',SubmitType::class);
     }/**
      * {@inheritdoc}
