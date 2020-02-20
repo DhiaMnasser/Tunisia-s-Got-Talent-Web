@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new UserBundle\UserBundle(),
             new PublicationBundle\PublicationBundle(),
             new EvaluationBundle\EvaluationBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Gth\UploadBundle\GthUploadBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

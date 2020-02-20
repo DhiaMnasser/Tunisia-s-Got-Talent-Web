@@ -3,7 +3,27 @@ evaluation_homepage:
     defaults: { _controller: EvaluationBundle:Default:index }
 
 publication_add:
-    path:     /upPub
+    path:     /publication/ajout
     defaults: { _controller: EvaluationBundle:Publication:up }
 
+publication_list:
+    path:     /publication/list
+    defaults: { _controller: EvaluationBundle:Publication:list }
+
+evaluation_home_user:
+    path:     /user/home
+    defaults: { _controller: EvaluationBundle:Security:redirect }
+
+
+publication_comment:
+    path:     /commentaire/{id}
+    defaults: { _controller: EvaluationBundle:Publication:commentPub }
+
+commentaire_new:
+    path:     /commentaire/new/{idPub}
+    defaults: { _controller: EvaluationBundle:Commentaire:add }
+
+publication_edit:
+    path:     /publication/edit/{id}
+    defaults: { _controller: EvaluationBundle:Publication:edit }
 

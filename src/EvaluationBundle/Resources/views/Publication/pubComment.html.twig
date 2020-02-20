@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <center>
+    <div class="main-grids news-main-grids">
+        <div class="recommended-info">
+            <h3>{{pub.author}}</h3>
+            <video controls preload="auto" width="640" height="264">
+                <source src="{{asset(pub.video)}}" type="video/mp4">
+            </video>
+            <p class="history-text">
+                Catégorie | {{ pub.categorie }}
+                <span>
+                    Description | {{ pub.description }}
+							</span>
+            </p>
+            {% for i in coms %}
+            <div class="history-grids">
+                <div class="col-md-1 history-left">
+                    <p>{{i.author}}</p>
+                </div>
+                <div class="col-md-11 history-right">
+                    <h5>{{i.dateC}}</h5>
+                    <p>
+                        {{ i.texte }}
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            {% endfor %}
+            <textarea rows="10" cols="50" placeholder="Votre Commentaire..."></textarea><br>
+            <a href="#">Commenter</a>
+        </div>
+
+    </div>
+    </center>
+{% endblock %}

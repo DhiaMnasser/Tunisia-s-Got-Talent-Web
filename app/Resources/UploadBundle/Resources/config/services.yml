@@ -1,0 +1,4 @@
+services:
+#    gth_upload.example:
+#        class: Gth\UploadBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
