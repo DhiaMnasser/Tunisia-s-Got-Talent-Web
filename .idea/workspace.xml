@@ -2,22 +2,214 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/css/forum/b.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/forum/color.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/forum/read.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/shw.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/SidebarNav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/export.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/graph.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/jqcandlestick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/monthly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/cards.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/gplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/img-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/move-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/nav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/pinterest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/second-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/weather.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/SidebarNav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/SimpleChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/amcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/chartinator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/SidebarNav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/export.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/graph.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/jqcandlestick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/monthly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/export.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/cards.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/dragIconRoundBig.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/gplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/img-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/lens.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/move-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/nav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/pinterest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/second-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/weather.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery-1.11.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.flexisel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.jqcandlestick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.nicescroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.swipebox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/metisMenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/modernizr.custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/monthly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/pie-chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/serial.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/validator.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TGTOf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TGTOf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/NotificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/DiscussionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Controller/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/notification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/notification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Repository/DiscussionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Repository/DiscussionRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/post.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/config/routing/post.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notification.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notification.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/discussion/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notifview.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/notif/notifview.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/readU.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForumBundle/Resources/views/post/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/forum/inde.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/forum/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/forum/b.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/forum/b.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/forum/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/forum/color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/forum/read.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/forum/read.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +271,8 @@
       <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
       <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
       <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XrPhZbB15lQiOWx5SHhy6GcnZC" />
@@ -104,6 +298,7 @@
       <recent name="C:\wamp64\www\TGTOf\src\ForumBundle\Resources\views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TGTOf\src\ForumBundle\Resources\views\admin" />
       <recent name="C:\wamp64\www\TGTOf\app\Resources\views" />
       <recent name="C:\wamp64\www\TGTOf\web" />
     </key>

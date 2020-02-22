@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+
 {% block body %}
     <link href="{{ asset('css/forum/read.css') }}" rel='stylesheet' type='text/css'  />
 <div>
-    <div>{{ render(controller('ForumBundle:Post:show',{'id':id}) ) }}</div>
+    <div>{{ render(controller('ForumBundle:Post:shw',{'id':id}) ) }}</div>
     <h1><b>discussion</b></h1>
-<div>
+</div>
+
 
 
     <div id="yTable">
@@ -13,21 +14,20 @@
             <div class="ser"> {{  u.user }} </div>
             <div class="itre"> {{  u.titre }} </div>
             <div class="ontenu"> {{  u.texte}} </div>
-            <div class="mg"><img src="{{ u.lienImg }}" width="{{ 220 }}"></div>
+            <div class="mg"><img src="{{ u.lienImg }}" width="{{ 500 }}"></div>
 
-            <div> {% if app.user.username == u.user %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</div>
-            <div>{% if app.user.username == u.user %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</div>
+            <div> {% if (app.user.username == u.user) or ( is_granted('ROLE_ADMIN') ) %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</div>
+            <div>{% if (app.user.username == u.user) or ( is_granted('ROLE_ADMIN') ) %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</div>
             <div class="ate">Date{% if u.date %}{{ u.date|date('Y-m-d H:i:s') }}{% endif %}</div>
         </div>
         {% endfor %}
 
     </div>
-</table>
+    <div>
 
-    <a href="{{ path('discussion_new',{ 'id': id }) }}" class="k">create discussion</a>
 
-    <a href="{{ path('post_index') }}" class="k">retour au post</a>
-</div>
 
 </div>
+
+
 {% endblock %}

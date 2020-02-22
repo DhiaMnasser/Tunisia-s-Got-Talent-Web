@@ -52,11 +52,12 @@ class DiscussionController extends Controller
             $em->persist($discussion);
             $em->flush();
 
-            return $this->redirectToRoute('post_readU', array('id' => $id ));
+            return $this->redirectToRoute('discussion_new', array('id' => $id ));
         }
 
         return $this->render('@Forum/discussion/new.html.twig', array(
             'discussion' => $discussion,
+            'id'=>$id,
             'form' => $form->createView(),
         ));
     }

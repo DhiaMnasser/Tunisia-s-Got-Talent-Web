@@ -1,8 +1,11 @@
+
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <h1>Discussion creation</h1>
 
+
+
+    <div>{{ render(controller('ForumBundle:Post:readU',{'id':id}) ) }}</div>
+    <h1>create discussion</h1>
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
@@ -10,7 +13,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('post_index') }}">Back to posts</a>
+            <a href="{{ path('post_index') }}" class="k">Back to posts</a>
         </li>
     </ul>
 {% endblock %}

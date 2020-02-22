@@ -16,4 +16,5 @@ class DiscussionRepository extends \Doctrine\ORM\EntityRepository
     )->setParameter('id',$id);
     return $Query->getResult();
 }
+
 }

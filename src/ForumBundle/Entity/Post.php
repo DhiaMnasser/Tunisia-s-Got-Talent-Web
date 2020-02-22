@@ -233,8 +233,8 @@ class Post implements NotifiableInterface, \JsonSerializable
     {
         $notification = new Notification();
         $notification
-            ->setTitle('update post')
-            ->setDescription($this->getTitre())
+            ->setTitle('un post a été mis a jour par')
+            ->setDescription($this->getUser())
             ->setRoute('post_show',array('id' => $this->id))// I suppose you have a show route for your entity
             ->setParameters(array('id' => $this->id))
         ;

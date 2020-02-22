@@ -1,4 +1,4 @@
-
+{% extends 'base.html.twig' %}
 {% block body %}
     <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
     <link href="{{ asset('css/forum/color.css') }}" rel='stylesheet' type='text/css'  />
@@ -9,11 +9,11 @@
             <div class="user">{{ post.user }}</div>
             <div class="titre">{{ post.titre }}</div>
             <div class="contenu">{{ post.contenu }}</div>
-            <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
+            <div class="img"><img src="{{ post.lienFich }}" width="{{ 750 }}"> </div>
 
-            <div class="action"><button class="show"><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
+            <div class="action"><button class="show"><a href="{{ path('discussion_new', { 'id': post.id }) }}">show discussion</a>
                 </button>
-                {% if app.user.username == post.user %}
+                {% if (app.user.username == post.user) or ( is_granted('ROLE_ADMIN') ) %}
                     <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
                     <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
 
@@ -23,11 +23,9 @@
     </table>
 
     <ul>
+
         <li>
             <a href="{{ path('post_index') }}"class="ok">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('post_edit', { 'id': post.id }) }}" class="ok">Edit</a>
         </li>
 
     </ul>

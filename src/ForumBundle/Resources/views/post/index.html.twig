@@ -4,6 +4,7 @@
     <link href="{{ asset('css/forum/color.css') }}" rel='stylesheet' type='text/css'  />
 
 
+
     <div class="index">
         <h1 >Posts list</h1>
 
@@ -16,15 +17,14 @@
  <div class="user">{{ post.user }}</div>
  <div class="titre">{{ post.titre }}</div>
  <div class="contenu">{{ post.contenu }}</div>
- <div class="img"><img src="{{ post.lienFich }}" width="{{ 220 }}"> </div>
+ <div class="img"><img src="{{ post.lienFich }}" width="{{ 750 }}"> </div>
 
- <div class="action"><button class="show"><a href="{{ path('post_readU', { 'id': post.id }) }}">show discussion</a>
-     </button>
-     {% if app.user.username == post.user %}
+ <div class="action">
+     {% if (app.user.username == post.user) or ( is_granted('ROLE_ADMIN') ) %}
          <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
      <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
      <button class="show"> <a href="{{ path('post_show', { 'id': post.id }) }}">show</a></button><button class="show">
-         <a href="{{ path('discussion_new',{ 'id': post.id }) }}">create discussion</a></button>
+         <a href="{{ path('discussion_new',{ 'id': post.id }) }}">discussions</a></button>
  </div>
  <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
 </div>

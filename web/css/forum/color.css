@@ -51,6 +51,7 @@
 .img{
     max-width: 100%;
     text-align: center;
+    table-layout: fixed;
 }
 .date{
 

@@ -20,7 +20,6 @@ class PostController extends Controller
      */
     public function indexAction()
     {
-
         $em = $this->getDoctrine()->getManager();
 
         $posts = $em->getRepository('ForumBundle:Post')->findAll();
@@ -29,6 +28,8 @@ class PostController extends Controller
             'posts' => $posts,
         ));
     }
+
+
 
     /**
      * Creates a new post entity.
@@ -44,6 +45,7 @@ $post->setUser($user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
             $em->flush();
@@ -122,6 +124,7 @@ $post->setUser($user);
 
         $em = $this->getDoctrine()->getManager();
         $discussion = $em->getRepository("ForumBundle:Discussion")->findDiscussion($id);
+
         return $this->render('@Forum/post/readU.html.twig', array('discussion'=>$discussion,'id'=>$id));
 
     }
@@ -132,7 +135,17 @@ $post->setUser($user);
         return $this->render('@Forum/post/show.html.twig', array(
             'post' => $post,
 
+        ));}
+        public function shwAction(Post $post)
+    {
+
+
+        return $this->render('@Forum/post/shw.html.twig', array(
+            'post' => $post,
+
         ));
     }
+
+
 
 }

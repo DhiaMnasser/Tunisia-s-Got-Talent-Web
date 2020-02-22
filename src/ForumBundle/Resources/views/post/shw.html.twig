@@ -1,0 +1,33 @@
+
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+    <link href="{{ asset('css/forum/color.css') }}" rel='stylesheet' type='text/css'  />
+    <h1>Post</h1>
+
+    <table>
+        <div class="post">
+            <div class="user">{{ post.user }}</div>
+            <div class="titre">{{ post.titre }}</div>
+            <div class="contenu">{{ post.contenu }}</div>
+            <div class="img"><img src="{{ post.lienFich }}" width="{{ 750 }}"> </div>
+
+            <div class="action"><button class="show"><a href="{{ path('discussion_new', { 'id': post.id }) }}">show discussion</a>
+                </button>
+                {% if (app.user.username == post.user) or ( is_granted('ROLE_ADMIN') ) %}
+                    <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
+                    <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
+
+            </div>
+            <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+        </div>
+    </table>
+
+    <ul>
+
+        <li>
+            <a href="{{ path('post_index') }}"class="ok">Back to the list</a>
+        </li>
+
+
+    </ul>
+{% endblock %}

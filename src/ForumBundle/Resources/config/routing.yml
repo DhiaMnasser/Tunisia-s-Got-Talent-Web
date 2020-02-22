@@ -7,6 +7,7 @@ forum_discussion:
 forum_notification:
     resource: "@ForumBundle/Resources/config/routing/notification.yml"
     prefix:   /notification/
+
 forum_homepage:
     path:     /
     defaults: { _controller: ForumBundle:Default:index }

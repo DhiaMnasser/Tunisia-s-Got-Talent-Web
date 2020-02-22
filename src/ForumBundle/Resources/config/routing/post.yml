@@ -25,3 +25,8 @@ post_show:
     path:     /{id}
     defaults: { _controller: "ForumBundle:Post:show" }
     methods:  GET
+post_shw:
+    path:     shw/{id}
+    defaults: { _controller: "ForumBundle:Post:shw" }
+    methods:  GET
+

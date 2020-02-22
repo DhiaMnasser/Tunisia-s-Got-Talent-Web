@@ -51,6 +51,7 @@
 .mg{
     max-width: 100%;
     text-align: center;
+    table-layout: fixed;
 }
 .ate{
 
