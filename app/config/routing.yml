@@ -2,9 +2,6 @@ stock_produit:
     resource: "@StockBundle/Controller/ProduitController.php"
     type:     annotation
 
-stock_produit:
-    resource: "@StockBundle/Controller/ProduitController.php"
-    type:     annotation
 
 achat_panier:
     resource: "@AchatBundle/Controller/PanierController.php"

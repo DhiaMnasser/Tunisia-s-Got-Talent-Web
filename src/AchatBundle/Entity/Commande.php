@@ -49,6 +49,50 @@ class Commande
     private $etat;
 
     /**
+     * @var string
+     * @ORM\Column(name="address", type="string", nullable=false)
+     */
+    private $address;
+
+    /**
+     * @var string
+     * @ORM\Column(name="tel", type="string", nullable=false)
+     */
+    private $tel;
+
+    /**
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * @param string $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
+
+    /**
      * @return mixed
      */
     public function getUserId()
@@ -111,11 +155,6 @@ class Commande
     {
         $this->etat = $etat;
     }
-
-
-
-
-
 
     /**
      * Get id.

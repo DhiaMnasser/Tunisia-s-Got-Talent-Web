@@ -3,9 +3,19 @@
 namespace AchatBundle\Controller;
 
 use AchatBundle\Entity\Commande;
+use AchatBundle\Entity\LigneCommande;
+use AchatBundle\Entity\Panier;
+use Cassandra\Date;
+use DateTime;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+//use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Commande controller.
@@ -22,9 +32,15 @@ class CommandeController extends Controller
      */
     public function indexAction()
     {
+        if (!($this->get('security.authorization_checker')->isGranted('ROLE_USER')))
+        {
+
+            throw new AccessDeniedException('accés user');
+        }
         $em = $this->getDoctrine()->getManager();
 
-        $commandes = $em->getRepository('AchatBundle:Commande')->findAll();
+//        $commandes = $em->getRepository('AchatBundle:Commande')->findBy();
+        $commandes=$em->getRepository('AchatBundle:Commande')->findByUser_Id($this->getUser());
 
         return $this->render('@Achat/commande/index.html.twig', array(
             'commandes' => $commandes,
@@ -32,46 +48,72 @@ class CommandeController extends Controller
     }
 
     /**
+     * Lists all commande entities.
+     *
+     * @Route("/admin", name="commande_index2")
+     * @Method("GET")
+     */
+    public function index2Action()
+    {
+        if (($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')))
+        {
+
+            throw new AccessDeniedException('accés admin');
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $commandes = $em->getRepository('AchatBundle:Commande')->findAll();
+
+        return $this->render('@Achat/commande/index2.html.twig', array(
+            'commandes' => $commandes,
+        ));
+    }
+
+    /**
      * Creates a new commande entity.
      *
-     * @Route("/new", name="commande_new")
+     * @Route("/{id}/new", name="commande_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, $id)
     {
+        $em=$this->getDoctrine()->getManager();
+        $panier=$em->getRepository("AchatBundle:Panier")->find($id);
+
+        $ligneCommandes = $em->getRepository('AchatBundle:LigneCommande')->findByPanier($panier->getId());
+
         $commande = new Commande();
+
         $form = $this->createForm('AchatBundle\Form\CommandeType', $commande);
         $form->handleRequest($request);
-
+//        var_dump($form);
+//        exit();
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+
+            $commande->setUserId($this->getUser());
+            $commande->setIdPanier($panier);
+            $commande->setDate(new \DateTime('now'));
+            $commande->setEtat(false);
+
             $em->persist($commande);
             $em->flush();
 
-            return $this->redirectToRoute('commande_show', array('id' => $commande->getId()));
+//            $panierCtrl = $this->get('panier_services');
+//            $panierCtrl->changer($panier);
+            $this->redirectToRoute('panier_changer', array('id' => $panier->getId()));
+            return $this->redirectToRoute('commande_index', array('id' => $commande->getId()));
         }
 
         return $this->render('@Achat/commande/new.html.twig', array(
             'commande' => $commande,
             'form' => $form->createView(),
         ));
-    }
-    /**
-     * Lists all commande entities.
-     *
-     * @Route("/{id}imp", name="commande_imp")
-     * @Method("GET")
-     */
-    public function impAction(Commande $commande)
-    {
-        $em = $this->getDoctrine()->getManager();
 
-        $commandes = $em->getRepository('AchatBundle:Commande')->find($commande);
-
-        return $this->render('@Achat/commande/imp.html.twig', array(
-            'commande' => $commandes,
-        ));
     }
+
+
+
     /**
      * Finds and displays a commande entity.
      *
@@ -85,6 +127,24 @@ class CommandeController extends Controller
         return $this->render('@Achat/commande/show.html.twig', array(
             'commande' => $commande,
             'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+
+    /**
+     * Finds and displays a commande entity.
+     *
+     * @Route("/{id}/show", name="commande_show2")
+     * @Method("GET")
+     */
+    public function show2Action(Commande $commande)
+    {
+        $ligneCommandes = $this->getDoctrine()->getManager()->getRepository('AchatBundle:LigneCommande')->findByPanier($commande->getIdPanier());
+
+
+        return $this->render('@Achat/commande/show2.html.twig', array(
+            'commande' => $commande,
+            'ligneCommandes' => $ligneCommandes,
         ));
     }
 
@@ -147,5 +207,57 @@ class CommandeController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * print commande
+     *
+     * @Route("/{id}/print", name="commande_print")
+     * @Method({"GET", "POST"})
+     */
+
+    public function printAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $commande = $this->getDoctrine()->getManager()->getRepository('AchatBundle:Commande')->find($id);
+        $panier=$em->getRepository("AchatBundle:Panier")->find($commande->getIdPanier());
+        $ligneCommandes = $em->getRepository('AchatBundle:LigneCommande')->findByPanier($panier->getId());
+
+
+        $snappy = $this->get('knp_snappy.pdf');
+
+        $html = $this->render('@Achat/commande/print.html.twig', array(
+            'user' => $this->getUser(),
+            'ligneCommandes'  => $ligneCommandes,
+            'commande' => $commande
+        ));
+
+        $filename = "commande";
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'content-Type' => 'app/pdf',
+                'content-Disposition' => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
+    }
+
+    /**
+     * valider une commande entities.
+     *
+     * @Route("/{id}/valider", name="commande_valider")
+     * @Method("GET")
+     */
+    public function validerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $commande = $em->getRepository('AchatBundle:Commande')->find($id);
+        $commande->setEtat(true);
+        $this->getDoctrine()->getManager()->flush();
+        return $this->redirectToRoute('commande_index2');
+
     }
 }

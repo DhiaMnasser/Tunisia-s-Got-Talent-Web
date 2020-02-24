@@ -10,4 +10,24 @@ namespace AchatBundle\Repository;
  */
 class CommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    public  function findByUser_Id($user){
+
+
+        $query = $this->getEntityManager()->createQuery("SELECT c FROM  AchatBundle\Entity\Commande AS c WHERE c.user_id=:user ")->setParameter('user',$user);
+
+
+        try {
+            return $query->getResult();
+        } catch (NoResultException $e) {
+
+        } catch (NonUniqueResultException $e) {
+        }
+//        finally {
+//            return 0;
+//        }
+
+
+    }
 }

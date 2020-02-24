@@ -1,6 +1,7 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
+    <a href="{{ path('commande_index') }}">< Back to the list</a>
     <h1>Commande</h1>
 
     <table>
@@ -15,22 +16,11 @@
             </tr>
             <tr>
                 <th>Etat</th>
-                <td>{% if commande.etat %}Yes{% else %}No{% endif %}</td>
+                <td>{% if commande.etat %}Validee{% else %}pending{% endif %}</td>
             </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('commande_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('commande_edit', { 'id': commande.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
 {% endblock %}
+{#{% extends 'index.html.twig' %}#}

@@ -1,16 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Commande creation</h1>
+    <h4><a href="{{ path('commande_index') }}">< Back to Orders list</a></h4>
+    <h1>Complete Your Informations</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('commande_index') }}">Back to the list</a>
-        </li>
-    </ul>
 {% endblock %}

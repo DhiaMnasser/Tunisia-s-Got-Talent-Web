@@ -11,16 +11,43 @@ namespace AchatBundle\Repository;
 class LigneCommandeRepository extends \Doctrine\ORM\EntityRepository
 {
 
-    public function findByIdPanier($id){
-        $query = $this->getEntityManager()->createQueryBuilder('n')
-            ->select('c')
-            ->from('ecommerceBundle:LigneCommande','c')
-            ->where('c.idPanier = :id')->setParameter('id',$id);
-        return $query->getQuery();
+    public  function findByProduit($id){
+        /*  $query= $this->getEntityManager()->createQueryBuilder()
+          ->select('p')->from('ecommerceBundle:Panier','p')->where('p.user_id= :user')->setParameter('user',"%{$user}%");
+
+              return $query->getResult();
+  */
+
+        $query = $this->getEntityManager()->createQuery("SELECT l FROM  AchatBundle\Entity\LigneCommande AS l WHERE l.idproduit=:id ")->setParameter('id',$id);
 
 
+        try {
+            return $query->getOneOrNullResult();
+        } catch (NoResultException $e) {
+            return null;
+        } catch (NonUniqueResultException $e) {
+            return null;
+        }
 
-        /*("SELECT c , p.image , p.description p.id FROM ecommerceBundle:LigneCommande AS c
-                JOIN ecommerceBundle:Produit AS p WITH c.idproduit=p.id WHERE c.idPanier=:id")*/
+}
+
+    public  function findByPanier($id){
+        /*  $query= $this->getEntityManager()->createQueryBuilder()
+          ->select('p')->from('ecommerceBundle:Panier','p')->where('p.user_id= :user')->setParameter('user',"%{$user}%");
+
+              return $query->getResult();
+  */
+
+        $query = $this->getEntityManager()->createQuery("SELECT l FROM  AchatBundle\Entity\LigneCommande AS l WHERE l.idPanier=:id ")->setParameter('id',$id);
+
+
+        try {
+            return $query->getOneOrNullResult();
+        } catch (NoResultException $e) {
+            return null;
+        } catch (NonUniqueResultException $e) {
+            return null;
+        }
+
     }
 }

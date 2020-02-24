@@ -87,3 +87,14 @@ fos_user:
 
 flosch_stripe:
     stripe_api_key: "pk_test_VkxHIqxNUhztx7sLrBe14vNu00HVIf29N2"
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     "\"C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe\""
+        options:    []
+#    image:
+#        enabled:    true
+#        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\""
+#        options:    []
+

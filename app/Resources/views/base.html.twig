@@ -180,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 });
             </script>
             <li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Songs</a></li>
-            <li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>News</a></li>
+            <li><a href="{{ path('commande_index') }}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Mes Commandes</a></li>
         </ul>
         <!-- script-for-menu -->
         <script>
@@ -573,6 +573,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% block javascriptes %}
+<script src="{{ asset('js/saisie.js') }}"></script>
+{% endblock %}
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 </body>
 </html>

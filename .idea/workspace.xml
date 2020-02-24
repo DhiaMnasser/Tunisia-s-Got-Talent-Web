@@ -2,325 +2,220 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9defb842-848d-4366-bde6-42b21500cf03" name="Default Changelist" comment="done">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/imp.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/.php_cs.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Changelog.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/ActivateUserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/ChangePasswordCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/CreateUserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/DeactivateUserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/DemoteUserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/PromoteUserCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Command/RoleCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/ChangePasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/GroupController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/ResettingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Compiler/CheckForMailerPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Compiler/CheckForSessionPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Compiler/InjectRememberMeServicesPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Compiler/InjectUserCheckerPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Compiler/ValidationPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/Configuration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/DependencyInjection/FOSUserExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Doctrine/CouchDB/UserListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Doctrine/GroupManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Doctrine/UserListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Doctrine/UserManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/FilterGroupResponseEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/FilterUserResponseEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/FormEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/GetResponseGroupEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/GetResponseNullableUserEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/GetResponseUserEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/GroupEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Event/UserEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/EventListener/AuthenticationListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/EventListener/EmailConfirmationListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/EventListener/FlashListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/EventListener/LastLoginListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/EventListener/ResettingListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/FOSUserBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/FOSUserEvents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/DataTransformer/UserToUsernameTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Factory/FactoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Factory/FormFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/ChangePasswordFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/GroupFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/ProfileFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/ResettingFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Form/Type/UsernameFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Mailer/Mailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Mailer/MailerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Mailer/NoopMailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Mailer/TwigSwiftMailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/Group.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/GroupInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/GroupManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/GroupManagerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/GroupableInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/UserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/UserManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Model/UserManagerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/change_password.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/commands.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/Group.couchdb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/Group.mongodb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/Group.orm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/User.couchdb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/User.mongodb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine-mapping/User.orm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/doctrine_group.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/email_confirmation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/flash_notifications.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/group.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/listeners.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/mailer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/registration.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/resetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/all.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/change_password.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/group.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/registration.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/resetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/routing/security.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/security.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/storage-validation/couchdb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/storage-validation/mongodb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/storage-validation/orm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/username_form_type.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/util.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/validation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/config/validator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/adding_invitation_registration.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/canonicalizer.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/command_line_tools.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/configuration_reference.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/controller_events.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/custom_storage_layer.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/doctrine.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/emails.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/form_type.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/groups.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/logging_by_username_or_email.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/overriding_forms.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/overriding_templates.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/overriding_validation.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/routing.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/doc/user_manager.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.af.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ar.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.bg.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.bn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.bn_BD.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ca.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.cs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.da.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.de.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.el.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.eo.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.es.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.et.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.eu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.fa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.fi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.fr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.gl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.he.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.hr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.hu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.id.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.it.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ja.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ky.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.lb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.lt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.lv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.mn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.nb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.nl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.pl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.pt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.pt_BR.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ro.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.ru.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.sk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.sl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.sr_Latn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.sv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.th.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.tr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.uk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.vi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/FOSUserBundle.zh_CN.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ar.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.bg.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.bn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.bn_BD.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ca.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.cs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.da.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.de.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.el.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.eo.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.es.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.eu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.fa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.fi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.fr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.he.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.hr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.hu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.id.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.it.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ja.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ky.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.lb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.lt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.lv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.nb.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.nl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.pl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.pt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.pt_BR.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ro.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.ru.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.sk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.sl.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.sr_Latn.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.sv.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.th.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.tr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.uk.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.vi.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/translations/validators.zh_CN.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/ChangePassword/change_password.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/ChangePassword/change_password_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/edit_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/list.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/list_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/new_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Group/show_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Profile/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Profile/edit_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Profile/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Profile/show_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Registration/check_email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Registration/confirmed.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Registration/email.txt.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Registration/register_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/check_email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/email.txt.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/request.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/request_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Resetting/reset_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/Security/login_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/EmailProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/EmailUserProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/LoginManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/LoginManagerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/UserChecker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Security/UserProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/ActivateUserCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/ChangePasswordCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/CreateUserCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/DeactivateUserCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/DemoteUserCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Command/PromoteUserCommandTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/DependencyInjection/FOSUserExtensionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Doctrine/UserManagerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/EventListener/AuthenticationListenerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/EventListener/FlashListenerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/ChangePasswordFormTypeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/GroupFormTypeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/ProfileFormTypeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/RegistrationFormTypeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/ResettingFormTypeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/TypeTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Form/Type/ValidatorExtensionTypeTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Mailer/MailerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Mailer/TwigSwiftMailerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Model/UserManagerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Model/UserTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Routing/RoutingTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Security/EmailProviderTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Security/EmailUserProviderTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Security/LoginManagerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Security/UserCheckerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Security/UserProviderTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/TestGroup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/TestUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Util/CanonicalFieldsUpdaterTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Util/CanonicalizerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Util/PasswordUpdaterTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/Util/UserManipulatorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Tests/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Upgrade.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/CanonicalFieldsUpdater.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/Canonicalizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/CanonicalizerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/PasswordUpdater.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/PasswordUpdaterInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/TokenGenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/TokenGeneratorInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Util/UserManipulator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/Validator/Initializer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FOSUserBundle/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/base2.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/index2.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/print.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/show2.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/SidebarNav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/export.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/graph.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/jqcandlestick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/monthly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/b_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/cards.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/gplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/i4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/img-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/move-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/nav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/pinterest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/second-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/slider7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/images/weather.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/SidebarNav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/SimpleChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/amcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/chartinator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/SidebarNav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/export.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/graph.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/jqcandlestick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/monthly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/export.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/b_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/cards.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/dragIconRoundBig.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/gplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/i4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/img-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/lens.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/move-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/nav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/pinterest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/second-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/slider7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/t4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/images/weather.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/index2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery-1.11.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.flexisel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.jqcandlestick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.nicescroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/jquery.swipebox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/metisMenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/modernizr.custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/monthly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/pie-chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/serial.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/js/validator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/saisie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TGTOf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TGTOf.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Security/login_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Security/login_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Controller/CommandeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Controller/LigneCommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Controller/LigneCommandeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/LigneCommande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/LigneCommande.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/Panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/Panier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Form/LigneCommandeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Form/LigneCommandeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Controller/PanierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Form/CommandeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Form/CommandeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Repository/CommandeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Repository/CommandeRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Repository/LigneCommandeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Repository/LigneCommandeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Repository/PanierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Repository/PanierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/imp.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/lignecommande/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/panier/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/panier/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockBundle/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockBundle/Controller/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockBundle/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockBundle/Entity/Produit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockBundle/Form/ProduitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockBundle/Form/ProduitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StockBundle/Resources/views/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockBundle/Resources/views/produit/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockBundle/Resources/views/produit/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockBundle/Resources/views/produit/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -335,10 +230,14 @@
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="51cb8e01-9354-4376-a2c2-ec5d4b950d16" />
     </execution>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TGTOf" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -392,6 +291,8 @@
       <path value="$PROJECT_DIR$/vendor/flosch/stripe-bundle" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XrPhZbB15lQiOWx5SHhy6GcnZC" />
@@ -400,7 +301,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AchatBundle/Resources/views/commande" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -408,19 +309,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Softwares\wamp64\www\TGTOf\src\StockBundle\Resources\views" />
-      <recent name="D:\Softwares\wamp64\www\TGTOf\src\AchatBundle\Resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Softwares\wamp64\www\TGTOf\src\AchatBundle\Resources\views\commande" />
+      <recent name="D:\Softwares\wamp64\www\TGTOf\web\back" />
       <recent name="D:\Softwares\wamp64\www\TGTOf\src\" />
       <recent name="D:\Softwares\wamp64\www\TGTOf\src\AchatBundle\Resources\views" />
       <recent name="D:\Softwares\wamp64\www\TGTOf\src" />
-      <recent name="D:\Softwares\wamp64\www\TGTOf\web" />
-      <recent name="D:\Softwares\wamp64\www\TGTOf\web\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Softwares\wamp64\www\TGTOf\web\js" />
+      <recent name="D:\Softwares\wamp64\www\TGTOf\src\StockBundle\Resources\views" />
+      <recent name="D:\Softwares\wamp64\www\TGTOf\src\AchatBundle\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -437,10 +339,13 @@
       <command value="s fos:user:promote d1 jury" />
       <command value="s doctrine:generate:crud" />
       <command value="s doctrine:generate:crud --overwrite" />
-      <command value="s debug:router" />
-      <command value="s doctrine:schema:update --force" />
-      <command value="s server:run" />
       <command value="composer require flosch/stripe-bundle" />
+      <command value="s server:run" />
+      <command value="s debug:router" />
+      <command value="Doctrine\DBAL\Types\Type::getTypesMap()" />
+      <command value="getTypesMap()" />
+      <command value="getTypesMap" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -474,7 +379,10 @@
       <workItem from="1582058793253" duration="13013000" />
       <workItem from="1582113457052" duration="16094000" />
       <workItem from="1582132754352" duration="7583000" />
-      <workItem from="1582140461876" duration="85000" />
+      <workItem from="1582140461876" duration="3070000" />
+      <workItem from="1582144135670" duration="36138000" />
+      <workItem from="1582406058534" duration="7161000" />
+      <workItem from="1582445399963" duration="47486000" />
     </task>
     <servers />
   </component>

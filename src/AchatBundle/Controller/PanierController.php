@@ -6,6 +6,7 @@ use AchatBundle\Entity\Panier;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use UserBundle\Entity\User;
 
 /**
  * Panier controller.
@@ -132,5 +133,47 @@ class PanierController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Deletes a panier entity.
+     *
+     * @Route("/{id}/supprimer", name="panier_supprimer")
+     * @Method("DELETE")
+     */
+    public function supprimerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $panier = $em->getRepository("AchatBundle:Panier")->find($id);
+
+        $em->remove($panier);
+        $em->flush();
+        return $this->redirectToRoute('lignecommande_index');
+
+    }
+
+    /**
+     * changer panier .
+     *
+     * @Route("/{id}/changer", name="panier_changer")
+     * @Method("CHANGER")
+     */
+    public function changerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $this->getUser();
+        $panier = $em->getRepository("AchatBundle:Panier")->find($id);
+        $panier->setUserId(null);
+        $em->persist($panier);
+        $em->flush();
+
+        $panier=new Panier();
+        $panier->setUserId($user);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($panier);
+        $em->flush();
+        return $this->redirectToRoute('lignecommande_index');
+
     }
 }

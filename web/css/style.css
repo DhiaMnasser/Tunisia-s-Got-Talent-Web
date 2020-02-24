@@ -2791,6 +2791,19 @@ tbody tr:nth-child(odd){
 tbody tr:nth-child(even){
     background-color: lightskyblue;
 }
-tbody tr:hover{
-    border: 2px solid lightgreen;
+
+.button{
+    border: solid 1px darkgrey;
+    background: mintcream;
+    margin: 0;
+    padding: 0;
 }
+.button:hover{
+    background: lightskyblue;
+    padding: 0;
+
+
+}
+/*tbody tr:hover{*/
+/*    border: 2px solid lightgreen;*/
+/*}*/

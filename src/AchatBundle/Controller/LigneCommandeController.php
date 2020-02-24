@@ -55,31 +55,32 @@ class LigneCommandeController extends Controller
 
         $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->findByUser_Id($user);
 
+        $ligneCommande = $this->getDoctrine()->getManager()->getRepository('AchatBundle:LigneCommande')->findByProduit($produit);
 
-        if () {
-
-        }
-        else{
-        $ligneCommande = new Lignecommande();
-        }
-        $ligneCommande->setIdproduit($produit);
-        $ligneCommande->setNomproduit($produit->getNom());
-        $ligneCommande->setIdPanier($panier);
-        $ligneCommande->setQuantite(1);
-        $panier->setPrixtotal($panier->getPrixtotal()+($produit->getPrix()*$ligneCommande->getQuantite()));
         $form = $this->createForm('AchatBundle\Form\LigneCommandeType', $ligneCommande);
         $form->handleRequest($request);
 
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $em = $this->getDoctrine()->getManager();
-//            $em->persist($ligneCommande);
-//            $em->flush();
-//            return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
-//        }
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($ligneCommande);
-        $em->flush();
-        return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
+        if ($ligneCommande != null) {
+
+            $ligneCommande->setQuantite(($ligneCommande->getQuantite()+1));
+            $panier->setPrixtotal($panier->getPrixtotal() + $produit->getPrix());
+
+            $this->getDoctrine()->getManager()->flush();
+        }
+        else {
+            $ligneCommande = new Lignecommande();
+            $ligneCommande->setIdproduit($produit);
+            $ligneCommande->setNomproduit($produit->getNom());
+            $ligneCommande->setIdPanier($panier);
+            $ligneCommande->setQuantite(1);
+
+            $panier->setPrixtotal($panier->getPrixtotal() + ($produit->getPrix() * $ligneCommande->getQuantite()));
+        }
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ligneCommande);
+            $em->flush();
+            return $this->redirectToRoute('lignecommande_show', array('id' => $ligneCommande->getId()));
 
         return $this->render('@Achat/lignecommande/new.html.twig', array(
             'ligneCommande' => $ligneCommande,
@@ -111,12 +112,45 @@ class LigneCommandeController extends Controller
      */
     public function editAction(Request $request, LigneCommande $ligneCommande)
     {
+//      recuperer la quantite avant la modification
+        $qte = $ligneCommande->getQuantite();
+
         $deleteForm = $this->createDeleteForm($ligneCommande);
         $editForm = $this->createForm('AchatBundle\Form\LigneCommandeType', $ligneCommande);
         $editForm->handleRequest($request);
 
+        $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->find($ligneCommande->getIdPanier());
+
+        if ($ligneCommande->getQuantite() >= $qte){
+            $panier->setPrixtotal($panier->getPrixtotal() + ($ligneCommande->getQuantite()-$qte)*($ligneCommande->getIdproduit()->getPrix()));
+        }else{
+            $panier->setPrixtotal($panier->getPrixtotal() - ($qte-$ligneCommande->getQuantite())*($ligneCommande->getIdproduit()->getPrix()));
+        }
+
+//        dump($ligneCommande);
+//        exit();
+
+
+//        editform bch traj3elna lignecommande modifiee
+        $produit=$this->getDoctrine()->getManager()->getRepository('StockBundle:Produit')->find($ligneCommande->getIdproduit());
+
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+//            itha l'quantite mahich valide bch jraja3na l page edit
+            if ($ligneCommande->getQuantite()<0){
+
+                return $this->render('@Achat/lignecommande/edit.html.twig', array(
+                    'ligneCommande' => $ligneCommande,
+                    'edit_form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
+                ));
+            }elseif($produit->getQte() < $ligneCommande->getQuantite()) {
+                $ligneCommande->setQuantite($produit->getQte());
+                $produit->setQte(0);
+            }else{
+//          itha valide bch ya3ml maj ta3 bd
+                $produit->setQte($produit->getQte() - $ligneCommande->getQuantite());
+                $this->getDoctrine()->getManager()->flush();
+            }
 
             return $this->redirectToRoute('lignecommande_index');
         }
@@ -178,18 +212,11 @@ class LigneCommandeController extends Controller
 
         $produit=$this->getDoctrine()->getManager()->getRepository('StockBundle:Produit')->find($lignecommande->getIdproduit());
 
-
         $panier=$this->getDoctrine()->getManager()->getRepository(Panier::class)->find($lignecommande->getIdPanier());
-        $panier->setPrixtotal($panier->getPrixtotal() - $produit->getPrix());
-
+        $panier->setPrixtotal($panier->getPrixtotal() - ($produit->getPrix()*$lignecommande->getQuantite()));
 
         $em->remove($lignecommande);
         $em->flush();
         return $this->redirectToRoute('lignecommande_index');
-
     }
-
-
-
-
 }

@@ -22,7 +22,8 @@ class AppKernel extends Kernel
             new UserBundle\UserBundle(),
             new AchatBundle\AchatBundle(),
             new StockBundle\StockBundle(),
-            new Flosch\Bundle\StripeBundle\FloschStripeBundle()
+            new Flosch\Bundle\StripeBundle\FloschStripeBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

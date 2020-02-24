@@ -8,8 +8,8 @@
             <tr>
 {#                <th> Id </th>#}
                 <th> Nomproduit </th>
+                <th> Prix par unite</th>
                 <th> Quantite </th>
-                <th> Prix </th>
                 <th> Actions</th>
             </tr>
         </thead>
@@ -17,14 +17,11 @@
         {% for ligneCommande in ligneCommandes %}
             {% if ligneCommande.idPanier == panier   %}
             <tr class="lignecommande">
-{#                <td><a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">{{ ligneCommande.id }} </a></td>#}
                 <td>{{ ligneCommande.nomproduit }}  </td>
+                <td> {{  ligneCommande.idproduit.prix   }}</td>
                 <td>{{ ligneCommande.quantite }}  </td>
-{#                <td> {%  produit.prix * ligneCommande.quantite  %}</td>#}
                 <td>
-{#                            <button>#}
-{#                            <a href="{{ path('lignecommande_show', { 'id': ligneCommande.id }) }}">show</a>#}
-{#                            </button>#}
+
                             <button>
                                 <a href="{{ path('lignecommande_edit', { 'id': ligneCommande.id }) }}">edit</a>
                             </button>
@@ -46,10 +43,14 @@
 
     <div>
         <button>
-            <a class="btn btn-outline" href="{{ path('commande_new',{'panier':panier}) }}">Checkout</a>
+            <a class="btn btn-outline" href="{{ path('commande_new',{'id':panier.id}) }}">Checkout</a>
         </button>
     </div>
-
+    <div>
+        <button>
+{#            <a class="btn btn-outline" href="{{ path('panier_vider',{'id':panier.id}) }}">Vider Panier</a>#}
+        </button>
+    </div>
 
     <script src="{{ asset('js/jquery-min.js') }}"></script>
     <script>

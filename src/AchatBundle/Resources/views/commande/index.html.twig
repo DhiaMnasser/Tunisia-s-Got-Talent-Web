@@ -1,39 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Commandes list</h1>
+    <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' media="all" />
 
-    <table>
+    <h1>liste des Commandes </h1>
+    <input id="myInput" type="text" placeholder="Search..">
+
+    <table id="myTable">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Reference</th>
                 <th>Date</th>
                 <th>Etat</th>
-                <th>Actions</th>
+{#                <th>Actions</th>#}
             </tr>
         </thead>
         <tbody>
         {% for commande in commandes %}
-            <tr>
-                <td><a href="{{ path('commande_show', { 'id': commande.id }) }}">{{ commande.id }}</a></td>
+            <tr class="commande">
+                <td><a href="{{ path('commande_show', { 'id': commande.id }) }}">cmd{{ commande.id }}</a></td>
                 <td>{% if commande.date %}{{ commande.date|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if commande.etat %}Yes{% else %}No{% endif %}</td>
-                <td>
-                            <button><a href="{{ path('commande_show', { 'id': commande.id }) }}">show</a></button>
-                            <button><a href="{{ path('commande_edit', { 'id': commande.id }) }}">edit</a></button>
-                            <button><form name="form" method="post" action="/commande/{{ commande.id }}/delete"><input type="hidden" name="_method" value="DELETE">
-                                    <input type="submit" value="Delete">
-                                    <input type="hidden" id="form__token" name="form[_token]" value="-ebgIJT7urprPOsNAUgDxfuujCMquPx3s1nELXbVXXQ"></form>
-                            </button>
-                </td>
+                <td>{% if commande.etat %}validee{% else %}Non validee{% endif %}</td>
+                <td><a class="btn  btn-outline" href="{{ path('commande_print',{'id':commande.id}) }}">Print</a></td>
+
+
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('commande_new') }}">Create a new commande</a>
-        </li>
-    </ul>
+    <script src="{{ asset('js/jquery-min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable .commande").filter(function() {
+                    $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1 );
+                });
+            });
+        });
+    </script>
 {% endblock %}

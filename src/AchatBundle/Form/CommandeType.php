@@ -13,7 +13,7 @@ class CommandeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('date')->add('etat')->add('user_id')->add('idPanier');
+        $builder->add('address')->add('tel');
     }/**
      * {@inheritdoc}
      */
