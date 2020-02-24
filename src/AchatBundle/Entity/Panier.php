@@ -21,23 +21,42 @@ class Panier
      */
     private $id;
 
-
     /**
-     * @ORM\ManyToOne(targetEntity="UserBundle\Entity\User")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="UserBundle\Entity\User",inversedBy="Panier" )
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id",onDelete="CASCADE")
+     *
      */
     private $user_id;
-
 
     /**
      * @var float
      *
      * @ORM\Column(name="prixTotal", type="float", precision=10, scale=0, nullable=true)
      */
-
     private $prixtotal;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="etat", type="boolean", nullable=false)
+     */
+    private $etat;
 
+    /**
+     * @return bool
+     */
+    public function isEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param bool $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
 
     /**
      * Get id.

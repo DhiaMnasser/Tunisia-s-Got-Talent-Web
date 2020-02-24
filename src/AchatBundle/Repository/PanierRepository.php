@@ -17,7 +17,7 @@ class PanierRepository extends \Doctrine\ORM\EntityRepository
               return $query->getResult();
   */
 
-        $query = $this->getEntityManager()->createQuery("SELECT p FROM  AchatBundle\Entity\Panier AS p WHERE p.user_id=:user ")->setParameter('user',$user);
+        $query = $this->getEntityManager()->createQuery("SELECT p FROM  AchatBundle\Entity\Panier AS p WHERE p.user_id=:user and p.etat=true")->setParameter('user',$user);
 
 
         try {

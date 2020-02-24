@@ -156,24 +156,66 @@ class PanierController extends Controller
      * changer panier .
      *
      * @Route("/{id}/changer", name="panier_changer")
-     * @Method("CHANGER")
+     * @Method("GET")
      */
-    public function changerAction($id)
+    public function changerAction($id,$c)
     {
-        $em = $this->getDoctrine()->getManager();
+        $em = $c->getDoctrine()->getManager();
+        $user = $c->getUser();
 
-        $user = $this->getUser();
-        $panier = $em->getRepository("AchatBundle:Panier")->find($id);
-        $panier->setUserId(null);
-        $em->persist($panier);
-        $em->flush();
+        $panier1 = $em->getRepository("AchatBundle:Panier")->find($id);
+//        var_dump($user2);
+//        exit();
+
+        $panier1->setEtat(false);
+        $em->persist($panier1);
+//        $em->flush();
 
         $panier=new Panier();
         $panier->setUserId($user);
-        $em = $this->getDoctrine()->getManager();
+        $panier->setPrixtotal(0);
+        $panier->setEtat(true);
+        $em = $c->getDoctrine()->getManager();
         $em->persist($panier);
         $em->flush();
-        return $this->redirectToRoute('lignecommande_index');
+        return $c->redirectToRoute('lignecommande_index');
 
     }
+
+    /**
+     * payer panier .
+     *
+     * @Route("/{id}/payer", name="panier_changer")
+     * @Method("GET")
+     */
+    public function payerAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getRepository(Panier::class);
+        $el = $this->getDoctrine()->getManager();
+        $panier = $em->findByUser_Id($this->getUser()->getId());
+        $ec = $this->getDoctrine()->getRepository(LigneCommande::class)->findByPanier($panier);
+
+
+        \Stripe\Stripe::setApiKey("sk_test_lE9pTHIXFMFcZr7CZvTS33wM00fIb8c2WL");
+
+        \Stripe\Charge::create(array(
+            "amount" => $panier->getPrixtotal() + 50,
+            "currency" => "usd",
+            "source" => 'tok_mastercard', // obtained with Stripe.js
+            "description" => "Payer"
+
+        ));
+        $panier->setPrixtotal(0);
+        $el->flush();
+        $ecc = $this->getDoctrine()->getManager();
+        foreach ($ec as $c) {
+            $ecc->clear($c);
+            $ecc->flush();
+        }
+
+
+
+        return $this->render('@Achat/panier/payement.html.twig');
+    }
+
 }

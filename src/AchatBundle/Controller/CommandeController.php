@@ -99,9 +99,9 @@ class CommandeController extends Controller
             $em->persist($commande);
             $em->flush();
 
-//            $panierCtrl = $this->get('panier_services');
-//            $panierCtrl->changer($panier);
-            $this->redirectToRoute('panier_changer', array('id' => $panier->getId()));
+            $panierCtrl = $this->get('panier_services');
+            $panierCtrl->changerAction($panier,$this);
+//            $this->redirectToRoute('panier_changer', array('id' => $panier->getId()));
             return $this->redirectToRoute('commande_index', array('id' => $commande->getId()));
         }
 
