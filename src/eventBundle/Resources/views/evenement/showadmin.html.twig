@@ -47,6 +47,13 @@
             <th>Image</th>
             <td>{{ evenement.image }}</td>
         </tr>
+        <tr>
+            <th>Liste des participants</th>
+            <td> {% for user in users %} <br>
+            {{ user.username }}
+            {% endfor %}</td>
+        </tr>
+
         </tbody>
     </table>
 

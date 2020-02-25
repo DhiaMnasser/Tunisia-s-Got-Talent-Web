@@ -55,33 +55,14 @@ class Evenement
     {
         $this->region = $region;
     }
-    private $nom;
     /**
      * @var string
      *
      * @ORM\Column(name="Nom", type="string", length=255)
      */
-    /**
-     * @ORM\ManyToOne(targetEntity="eventBundle\Entity\User")
-     * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
-     */
-    private $user;
 
-    /**
-     * @return mixed
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
+    private $nom;
 
-    /**
-     * @param mixed $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
-    }
     /**
      * @var string
      *

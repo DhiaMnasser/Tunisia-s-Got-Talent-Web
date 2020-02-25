@@ -15,7 +15,7 @@ class EvenementType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nomevent')->add('duree')->add('maxParticipants')->add('dateD')->add('dateF')->add('gagnant')->add('etat')->add('region')->add('user')->add('image')->add('captcha', CaptchaType::class);
+        $builder->add('nomevent')->add('duree')->add('maxParticipants')->add('dateD')->add('dateF')->add('gagnant')->add('etat')->add('region')->add('image')->add('captcha', CaptchaType::class);
     }/**
      * {@inheritdoc}
      */

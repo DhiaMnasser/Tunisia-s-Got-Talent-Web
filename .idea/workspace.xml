@@ -14,6 +14,9 @@
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="11cbbc91-3e7e-4958-a048-488869fa7b8a" />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
@@ -66,11 +69,12 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Xht8ZVuTg48HUGH4zsxFJMD9Am" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,10 +97,10 @@
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:crud" />
-      <command value="s doctrine:schema:update --force " />
       <command value="s debug:router" />
       <command value="composer require symfony/filessystem" />
       <command value="s server:run" />
+      <command value="s doctrine:schema:update --force " />
     </option>
   </component>
   <component name="RunDashboard">
@@ -131,12 +135,23 @@
       <workItem from="1582182235975" duration="1482000" />
       <workItem from="1582185127633" duration="7660000" />
       <workItem from="1582561342327" duration="20544000" />
-      <workItem from="1582649036459" duration="620000" />
+      <workItem from="1582649036459" duration="18221000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

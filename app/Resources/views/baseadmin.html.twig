@@ -123,25 +123,25 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a class="navbar-brand" href="http://localhost/TGT/web/app_dev.php/evenement/admin"><span class="fa fa-area-chart"></span> TGT<span class="dashboard_text">Dashboard Admin</span></a></h1>
+                    <h1><a class="navbar-brand" href="{{ path('evenement_indexadmin') }}"><span class="fa fa-area-chart"></span> TGT<span class="dashboard_text">Dashboard Admin</span></a></h1>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="sidebar-menu">
                         <li class="header">MAIN NAVIGATION</li>
                         <li class="treeview">
-                            <a href="http://localhost/TGT/web/app_dev.php/evenement">
+                            <a href="{{ path('evenement_index') }}">
                                 <i class="fa fa-dashboard"></i> <span>Evenements Front</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="http://localhost/TGT/web/app_dev.php/evenement/admin">
+                            <a href="{{ path('evenement_indexadmin') }}">
                                 <i class="fa fa-laptop"></i>
                                 <span>Evenement Admin</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="http://localhost/TGT/web/app_dev.php/evenement/admin"><i class="fa fa-angle-right"></i> Evenement</a></li>
-                                <li><a href="http://localhost/TGT/web/app_dev.php/region"><i class="fa fa-angle-right"></i> Region </a></li>
+                                <li><a href="{{ path('evenement_indexadmin') }}"><i class="fa fa-angle-right"></i> Evenement</a></li>
+                                <li><a href="{{ path('region_index') }}"><i class="fa fa-angle-right"></i> Region </a></li>
                             </ul>
                         </li>
                         <li class="treeview">

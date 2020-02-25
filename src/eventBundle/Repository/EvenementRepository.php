@@ -29,12 +29,20 @@ class EvenementRepository extends \Doctrine\ORM\EntityRepository
     public function filtreregion($str){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT e
-                FROM eventBundle:Evenement e
-                WHERE e.region =  ( select r.id from eventBundle:Region WHERE r.nom LIKE :str) '
+                'SELECT p
+                FROM eventBundle:Evenement p
+                WHERE p.region =  ( select r.id FROM eventBundle:Region r WHERE r.nom LIKE :str) '
+
             )
             ->setParameter('str', '%'.$str.'%')
             ->getResult();
+    }
+    /**
+     * @return Evenement[]
+     */
+    public function findsearch()
+    {
+        return $this->$this->findAll();
     }
 
 }

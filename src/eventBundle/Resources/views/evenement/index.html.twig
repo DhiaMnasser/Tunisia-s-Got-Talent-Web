@@ -11,14 +11,21 @@
                 <div class="recommended-info">
                     <div class="heading">
                         <ul class="nav" id="side-menu">
-                            <FORM style="position: absolute; top: 30px; left: 600px;"><h5>Filtrer par Région :</h5>
-                                <SELECT name="nom" size="1">
-                                    <option>
+
+                            <FORM style="position: absolute; top: 30px; left: 600px;" ><h5>Filtrer par Région :</h5>
+                                <SELECT name="nomfiltre"  size="1" >
+                                    <option></option>
                                     {% for region in regions %}
-                                    <OPTION> {{ region.nom }}
+                                    <OPTION id="filtre"> {{ region.nom }} </OPTION>
+
                                     {% endfor %}
+
                                 </SELECT>
+
+                                <input type="submit" class="btn btn-primary w-100" value="Filtrer" ></input>
+
                             </FORM>
+
                             <li>
                                 <a > <h4>Résultats trouvés</h4><span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level" id="entitiesNav">
@@ -31,7 +38,7 @@
                         <script type="text/javascript">
                             jQuery(document).ready(function() {
                                 var searchRequest = null;
-                                $("#inputrecherche").keyup(function() {
+                       $("#inputrecherche").keyup(function() {
                                     var minlength = 1;
                                     var that = this;
                                     var value = $(this).val();
@@ -83,7 +90,7 @@
                     <div class="resent-grid-img recommended-grid-img">
 
                         <div class="time small-time show-time">
-                            <p>7:34</p>
+
                         </div>
                         <div class="clck show-clock">
                             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>

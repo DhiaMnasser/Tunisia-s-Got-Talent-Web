@@ -4,6 +4,8 @@ namespace eventBundle\Controller;
 
 use eventBundle\Entity\Evenement;
 use eventBundle\Entity\Region;
+use eventBundle\Entity\User;
+use eventBundle\Repository\EvenementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -32,6 +34,7 @@ class EvenementController extends Controller
         $regions = $em2->getRepository('eventBundle:Region')->findAll();
         return $this->render('@event/evenement/index.html.twig', array('evenements' => $evenements , 'regions' => $regions ));
     }
+
     /**
      * Lists all evenement entities.
      *
@@ -100,13 +103,16 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
      * @Route("/admin/{id}", name="evenement_show")
      * @Method("GET")
      */
-    public function showAction(Evenement $evenement)
+    public function showAction(Evenement $evenement )
     {
+
+
         $deleteForm = $this->createDeleteForm($evenement);
 
         return $this->render('@event/evenement/show.html.twig', array(
             'evenement' => $evenement,
-            'delete_form' => $deleteForm->createView(),
+            'delete_form' => $deleteForm->createView()
+
         ));
     }
     /**
@@ -117,10 +123,12 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
      */
     public function showadminAction(Evenement $evenement)
     {
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('eventBundle:User')->findAll();
         $deleteForm = $this->createDeleteForm($evenement);
 
         return $this->render('@event/evenement/showadmin.html.twig', array(
-            'evenement' => $evenement,
+            'evenement' => $evenement,'users' => $users ,
             'delete_form' => $deleteForm->createView(),
         ));
     }
