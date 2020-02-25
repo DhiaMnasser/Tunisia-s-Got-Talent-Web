@@ -11,6 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' media="all" />
@@ -45,8 +46,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="{{ path('fos_user_security_logout') }}">
                         {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                     </a>
-                {% else %}
-                    <a href="{{ path('fos_user_security_login') }}" class="play-icon popup-with-zoom-anim">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                 {% endif %}
             </div>
         </div>
@@ -59,9 +58,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
             </div>
             <div class="header-top-right">
-                <div class="file">
-                    <a href="{{ path('publication_add') }}">Upload</a>
-                </div>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <div class="file">
+                        <a href="{{ path('publication_add') }}">Upload</a>
+                    </div>
+                {% endif %}
                 <div class="signin">
                     <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Sign Up</a>
                     <!-- pop-up-box -->

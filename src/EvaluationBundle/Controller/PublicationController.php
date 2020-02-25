@@ -29,8 +29,8 @@ class PublicationController extends Controller
         $form=$this->createForm(PublicationType::class,$pub);
         $form->handleRequest($request);
         $user=$this->getUser()->getUsername();
-        $this->get('upload.annotation_reader')->isUploadable($pub);
 
+        //$this->get('upload.annotation_reader')->isUploadable($pub);
         if($form->isSubmitted() && $form->isValid())
         {
             $pub->setAuthor($user);

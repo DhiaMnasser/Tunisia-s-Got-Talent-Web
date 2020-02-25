@@ -23,7 +23,11 @@
                 <input type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="Password"   ><br>
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                 <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('fos_user_security_login') }}" class="play-icon popup-with-zoom-anim">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                {% else %}
+                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >
+                {% endif %}
             </form>
             <div class="forgot">
                 <a href="#">Forgot password ?</a>

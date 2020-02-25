@@ -1,0 +1,95 @@
+tgt_homepageA:
+    path:     /
+    defaults: { _controller: TgtBundle:Default:index }
+
+region_addA:
+    path:     /registerReg
+    defaults: { _controller: TgtBundle:Region:add }
+
+region_listA:
+    path:     /listReg
+    defaults: { _controller: TgtBundle:Region:list }
+
+region_updateA:
+    path:     /updateReg/{id}
+    defaults: { _controller: TgtBundle:Region:update }
+
+region_delA:
+    path:     /delReg/{id}
+    defaults: { _controller: TgtBundle:Region:delete }
+
+event_addA:
+    path:     /registerEv
+    defaults: { _controller: TgtBundle:Event:add }
+
+event_listA:
+    path:     /listEv
+    defaults: { _controller: TgtBundle:Event:list }
+
+event_delA:
+    path:     /delEv/{id}
+    defaults: { _controller: TgtBundle:Event:delete }
+
+event_updateA:
+    path:     /delEv/{id}
+    defaults: { _controller: TgtBundle:Event:update }
+
+publication_listNV:
+    path:     /publication/listNV
+    defaults: { _controller: TgtBundle:Publication:listNV }
+
+publication_listV:
+    path:     /publication/listV
+    defaults: { _controller: TgtBundle:Publication:list }
+
+publication_delA:
+    path:     /publication/del/{id}
+    defaults: { _controller: TgtBundle:Publication:delete }
+
+publication_addA:
+    path:     /publication/add
+    defaults: { _controller: TgtBundle:Publication:add }
+
+publication_valA:
+    path:     /publication/val/{id}
+    defaults: { _controller: TgtBundle:Publication:valide }
+
+commentaire_listA:
+    path:     /listCom
+    defaults: { _controller: TgtBundle:Commentaire:list }
+
+commentaire_delA:
+    path:     /commentaire/del/{id}
+    defaults: { _controller: TgtBundle:Commentaire:delete }
+
+commentaire_addA:
+    path:     /commentaire/add
+    defaults: { _controller: TgtBundle:Commentaire:add }
+
+participant_listA:
+    path:     /participant/list
+    defaults: { _controller: TgtBundle:User:listParticipant }
+
+jury_listA:
+    path:     /jury/list
+    defaults: { _controller: TgtBundle:User:listJury }
+
+jury_newA:
+    path:     /jury/new/{id}
+    defaults: { _controller: TgtBundle:User:newJury }
+
+jury_moveA:
+    path:     /jury/move/{id}
+    defaults: { _controller: TgtBundle:User:moveJury }
+
+spectateur_listA:
+    path:     /spectateur/list
+    defaults: { _controller: TgtBundle:User:listSpectateur }
+
+user_delA:
+    path:     /user/delete
+    defaults: { _controller: TgtBundle:User:delete }
+
+user_home_pageA:
+    path:     /user/home
+    defaults: { _controller: TgtBundle:Security:redirect }
