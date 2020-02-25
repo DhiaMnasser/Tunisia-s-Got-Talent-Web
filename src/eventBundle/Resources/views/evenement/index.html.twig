@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class="show-top-grids">
+    <div class="col-sm-10 show-grid-left main-grids">
+        <div class="recommended">
+            <div class="recommended-grids english-grid">
+                <div class="recommended-info">
+                    <div class="heading">
+                        <ul class="nav" id="side-menu">
+                            <FORM style="position: absolute; top: 30px; left: 600px;"><h5>Filtrer par Région :</h5>
+                                <SELECT name="nom" size="1">
+                                    <option>
+                                    {% for region in regions %}
+                                    <OPTION> {{ region.nom }}
+                                    {% endfor %}
+                                </SELECT>
+                            </FORM>
+                            <li>
+                                <a > <h4>Résultats trouvés</h4><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level" id="entitiesNav">
+                                </ul>
+                            </li>
+                        </ul><br><br><br><br>
+
+                        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+                        <script type="text/javascript">
+                            jQuery(document).ready(function() {
+                                var searchRequest = null;
+                                $("#inputrecherche").keyup(function() {
+                                    var minlength = 1;
+                                    var that = this;
+                                    var value = $(this).val();
+                                    var entitySelector = $("#entitiesNav").html('');
+                                    if (value.length >= minlength ) {
+                                        if (searchRequest != null)
+                                            searchRequest.abort();
+                                        searchRequest = $.ajax({
+                                            type: "GET",
+                                            url: "{{ path('ajax_search') }}",
+                                            data: {
+                                                'p' : value
+                                            },
+                                            dataType: "text",
+                                            success: function(msg){
+                                                //we need to check if the value is the same
+                                                if (value===$(that).val()) {
+
+                                                    var result = JSON.parse(msg);
+                                                    $.each(result, function(key, arr) {
+                                                        $.each(arr, function(id, value) {
+                                                            if (key === 'posts') {
+                                                                if (id !== 'error') {
+                                                                    console.log(value[1]);
+                                                                    entitySelector.append('<li><b>'+value[0]+'</b><a href="/TGT/web/app_dev.php/evenement/admin/'+id+'">Afficher l\'événement</a></li>');
+                                                                } else {
+                                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                                }
+                                                            }
+                                                        });
+                                                    });
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
+                        <h3>EVENEMENTS</h3>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+
+
+
+                {% for evenement in evenements %}
+                <div class="col-md-2 resent-grid recommended-grid show-video-grid">
+                    <div class="resent-grid-img recommended-grid-img">
+
+                        <div class="time small-time show-time">
+                            <p>7:34</p>
+                        </div>
+                        <div class="clck show-clock">
+                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="resent-grid-info recommended-grid-info">
+                        <a href="{{ path('evenement_show', { 'id': evenement.id }) }}" onclick="verif()"><img src="{{ evenement.image }}" alt="" /></a>
+                        <h5><a href="{{ path('evenement_show', { 'id': evenement.id }) }}" class="title">{{ evenement.nomevent }}</a></h5>
+                        <p class="author"><b>Durée</b> : {{ evenement.duree }}</p>
+                        <p class="views"><b>Participants</b> : {{ evenement.maxParticipants }}</p>
+                        <p class="views"><b>Date de début</b> : {% if evenement.dateD %}{{ evenement.dateD|date('Y-m-d') }}{% endif %}</p>
+                        <p class="views"><b>Date de fin</b>   : {% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</p>
+                        <p class="views"><b>Gagnant</b> : {{ evenement.gagnant }}</p>
+                        <p class="views"><b>Region</b> : {{ evenement.region }}</p>
+                        <br>
+                        <input type="submit" value="S'inscrire à l'événement" >
+
+
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 show-grid-left main-grids">
+        <div class="recommended">
+            <div class="recommended-grids english-grid">
+                <div class="recommended-info">
+                    <div class="heading">
+                        <h3>EVENEMENTS EN COURS</h3>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+
+                {% for evenement in evenements %}
+                    {%  if evenement.etat == 1 %}
+                    <div class="col-md-2 resent-grid recommended-grid show-video-grid">
+                        <div class="resent-grid-img recommended-grid-img">
+
+
+                            <div class="clck show-clock">
+                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="resent-grid-info recommended-grid-info">
+
+                            <a href="{{ path('evenement_show', { 'id': evenement.id }) }}" onclick="verif()"><img src="{{ evenement.image }}" alt="" /></a>
+                            <h5><a href="{{ path('evenement_show', { 'id': evenement.id }) }}" class="title">{{ evenement.nomevent }}</a></h5>
+                            <p class="author"><b>Durée</b> : {{ evenement.duree }}</p>
+                            <p class="views"><b>Participants</b> : {{ evenement.maxParticipants }}</p>
+                            <p class="views"><b>Date de début</b> : {% if evenement.dateD %}{{ evenement.dateD|date('Y-m-d') }}{% endif %}</p>
+                            <p class="views"><b>Date de fin</b>   : {% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</p>
+                            <p class="views"><b>Gagnant</b> : {{ evenement.gagnant }}</p>
+                            <p class="views"><b>Region</b> : {{ evenement.region }}</p>
+                            <br>
+                            <input type="submit" value="S'inscrire à l'événement">
+
+
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+    <h1>Region</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ region.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ region.nom }}</td>
+            </tr>
+            <tr>
+                <th>Nbvilles</th>
+                <td>{{ region.nbVilles }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('region_index') }}">Revenir à la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('region_edit', { 'id': region.id }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

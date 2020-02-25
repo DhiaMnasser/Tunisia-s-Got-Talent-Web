@@ -1,0 +1,33 @@
+event_evenement:
+    resource: "@eventBundle/Controller/EvenementController.php"
+    type:     annotation
+
+event_region:
+    resource: "@eventBundle/Controller/RegionController.php"
+    type:     annotation
+
+event_evenement:
+    resource: "@eventBundle/Controller/EvenementController.php"
+    type:     annotation
+
+event_evenement:
+    resource: "@eventBundle/Controller/EvenementController.php"
+    type:     annotation
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+event:
+    resource: "@eventBundle/Resources/config/routing.yml"
+    prefix:   /test
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+adesigns_calendar:
+    resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"

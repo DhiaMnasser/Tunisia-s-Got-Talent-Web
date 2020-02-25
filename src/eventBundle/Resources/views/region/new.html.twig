@@ -1,0 +1,16 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+    <h1>Créer une Région</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Ajouter une région" onclick="verifRegion()"/>
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('region_index') }}">Revenir à la liste</a>
+        </li>
+    </ul>
+{% endblock %}

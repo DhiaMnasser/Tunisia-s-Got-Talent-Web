@@ -1,0 +1,11 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: eventBundle:Default:index }
+ajax_search:
+    path:     /search
+    defaults: { _controller: "eventBundle:Evenement:search" }
+    methods:  GET
+ajax_search2:
+    path:     /search2
+    defaults: { _controller: "eventBundle:Region:search2" }
+    methods:  GET
