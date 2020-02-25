@@ -1,0 +1,61 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Listes des Utilisateurs</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Les Jury</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Mail</th>
+                        <th>Region d'origine</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Mail</th>
+                        <th>Region d'origine</th>
+                        <th>Action</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for i in jury %}
+                        <tr>
+                            <td>{{ i.username }}</td>
+                            <td>{{ i.email }}</td>
+                            <td>{{ i.region }}</td>
+                            <td>
+                                <a href="{{ path('user_delA',{'id':i.id}) }}" class="btn btn-danger btn-circle">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                                <a href="{{ path('jury_moveA',{'id':i.id}) }}" class="btn btn-danger btn-icon-split btn-sm">
+                                        <span class="icon text-white-50">
+                                          <i class="fas fa-flag"></i>
+                                        </span>
+                                    <span class="text">plus jury</span>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+{% endblock %}

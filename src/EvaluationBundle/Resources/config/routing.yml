@@ -27,3 +27,11 @@ publication_edit:
     path:     /publication/edit/{id}
     defaults: { _controller: EvaluationBundle:Publication:edit }
 
+user_add:
+    path:     /user/add
+    defaults: { _controller: EvaluationBundle:Security:add }
+
+publication_vote:
+    path:     /publication/vote/{id}
+    defaults: { _controller: EvaluationBundle:Vote:vote }
+

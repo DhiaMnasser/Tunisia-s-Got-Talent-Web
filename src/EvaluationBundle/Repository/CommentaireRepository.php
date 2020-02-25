@@ -15,6 +15,6 @@ class CommentaireRepository extends \Doctrine\ORM\EntityRepository
         $ql=$this->getEntityManager()
             ->createQuery("SELECT c FROM EvaluationBundle:Commentaire c where c.publication= :id ORDER BY c.dateC DESC")
             ->setParameter('id',$id);
-        $ql->getResult();
+        return $ql->getResult();
     }
 }

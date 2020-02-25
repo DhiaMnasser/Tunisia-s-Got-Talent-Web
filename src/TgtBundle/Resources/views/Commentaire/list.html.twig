@@ -1,0 +1,13 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+
+{% for com in coms  %}
+Liste des commentaire par publication: {{ com.publication.titre }}
+<ul>
+    <li>{{ com.texte }}</li>
+    <li>Classe: {{ com.dateC }}</li>
+</ul>
+{% endfor %}
+
+{% endblock %}

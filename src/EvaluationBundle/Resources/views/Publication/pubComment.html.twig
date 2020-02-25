@@ -2,37 +2,90 @@
 
 
 {% block body %}
-    <center>
+    <div class="col-sm-8 single-left">
     <div class="main-grids news-main-grids">
         <div class="recommended-info">
             <h3>{{pub.author}}</h3>
-            <video controls preload="auto" width="640" height="264">
-                <source src="{{asset(pub.video)}}" type="video/mp4">
+            <video id="example_video_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup='{"example_option":true}'>
+                <source src="{{'file:///'~pub.video}}" type='video/mp4'>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">
+                        supports HTML5 video
+                    </a>
+                </p>
             </video>
-            <p class="history-text">
-                Catégorie | {{ pub.categorie }}
-                <span>
-                    Description | {{ pub.description }}
-							</span>
-            </p>
-            {% for i in coms %}
-            <div class="history-grids">
-                <div class="col-md-1 history-left">
-                    <p>{{i.author}}</p>
+            <div class="published">
+                <script src="{{ asset('jquery.min.js')}}"></script>
+                <script>
+                    $(document).ready(function () {
+                        size_li = $("#myList li").size();
+                        x=1;
+                        $('#myList li:lt('+x+')').show();
+                        $('#loadMore').click(function () {
+                            x= (x+1 <= size_li) ? x+1 : size_li;
+                            $('#myList li:lt('+x+')').show();
+                        });
+                        $('#showLess').click(function () {
+                            x=(x-1<0) ? 1 : x-1;
+                            $('#myList li').not(':lt('+x+')').hide();
+                        });
+                    });
+                </script>
+                <div class="load_more">
+                    <ul id="myList">
+                        <li style="display: list-item;">
+                            <h4>Publié le {{ pub.updatedAt|date('d-m-Y H:i:s') }}</h4>
+                            <h5>Catégorie | {{ pub.categorie }}</h5>
+                            <h5>Nombre de Vote | {{ pub.nbrVote }}</h5>
+                            <p>
+                                {{ pub.description }}
+                            </p>
+                            <a href="{{ path("publication_vote",{'id':pub.id})}}" style="text-decoration:none"><input type="button" value="Voter"> </a>
+                            <a href="#" style="text-decoration:none"><input type="button" value="Buzzer"></a>
+                        </li>
+                        <li>
+                            <div class="load-grids">
+                                <div class="load-grid">
+                                    <p>Category</p>
+                                </div>
+                                <div class="load-grid">
+                                    <a href="movies.html">Entertainment</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-11 history-right">
-                    <h5>{{i.dateC}}</h5>
-                    <p>
-                        {{ i.texte }}
-                    </p>
-                </div>
-                <div class="clearfix"> </div>
             </div>
-            {% endfor %}
-            <textarea rows="10" cols="50" placeholder="Votre Commentaire..."></textarea><br>
-            <a href="#">Commenter</a>
+            <div class="box">
+                <form>
+                    <textarea placeholder="Message" required=" "></textarea>
+                    <a href="#" style="text-decoration:none"><input type="submit" value="SEND"></a>
+                    <div class="clearfix"> </div>
+                </form>
+            </div>
+            <div class="all-comments">
+                <div class="media-grids">
+                    {% for i in coms %}
+                        <div class="media">
+                            <h5>{{i.author}}</h5>
+                            <div class="media-left">
+                                <a href="#">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <p>{{ i.texte }}</p>
+                                <span>Post At :<a href="#"> {{i.dateC|date('d-m-Y H:i:s')}} </a></span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
 
     </div>
-    </center>
+    </div>
 {% endblock %}
+
+

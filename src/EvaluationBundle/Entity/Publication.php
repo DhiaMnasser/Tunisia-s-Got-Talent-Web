@@ -42,6 +42,31 @@ class Publication
      */
     private $author;
 
+
+    /**
+     * @var boolean
+     * @ORM\Column(name="valide", type="boolean",options={"default":false })
+     */
+    private $valide;
+
+    /**
+     * @return bool
+     */
+    public function isValide(): bool
+    {
+        return $this->valide;
+    }
+
+    /**
+     * @param bool $valide
+     * @return Publication
+     */
+    public function setValide(bool $valide): Publication
+    {
+        $this->valide = $valide;
+        return $this;
+    }
+
     /**
      * @return string
      */
@@ -58,6 +83,29 @@ class Publication
     {
         $this->author = $author;
         return $this;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Nb_Vote", type="integer")
+     */
+    private $nbrVote;
+
+    /**
+     * @return int
+     */
+    public function getNbrVote()
+    {
+        return $this->nbrVote;
+    }
+
+    /**
+     * @param int $nbrVote
+     */
+    public function setNbrVote($nbrVote)
+    {
+        $this->nbrVote = $nbrVote;
     }
 
     /**
@@ -244,6 +292,7 @@ class Publication
     public function __construct()
     {
         $this->updatedAt= new \datetime('now');
+        $this->nbrVote=0;
     }
 
     public function setVideoFile($video)
