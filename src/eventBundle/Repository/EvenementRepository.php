@@ -8,6 +8,7 @@ use eventBundle\Entity\User;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\Query;
 
+
 /**
  * EvenementRepository
  *
@@ -50,6 +51,19 @@ class EvenementRepository extends \Doctrine\ORM\EntityRepository
 
             ->getResult();
     }
+    public function eventset(User $user){
+
+        return $this->getEntityManager()
+
+            ->createQuery(
+                'UPDATE eventBundle:User p SET p.event = 10 WHERE p.id like :user'
+
+
+            )->setParameter('user', $user->getId())
+
+            ->getResult();
+    }
+
 
 
 

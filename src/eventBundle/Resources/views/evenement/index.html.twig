@@ -106,7 +106,7 @@
                         <p class="views"><b>Gagnant</b> : {{ evenement.gagnant }}</p>
                         <p class="views"><b>Region</b> : {{ evenement.region }}</p>
                         <br>
-                        <input type="submit" value="S'inscrire à l'événement" >
+                        <form action=" {{ path('evenement_show', { 'id': evenement.id }) }} "> <input type="submit" value="Afficher l'événement" ></form>
 
 
                     </div>

@@ -2,6 +2,7 @@
 
 namespace eventBundle\Controller;
 
+use Doctrine\ORM\Mapping\Entity;
 use eventBundle\Entity\Evenement;
 use eventBundle\Entity\Region;
 use eventBundle\Entity\User;
@@ -30,8 +31,10 @@ class EvenementController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $em2 = $this->getDoctrine()->getManager();
+
         $evenements = $em->getRepository('eventBundle:Evenement')->findAll();
         $regions = $em2->getRepository('eventBundle:Region')->findAll();
+
         return $this->render('@event/evenement/index.html.twig', array('evenements' => $evenements , 'regions' => $regions ));
     }
 
@@ -129,7 +132,7 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
 
         return $this->render('@event/evenement/showadmin.html.twig', array(
             'evenement' => $evenement,'users' => $users ,
-            'delete_form' => $deleteForm->createView(),
+            'delete_form' => $deleteForm->createView()
         ));
     }
 
@@ -250,5 +253,25 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
             "evenements" => $evenement,
 
         ));
+    }
+
+    /**
+     * Lists all evenement entities.
+     *
+     * @Route("/evenement/submit", name="evenement_submit")
+     * @Method("GET")
+     */
+    public function submitAction()
+    {
+
+
+        $test = $this->getUser() ;
+        $em = $this->getDoctrine()->getManager();
+         $em->getRepository('eventBundle:Evenement')->eventset($test);
+
+        return $this->redirectToRoute('evenement_index');
+        /*$this->getUser()->getId() ;*/
+
+
     }
 }

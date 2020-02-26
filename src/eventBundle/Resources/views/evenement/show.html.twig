@@ -19,6 +19,8 @@
                 <p class="views"><b>Date de fin</b>   : {% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</p>
                 <p class="views"><b>Gagnant</b> : {{ evenement.gagnant }}</p>
                 <p class="views"><b>Region</b> : {{ evenement.region }}</p>
+
+                    <form action=" {{ path('evenement_submit') }} "> <input type="submit" value="S'inscrire à l'événement" ></form>
                 </fieldset>
             </div>
         </div>
