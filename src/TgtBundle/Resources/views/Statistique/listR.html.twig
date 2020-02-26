@@ -1,0 +1,51 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Les Premiers par Région</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Les Stats</h6>
+        </div>
+        <div class="card-body">
+            {% for i in stat %}
+                <div class="card-header py-3">
+                   <h6 class="m-0 font-weight-bold text-danger">{{ i.evenement.region.nom }}</h6>
+                </div>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Nombre de vote</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Nombre de vote</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>{{ i.titre }}</td>
+                            <td>{{ i.author}}</td>
+                            <td>{{ i.nbrVote }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+{% endblock %}

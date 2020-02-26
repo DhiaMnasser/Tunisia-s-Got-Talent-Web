@@ -49,6 +49,32 @@ class Publication
      */
     private $valide;
 
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Evenement")
+     * @ORM\JoinColumn(name="evenement_id",referencedColumnName="id")
+     */
+    private $evenement;
+
+    /**
+     * @return mixed
+     */
+    public function getEvenement()
+    {
+        return $this->evenement;
+    }
+
+    /**
+     * @param mixed $evenement
+     * @return Publication
+     */
+    public function setEvenement($evenement)
+    {
+        $this->evenement = $evenement;
+        return $this;
+    }
+
     /**
      * @return bool
      */
@@ -92,6 +118,7 @@ class Publication
      */
     private $nbrVote;
 
+
     /**
      * @return int
      */
@@ -106,6 +133,81 @@ class Publication
     public function setNbrVote($nbrVote)
     {
         $this->nbrVote = $nbrVote;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="buz", type="integer")
+     */
+    private $buz;
+
+    /**
+     * @return int
+     */
+    public function getBuz(): int
+    {
+        return $this->buz;
+    }
+
+    /**
+     * @param int $buz
+     * @return Publication
+     */
+    public function setBuz(int $buz): Publication
+    {
+        $this->buz = $buz;
+        return $this;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="like", type="integer")
+     */
+    private $like;
+
+    /**
+     * @return int
+     */
+    public function getLike(): int
+    {
+        return $this->like;
+    }
+
+    /**
+     * @param int $like
+     * @return Publication
+     */
+    public function setLike(int $like): Publication
+    {
+        $this->like = $like;
+        return $this;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="unlike", type="integer")
+     */
+    private $unlike;
+
+    /**
+     * @return int
+     */
+    public function getUnlike(): int
+    {
+        return $this->unlike;
+    }
+
+    /**
+     * @param int $unlike
+     * @return Publication
+     */
+    public function setUnlike(int $unlike): Publication
+    {
+        $this->unlike = $unlike;
+        return $this;
     }
 
     /**

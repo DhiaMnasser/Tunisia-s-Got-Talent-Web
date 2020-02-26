@@ -15,7 +15,7 @@ class CommentaireController extends Controller
     public function addAction(Request $request,$id)
     {
         $com=new Commentaire();
-        $pub=$this->getDoctrine()->getRepository(Commentaire::class)->find($id);
+        $pub=$this->getDoctrine()->getRepository(Publication::class)->find($id);
 
         $form=$this->createForm(CommentaireType::class,$com);
         $form->handleRequest($request);
@@ -30,7 +30,9 @@ class CommentaireController extends Controller
 
             return $this->redirectToRoute('publication_comment',['id'=> $pub]);
         }
-        return $this->render('@Evaluation\Publication\pubComment.html.twig',array('form_com'=>$form->createView()));
+
+        $coms=$this->getDoctrine()->getRepository()->myGetComment($id);
+        return $this->render('@Evaluation\Publication\pubComment.html.twig',array('form_com'=>$form->createView(),'coms'=>$coms));
 
     }
 }

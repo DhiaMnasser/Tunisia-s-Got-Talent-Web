@@ -29,6 +29,31 @@ class Commentaire
     private $texte;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=255)
+     */
+    private $author;
+
+    /**
+     * @return string
+     */
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param string $author
+     * @return Commentaire
+     */
+    public function setAuthor(string $author): Commentaire
+    {
+        $this->author = $author;
+        return $this;
+    }
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateC", type="datetime")
@@ -41,6 +66,16 @@ class Commentaire
      * @ORM\JoinColumn(name="publication_id",referencedColumnName="id")
      */
     private $publication;
+
+    /**
+     * @param mixed $publication
+     * @return Commentaire
+     */
+    public function setPublication($publication)
+    {
+        $this->publication = $publication;
+        return $this;
+    }
 
     /**
      * Get publication

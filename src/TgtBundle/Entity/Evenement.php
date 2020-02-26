@@ -47,17 +47,19 @@ class Evenement
     {
         $this->region = $region;
     }
-    private $nom;
+
     /**
      * @var string
      *
      * @ORM\Column(name="Nom", type="string", length=255)
      */
+     private $nom;
+
     /**
      * @ORM\ManyToOne(targetEntity="TgtBundle\Entity\User")
      * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
      */
-    private $user;
+     private $user;
 
     /**
      * @return mixed

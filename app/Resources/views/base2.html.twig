@@ -30,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ path('evaluation_homepage') }}">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -65,7 +65,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Admin</h6>
                     <a class="collapse-item" href="buttons.html">Creation</a>
-                    <a class="collapse-item" href="buttons.html">Liste</a>
+                    <a class="collapse-item" href="{{ path('admin_list') }}">Liste</a>
                 </div>
             </div>
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePart" aria-expanded="true" aria-controls="collapseTwo">
@@ -154,13 +154,13 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCom" aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Commentaires</span>
+                <span>Statistiques</span>
             </a>
             <div id="collapseCom" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Les Commentaires</h6>
-                    <a class="collapse-item" href="{{ path('commentaire_addA') }}">Créer</a>
-                    <a class="collapse-item" href="{{ path('commentaire_listA') }}">Liste</a>
+                    <h6 class="collapse-header">Les Stats</h6>
+                    <a class="collapse-item" href="{{ path('publication_statRA') }}">Les Premiers Par Région</a>
+                    <a class="collapse-item" href="{{ path('publication_statGA') }}">Resultats Généraux</a>
                 </div>
             </div>
         </li>

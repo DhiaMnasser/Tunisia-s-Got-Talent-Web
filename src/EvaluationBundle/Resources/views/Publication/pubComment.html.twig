@@ -41,8 +41,12 @@
                             <p>
                                 {{ pub.description }}
                             </p>
-                            <a href="{{ path("publication_vote",{'id':pub.id})}}" style="text-decoration:none"><input type="button" value="Voter"> </a>
-                            <a href="#" style="text-decoration:none"><input type="button" value="Buzzer"></a>
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <a href="{{ path("publication_vote",{'id':pub.id})}}" style="text-decoration:none"><input type="button" value="Voter"> </a>
+
+                                <a href="#" style="text-decoration:none"><input type="button" value="Buzzer"></a>
+                            {% endif %}
+
                         </li>
                         <li>
                             <div class="load-grids">
@@ -50,7 +54,7 @@
                                     <p>Category</p>
                                 </div>
                                 <div class="load-grid">
-                                    <a href="movies.html">Entertainment</a>
+                                    <a href="#">Entertainment</a>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
@@ -58,13 +62,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="box">
-                <form>
-                    <textarea placeholder="Message" required=" "></textarea>
-                    <a href="#" style="text-decoration:none"><input type="submit" value="SEND"></a>
-                    <div class="clearfix"> </div>
-                </form>
-            </div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <div class="box">
+                    {{ form_start(form) }}
+                    {{ form_widget(form)}}
+                    {{ form_end(form) }}
+                </div>
+                {% else %}
+                    <p>Vous ne pouvez pas faire de commentaire car vous n'etes pas un utilisateur</p>
+            {% endif %}
             <div class="all-comments">
                 <div class="media-grids">
                     {% for i in coms %}
@@ -72,11 +78,13 @@
                             <h5>{{i.author}}</h5>
                             <div class="media-left">
                                 <a href="#">
+
                                 </a>
                             </div>
                             <div class="media-body">
                                 <p>{{ i.texte }}</p>
                                 <span>Post At :<a href="#"> {{i.dateC|date('d-m-Y H:i:s')}} </a></span>
+                                <a href="#"> supprimer </a>
                             </div>
                         </div>
                     {% endfor %}
@@ -86,6 +94,34 @@
 
     </div>
     </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            setInterval(function(){
+                $('.published');
+            },500);
+
+        });
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{asset('vendorA/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('vendorA/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('vendorA/jquery-easing/jquery.easing.min.js')}}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('jsA/sb-admin-2.min.js')}}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ asset('vendorA/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{ asset('vendorA/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('jsA/demo/datatables-demo.js')}}"></script>
 {% endblock %}
 
 

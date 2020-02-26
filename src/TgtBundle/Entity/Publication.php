@@ -36,11 +36,88 @@ class Publication
     private $titre;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="autheur", type="string", length=255)
+     */
+    private $author;
+
+
+    /**
+     * @var boolean
+     * @ORM\Column(name="valide", type="boolean",options={"default":false })
+     */
+    private $valide;
+
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Evenement")
+     * @ORM\JoinColumn(name="evenement_id",referencedColumnName="id")
+     */
+    private $evenement;
+
+    /**
+     * @return mixed
+     */
+    public function getEvenement()
+    {
+        return $this->evenement;
+    }
+
+    /**
+     * @param mixed $evenement
+     * @return Publication
+     */
+    public function setEvenement($evenement)
+    {
+        $this->evenement = $evenement;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isValide(): bool
+    {
+        return $this->valide;
+    }
+
+    /**
+     * @param bool $valide
+     * @return Publication
+     */
+    public function setValide(bool $valide): Publication
+    {
+        $this->valide = $valide;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param string $author
+     * @return Publication
+     */
+    public function setAuthor(string $author): Publication
+    {
+        $this->author = $author;
+        return $this;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="Nb_Vote", type="integer")
      */
     private $nbrVote;
+
 
     /**
      * @return int
@@ -59,27 +136,77 @@ class Publication
     }
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="autheur", type="string", length=255)
+     * @ORM\Column(name="buz", type="integer")
      */
-    private $author;
+    private $buz;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getAuthor()
+    public function getBuz(): int
     {
-        return $this->author;
+        return $this->buz;
     }
 
     /**
-     * @param string $author
+     * @param int $buz
      * @return Publication
      */
-    public function setAuthor(string $author)
+    public function setBuz(int $buz): Publication
     {
-        $this->author = $author;
+        $this->buz = $buz;
+        return $this;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="like", type="integer")
+     */
+    private $like;
+
+    /**
+     * @return int
+     */
+    public function getLike(): int
+    {
+        return $this->like;
+    }
+
+    /**
+     * @param int $like
+     * @return Publication
+     */
+    public function setLike(int $like): Publication
+    {
+        $this->like = $like;
+        return $this;
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="unlike", type="integer")
+     */
+    private $unlike;
+
+    /**
+     * @return int
+     */
+    public function getUnlike(): int
+    {
+        return $this->unlike;
+    }
+
+    /**
+     * @param int $unlike
+     * @return Publication
+     */
+    public function setUnlike(int $unlike): Publication
+    {
+        $this->unlike = $unlike;
         return $this;
     }
 
@@ -98,30 +225,6 @@ class Publication
      */
     private $video;
 
-
-    /**
-     * @var boolean
-     * @ORM\Column(name="valide", type="boolean",options={"default":false })
-     */
-    private $valide;
-
-    /**
-     * @return bool
-     */
-    public function isValide()
-    {
-        return $this->valide;
-    }
-
-    /**
-     * @param bool $valide
-     * @return Publication
-     */
-    public function setValide(bool $valide)
-    {
-        $this->valide = $valide;
-        return $this;
-    }
 
     /**
      * @UploadableField(filename="file",path="uploads")
@@ -291,6 +394,7 @@ class Publication
     public function __construct()
     {
         $this->updatedAt= new \datetime('now');
+        $this->nbrVote=0;
     }
 
     public function setVideoFile($video)

@@ -42,7 +42,7 @@ class UserController extends Controller
         $jury->setJury(1);
         $em->persist($jury);
         $em->flush();
-        return $this->redirectToRoute('jury_list');
+        return $this->redirectToRoute('jury_listA');
     }
 
     public function moveJuryAction($id)
@@ -53,7 +53,7 @@ class UserController extends Controller
         $jury->setJury(0);
         $em->persist($jury);
         $em->flush();
-        return $this->redirectToRoute('spectateur_list');
+        return $this->redirectToRoute('spectateur_listA');
     }
 
     public function deleteAction($id)
@@ -64,14 +64,49 @@ class UserController extends Controller
         $em->remove($user);
         $em->flush();
 
-        return $this->redirectToRoute('spectateur_list');
+        return $this->redirectToRoute('spectateur_listA');
 
     }
 
-    public function redirectAction()
+    public function newAdminAction($id)
     {
 
+        $em=$this->getDoctrine()->getManager();
+        $rep=$em->getRepository(User::class);
+
+        $user=$rep->find($id);
+        $user->setParticipant(1);
+        $user->setJury(1);
+        $user->setRoles(array('ROLE_ADMIN'));
+
+        $em->persist($user);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_list');
     }
 
+    public function listAdminAction()
+    {
+        $rep=$this->getDoctrine()->getManager()->getRepository(User::class);
+        $admin=$rep->findBy(array('jury'=>1,'participant'=>1));
+
+        return $this->render("@Tgt\Admin\list.html.twig",array('admin'=>$admin));
+    }
+
+    public function moveAdminAction($id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $rep=$em->getRepository(User::class);
+
+        $user=$rep->find($id);
+        $user->setParticipant(0);
+        $user->setJury(0);
+        $user->setRoles(array(''));
+
+        $em->persist($user);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_list');
+    }
 
 }

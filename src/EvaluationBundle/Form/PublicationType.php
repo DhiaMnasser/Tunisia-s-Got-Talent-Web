@@ -2,6 +2,7 @@
 
 namespace EvaluationBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -25,6 +26,11 @@ class PublicationType extends AbstractType
                     'Illusion'=>'Illusion',
                     'Autre'=>'Autre'
                 )))
+            ->add('evenement',EntityType::class,array(
+                'class'=>'EvaluationBundle:Evenement',
+                'choice_label'=>'nom',
+                'multiple'=>false
+            ))
             ->add('video', FileType::class,  array('label'=>'Votre Video :','required' => false
             ))
             ->add('ajouter',SubmitType::class);
