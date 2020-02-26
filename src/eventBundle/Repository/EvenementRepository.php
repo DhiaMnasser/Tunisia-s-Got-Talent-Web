@@ -4,6 +4,7 @@ namespace eventBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use eventBundle\Entity\Evenement;
 use eventBundle\Entity\Region;
+use eventBundle\Entity\User;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\Query;
 
@@ -37,12 +38,19 @@ class EvenementRepository extends \Doctrine\ORM\EntityRepository
             ->setParameter('str', '%'.$str.'%')
             ->getResult();
     }
-    /**
-     * @return Evenement[]
-     */
-    public function findsearch()
-    {
-        return $this->$this->findAll();
+    public function tableauuser(){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p.username , e.id
+                FROM eventBundle:User p inner join eventBundle:Evenement e
+        
+                WHERE p.event =   e.id  '
+
+            )
+
+            ->getResult();
     }
+
+
 
 }

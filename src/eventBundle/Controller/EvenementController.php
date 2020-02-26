@@ -124,7 +124,7 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
     public function showadminAction(Evenement $evenement)
     {
         $em = $this->getDoctrine()->getManager();
-        $users = $em->getRepository('eventBundle:User')->findAll();
+        $users = $em->getRepository('eventBundle:Evenement')->tableauuser();
         $deleteForm = $this->createDeleteForm($evenement);
 
         return $this->render('@event/evenement/showadmin.html.twig', array(
@@ -240,5 +240,15 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
         }
         return $realEntities;
     }
+    public function filterevenementAction(Request $request)
+    {
+        $str = $request->get('str');
+        $em = $this->getDoctrine()->getManager();
+        $evenement = $em->getRepository("EntityBundle:Evenement")
+            ->filtreregion($str);
+        return $this->render("@event/evenement/index.html.twig", array(
+            "evenements" => $evenement,
 
+        ));
+    }
 }

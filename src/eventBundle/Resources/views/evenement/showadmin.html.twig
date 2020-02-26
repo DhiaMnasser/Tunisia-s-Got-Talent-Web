@@ -49,9 +49,14 @@
         </tr>
         <tr>
             <th>Liste des participants</th>
+
             <td> {% for user in users %} <br>
-            {{ user.username }}
+                    {% if user.id == evenement.id %}
+
+                    {{ user.username }}
+                    {% endif %}
             {% endfor %}</td>
+
         </tr>
 
         </tbody>
