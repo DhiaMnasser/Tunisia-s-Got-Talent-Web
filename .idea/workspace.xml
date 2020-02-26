@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1e498a5-2fdc-4922-b051-cb425bce7e83" name="Default Changelist" comment="" />
+    <list default="true" id="f1e498a5-2fdc-4922-b051-cb425bce7e83" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/routing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/services.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/css/fullcalendar/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/css/fullcalendar/fullcalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/calendar-settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/fullcalendar/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/fullcalendar/jquery.fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/jquery/jquery-1.8.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/views/calendar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/Entity/CalendarEventListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/count.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Repository/EvenementRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Repository/EvenementRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/showadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/showadmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/region/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/region/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/saisie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/saisie.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +95,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\TGT\src\eventBundle\Resources\views\evenement" />
-      <recent name="C:\wamp64\www\TGT\src\UserBundle\Controller" />
-      <recent name="C:\wamp64\www\TGT\src\UserBundle\Resources\views\evenement" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\TGT\src\UserBundle\Resources\views\evenement" />
       <recent name="C:\wamp64\www\TGT\src\UserBundle\Resources\views" />
       <recent name="C:\wamp64\www\TGT\src\eventBundle\Resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TGT\app\Resources\ADesignsCalendarBundle" />
+      <recent name="C:\wamp64\www\TGT\src\eventBundle\Resources\views\evenement" />
+      <recent name="C:\wamp64\www\TGT\src\UserBundle\Controller" />
+      <recent name="C:\wamp64\www\TGT\src\UserBundle\Resources\views\evenement" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -135,7 +159,8 @@
       <workItem from="1582182235975" duration="1482000" />
       <workItem from="1582185127633" duration="7660000" />
       <workItem from="1582561342327" duration="20544000" />
-      <workItem from="1582649036459" duration="39090000" />
+      <workItem from="1582649036459" duration="44715000" />
+      <workItem from="1582733258059" duration="14791000" />
     </task>
     <servers />
   </component>
@@ -147,7 +172,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -42,7 +42,7 @@ class EvenementRepository extends \Doctrine\ORM\EntityRepository
     public function tableauuser(){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT p.username , e.id
+                'SELECT p.username , e.id 
                 FROM eventBundle:User p inner join eventBundle:Evenement e
         
                 WHERE p.event =   e.id  '
@@ -51,19 +51,39 @@ class EvenementRepository extends \Doctrine\ORM\EntityRepository
 
             ->getResult();
     }
-    public function eventset(User $user){
+  /*  public function nb(){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p.id,  count(p.username) total  
+                FROM eventBundle:User p inner join eventBundle:Evenement e
+        
+                WHERE p.event =   e.id  '
+
+            )
+
+            ->getResult();
+    }*/
+
+
+    public function eventset(User $user , $id ){
 
         return $this->getEntityManager()
 
             ->createQuery(
-                'UPDATE eventBundle:User p SET p.event = 10 WHERE p.id like :user'
+                'UPDATE eventBundle:User p SET p.event = :id WHERE p.id like :user'
 
 
             )->setParameter('user', $user->getId())
-
+            ->setParameter('id', $id)
             ->getResult();
     }
-
+    public function findevent($id)
+    {
+        $Query = $this->getEntityManager()->createQuery(
+            "select A from eventBundle:User A where A.event= :id"
+        )->setParameter('id',$id);
+        return $Query->getResult();
+    }
 
 
 

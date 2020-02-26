@@ -55,13 +55,7 @@ class Evenement
     {
         $this->region = $region;
     }
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Nom", type="string", length=255)
-     */
 
-    private $nom;
 
     /**
      * @var string
@@ -117,29 +111,6 @@ class Evenement
         return $this->id;
     }
 
-    /**
-     * Set nom
-     *
-     * @param string $nom
-     *
-     * @return Evenement
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    /**
-     * Get nom
-     *
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
 
     /**
      * Set duree

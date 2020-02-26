@@ -47,14 +47,14 @@ class EvenementController extends Controller
     public function indexAdminAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $evenements = $em->getRepository('eventBundle:Evenement')->findAll();
+        $em = $this->getDoctrine()->getManager();
+        $evenements = $em->getRepository('eventBundle:Evenement')->findBy(array(), array('dateF' => 'desc'));
 
         $pagination  = $this->get('knp_paginator')->paginate(
             $evenements,
             $request->query->get('page', 1)/*le numéro de la page à afficher*/,
             2/*nbre d'éléments par page*/  );
-        return $this->render('@event/evenement/indexadmin.html.twig', array("evenements"=>$pagination));
+        return $this->render('@event/evenement/indexadmin.html.twig', array("evenements"=>$pagination ));
     }
 
 
@@ -111,12 +111,12 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
 
 
         $deleteForm = $this->createDeleteForm($evenement);
-
+        $date = new \DateTime('now') ;
         return $this->render('@event/evenement/show.html.twig', array(
             'evenement' => $evenement,
-            'delete_form' => $deleteForm->createView()
+            'delete_form' => $deleteForm->createView() , 'date' => $date
 
-        ));
+        ) );
     }
     /**
      * Finds and displays a evenement entity.
@@ -127,14 +127,18 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
     public function showadminAction(Evenement $evenement)
     {
         $em = $this->getDoctrine()->getManager();
+
+
         $users = $em->getRepository('eventBundle:Evenement')->tableauuser();
+
         $deleteForm = $this->createDeleteForm($evenement);
 
         return $this->render('@event/evenement/showadmin.html.twig', array(
-            'evenement' => $evenement,'users' => $users ,
+            'evenement' => $evenement,'users' => $users  ,
             'delete_form' => $deleteForm->createView()
         ));
     }
+
 
     /**
      * Displays a form to edit an existing evenement entity.
@@ -258,20 +262,28 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
     /**
      * Lists all evenement entities.
      *
-     * @Route("/evenement/submit", name="evenement_submit")
+     * @Route("/evenement/submit/{id}", name="evenement_submit")
      * @Method("GET")
      */
-    public function submitAction()
+    public function submitAction($id)
     {
 
 
         $test = $this->getUser() ;
         $em = $this->getDoctrine()->getManager();
-         $em->getRepository('eventBundle:Evenement')->eventset($test);
+         $em->getRepository('eventBundle:Evenement')->eventset($test , $id);
 
         return $this->redirectToRoute('evenement_index');
         /*$this->getUser()->getId() ;*/
 
 
     }
+    public function countAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $evenement = $em->getRepository("eventBundle:Evenement")->findevent($id);
+        $total=sizeof($evenement);
+        return $this->render('@event/evenement/count.html.twig', array(
+            'nb' => $total,
+
+        ));}
 }

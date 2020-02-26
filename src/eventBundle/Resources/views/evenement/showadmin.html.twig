@@ -50,15 +50,33 @@
         <tr>
             <th>Liste des participants</th>
 
-            <td> {% for user in users %} <br>
+            <td>{% for key, user in users %}
+                <br>
+
                     {% if user.id == evenement.id %}
 
-                    {{ user.username }}
+                         {{ user.username }}
+
+
+
                     {% endif %}
-            {% endfor %}</td>
+
+
+                {% endfor %}
+
+            </td>
 
         </tr>
+        <tr>
+            <th>Total des participants</th>
+            <td>
 
+                        {{ render(controller('eventBundle:Evenement:count',{'id':evenement.id}) ) }}
+
+
+
+            </td>
+        </tr>
         </tbody>
     </table>
 

@@ -99,3 +99,8 @@ function verif3Region()
 {
 	alert("Region supprimée avec succès");
 }
+function verifinscri()
+{
+
+	alert ("Votre inscription  à cet événement a été prise en considération");
+}
