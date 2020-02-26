@@ -33,7 +33,6 @@ class Commentaire
      * @var string
      *
      * @ORM\Column(name="author", type="string", length=255)
-     * @Assert\NotBlank()
      */
     private $author;
 
@@ -68,6 +67,16 @@ class Commentaire
      * @ORM\JoinColumn(name="publication_id",referencedColumnName="id")
      */
     private $publication;
+
+    /**
+     * @param mixed $publication
+     * @return Commentaire
+     */
+    public function setPublication($publication)
+    {
+        $this->publication = $publication;
+        return $this;
+    }
 
     /**
      * Get publication

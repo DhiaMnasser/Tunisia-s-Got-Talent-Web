@@ -5,11 +5,16 @@ namespace EvaluationBundle\Controller;
 
 
 use EvaluationBundle\Entity\Commentaire;
+use EvaluationBundle\Form\CommentaireType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use EvaluationBundle\Form\PublicationType;
 use EvaluationBundle\Entity\Publication;
 use FOS\UserBundle\Doctrine\UserManager as FOS;
+use TgtBundle\Entity\User;
 
 
 class PublicationController extends Controller
@@ -63,12 +68,33 @@ class PublicationController extends Controller
         ));
     }
 
-    public function commentPubAction($id)
+    public function commentPubAction(Request $request,$id)
     {
+
+
+
         $em=$this->getDoctrine()->getManager();
-        $pub=$em->getRepository(Publication::class)->find($id);
         $coms=$em->getRepository(Commentaire::class)->myGetComment($id);
 
-        return $this->render("@Evaluation\Publication\pubComment.html.twig",array('pub'=>$pub,'coms'=>$coms));
+        $com=new Commentaire();
+        $pub=$em->getRepository(Publication::class)->find($id);
+
+        $form=$this->createFormBuilder($com)
+            ->add('texte',TextareaType::class)
+            ->add('commenter',SubmitType::class)
+            ->getForm();
+        $form->handleRequest($request);
+
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $username=$this->getUser()->getUsername();
+            $com->setPublication($pub);
+            $com->setAuthor($username);
+            $em->persist($com);
+            $em->flush();
+
+        }
+        return $this->render("@Evaluation\Publication\pubComment.html.twig",array('form'=>$form->createView(),'pub'=>$pub,'coms'=>$coms));
     }
 }

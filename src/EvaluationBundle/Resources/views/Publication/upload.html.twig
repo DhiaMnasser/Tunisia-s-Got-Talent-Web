@@ -17,6 +17,10 @@
 
                 </div>
                 <div class="form-group">
+                    {{ form_widget(form.evenement, { 'attr': {'class': 'form-control form-control-user','placeholder': 'Catégorie'}}) }}
+
+                </div>
+                <div class="form-group">
                     {{ form_widget(form.video) }}
                 </div>
                 {{ form_widget(form.ajouter, { 'attr': {'class': 'btn btn-primary btn-user btn-block'}}) }}

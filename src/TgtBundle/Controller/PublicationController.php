@@ -65,4 +65,20 @@ class PublicationController extends Controller
         }
         return $this->render('@Tgt\Publication\add.html.twig',array('form'=>$form->createView()));
     }
+
+    public function statAction()
+    {
+        $rep=$this->getDoctrine()->getManager()->getRepository(Publication::class);
+        $stat=$rep->myStat();
+
+        return $this->render("@Tgt\Statistique\listR.html.twig",array('stat'=>$stat));
+    }
+
+    public function statGAction()
+    {
+        $rep=$this->getDoctrine()->getManager()->getRepository(Publication::class);
+        $stat=$rep->findBy(array('valide'=>1));
+
+        return $this->render("@Tgt\Statistique\listG.html.twig",array('stat'=>$stat));
+    }
 }
