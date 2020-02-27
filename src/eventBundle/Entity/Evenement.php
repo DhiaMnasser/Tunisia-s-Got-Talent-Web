@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\OneToOne;
+use SBC\NotificationsBundle\Builder\NotificationBuilder;
+use SBC\NotificationsBundle\Model\NotifiableInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Evenement
@@ -14,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="evenement")
  * @ORM\Entity(repositoryClass="eventBundle\Repository\EvenementRepository")
  */
-class Evenement
+class Evenement implements NotifiableInterface , \JsonSerializable
 {
 
     /**
@@ -305,6 +307,49 @@ class Evenement
         return (string)"evenement".$this->id;
         // to show the id of the Category in the select
         // return $this->id;
+    }
+
+    public function notificationsOnCreate(NotificationBuilder $builder)
+    {
+       $notification = new Notif() ;
+       $notification
+           ->setTitle('Notification événement')
+           ->setDescription($this->nomevent)
+           ->setRoute('evenement_showadmin')
+           ->setParameters(array('id' => $this->id)) ;
+       $builder->addNotification($notification) ;
+       return $builder ;
+
+
+    }
+
+    public function notificationsOnUpdate(NotificationBuilder $builder)
+    {
+        $notification = new Notif() ;
+        $notification
+            ->setTitle('Notification événement')
+            ->setDescription($this->nomevent)
+            ->setRoute('evenement_showadmin')
+            ->setParameters(array('id' => $this->id)) ;
+        $builder->addNotification($notification) ;
+        return $builder ;
+    }
+
+    public function notificationsOnDelete(NotificationBuilder $builder)
+    {
+        // TODO: Implement notificationsOnDelete() method.
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+       return get_object_vars($this) ;
     }
 }
 

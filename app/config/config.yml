@@ -96,3 +96,9 @@ knp_paginator:
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
 
 gregwar_captcha: ~
+# NotificationsBundle configuration
+notifications:
+    app_id:     954590
+    app_key:    4c2b5c73397eb238dc91
+    app_secret: abed6f331e00cb8fa865
+    cluster:    eu

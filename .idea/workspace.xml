@@ -2,28 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e498a5-2fdc-4922-b051-cb425bce7e83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/routing.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/config/services.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/css/fullcalendar/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/css/fullcalendar/fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/calendar-settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/fullcalendar/jquery.fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/public/js/jquery/jquery-1.8.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle/views/calendar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eventBundle/Entity/CalendarEventListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/count.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/Controller/NotifController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/Entity/Notif.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/notif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TGT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TGT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Repository/EvenementRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Repository/EvenementRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/showadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/showadmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/region/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/region/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/saisie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/saisie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/calendrier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/calendrier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/indexadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/indexadmin.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +82,9 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
       <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Xht8ZVuTg48HUGH4zsxFJMD9Am" />
@@ -97,6 +93,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/ADesignsCalendarBundle" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -121,10 +118,10 @@
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:crud" />
-      <command value="s debug:router" />
       <command value="composer require symfony/filessystem" />
       <command value="s server:run" />
       <command value="s doctrine:schema:update --force " />
+      <command value="s debug:router" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -160,7 +157,7 @@
       <workItem from="1582185127633" duration="7660000" />
       <workItem from="1582561342327" duration="20544000" />
       <workItem from="1582649036459" duration="44715000" />
-      <workItem from="1582733258059" duration="14791000" />
+      <workItem from="1582733258059" duration="25287000" />
     </task>
     <servers />
   </component>

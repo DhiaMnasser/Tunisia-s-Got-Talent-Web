@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            new SBC\NotificationsBundle\NotificationsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

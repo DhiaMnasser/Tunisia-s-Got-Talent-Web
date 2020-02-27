@@ -31,3 +31,6 @@ fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+event_Notif:
+    resource: "@eventBundle/Controller/NotifController.php"
+    type:     annotation

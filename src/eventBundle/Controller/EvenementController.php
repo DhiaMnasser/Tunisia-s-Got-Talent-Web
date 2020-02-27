@@ -286,4 +286,8 @@ $evenement->getEtat() <0 || $evenement->getEtat() >1)
             'nb' => $total,
 
         ));}
+
+
+
+
 }

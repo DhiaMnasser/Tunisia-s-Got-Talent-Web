@@ -1,3 +1,23 @@
+{% extends 'baseadmin.html.twig' %}
+{% block body %}
 
+<table>
+        {% for u in noti %}
+            <tr>
+
+                <td class="t"> {{  u.title }} </td>
+
+                <td class="u"> {{  u.description }} </td>
+
+                <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
+                
+
+            </tr>
+
+        {% else %}
+            <div>list is empty</div>
+        {% endfor %}
+    </table>
+{% endblock %}
 
 
