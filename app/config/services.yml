@@ -14,6 +14,12 @@ services:
         # if you need to do this, you can override this setting on individual services
         public: false
 
+    eventBundle.service.listener:
+        class: eventBundle\EventListener\CalendarEventListener
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        tags:
+            - { name: 'kernel.event_listener', event: 'calendar.load_events', method: loadEvents }
+
     # makes classes in src/AppBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     AppBundle\:
@@ -33,3 +39,4 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+

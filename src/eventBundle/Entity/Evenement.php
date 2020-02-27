@@ -327,7 +327,7 @@ class Evenement implements NotifiableInterface , \JsonSerializable
     {
         $notification = new Notif() ;
         $notification
-            ->setTitle('Notification événement')
+            ->setTitle('Notification Ajout événement')
             ->setDescription($this->nomevent)
             ->setRoute('evenement_showadmin')
             ->setParameters(array('id' => $this->id)) ;

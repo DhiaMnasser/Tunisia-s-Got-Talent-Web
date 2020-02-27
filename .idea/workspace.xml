@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e498a5-2fdc-4922-b051-cb425bce7e83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/eventBundle/Controller/NotifController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eventBundle/Entity/Notif.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/notif.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TGT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TGT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eventBundle/EventListener/CalendarEventListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Controller/EvenementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventBundle/Entity/CalendarEventListener.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Entity/Evenement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/calendrier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/calendrier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/indexadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventBundle/Resources/views/evenement/indexadmin.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +148,7 @@
       <workItem from="1582185127633" duration="7660000" />
       <workItem from="1582561342327" duration="20544000" />
       <workItem from="1582649036459" duration="44715000" />
-      <workItem from="1582733258059" duration="25287000" />
+      <workItem from="1582733258059" duration="28617000" />
     </task>
     <servers />
   </component>

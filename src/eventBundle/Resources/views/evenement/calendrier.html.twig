@@ -1,16 +1,22 @@
 {% extends 'baseadmin.html.twig' %}
 {% block body %}
 
-<table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Description Notiffication</th>
+            <th>Nom événement</th>
+            <th>Actions</th>
+        </tr></thead>
         {% for u in noti %}
             <tr>
 
-                <td class="t"> {{  u.title }} </td>
+                <td > {{  u.title }} </td>
 
-                <td class="u"> {{  u.description }} </td>
+                <td > {{  u.description }} </td>
 
                 <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
-                
+
 
             </tr>
 
