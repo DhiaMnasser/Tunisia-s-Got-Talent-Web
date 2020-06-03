@@ -1,0 +1,13 @@
+forum_post:
+    resource: "@ForumBundle/Resources/config/routing/post.yml"
+    prefix:   /post/
+forum_discussion:
+    resource: "@ForumBundle/Resources/config/routing/discussion.yml"
+    prefix:   /discussion/
+forum_notification:
+    resource: "@ForumBundle/Resources/config/routing/notification.yml"
+    prefix:   /notification/
+
+forum_homepage:
+    path:     /
+    defaults: { _controller: ForumBundle:Default:index }

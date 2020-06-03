@@ -1,0 +1,44 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: eventBundle:Default:index }
+ajax_search:
+    path:     /search
+    defaults: { _controller: "eventBundle:Evenement:search" }
+    methods:  GET
+ajax_search2:
+    path:     /search2
+    defaults: { _controller: "eventBundle:Region:search2" }
+    methods:  GET
+
+event_api:
+    path:   /api
+    defaults: {_controller: eventBundle:EvenementAPI:indexapi}
+
+eventshow_api:
+    path:   /api/show/{id}
+    defaults: {_controller: eventBundle:EvenementAPI:showapi}
+
+region_api:
+    path:   /api/region
+    defaults: {_controller: eventBundle:EvenementAPI:indexregionapi}
+
+regionshow_api:
+    path:   /api/region/show/{id}
+    defaults: {_controller: eventBundle:EvenementAPI:showapiregion}
+
+eventsearch_api:
+    path:   /api/search/{p}
+    defaults: {_controller: eventBundle:EvenementAPI:searchapi}
+    methods:  [GET, POST]
+
+eventusers_api:
+    path:   /api/users
+    defaults: {_controller: eventBundle:EvenementAPI:userstab}
+
+eventusers2_api:
+    path:   /api/usersall
+    defaults: {_controller: eventBundle:EvenementAPI:getusers}
+
+modif_api:
+    path:   /api/modif
+    defaults: {_controller: eventBundle:EvenementAPI:mod}

@@ -1,0 +1,78 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ asset('/pub/js/jquery.tablesorter.js') }}";></script>
+    <script>$(document).ready(function()
+    {
+    $("#myTable").tablesorter();
+    }
+    );</script>;
+
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+<div style="margin: 50px 500px 0 0; font-family: Bahnschrift SemiBold,serif; font-size: medium">
+    <h1 style="margin-left: 380px; color: #9f1447">Liste des avis </h1>
+    <label for="myInput"></label><input id="myInput" type="text" placeholder="Rechercher par mot-clés.." style="margin-left: 790px"> </div>
+
+
+<table id="myTable" style="margin-left: 40px">
+        <thead>
+            <tr>
+                <th><img src="{{ asset('pub/asc.png') }}"/> User :</th>
+                <th><img src="{{ asset('pub/asc.png') }}"/> Avis :</th>
+                <th><img src="{{ asset('pub/asc.png') }}"/> Date:</th>
+                <th>Actions :</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for avi in avis %}
+            <tr class="avis">
+
+                <td>{{ avi.User }}</td>
+                <td>{{ avi.texte }}</td>
+                <td>{% if avi.date %}{{ avi.date|date('Y-m-d') }}{% endif %}</td>
+                <td>
+
+<ul><li>                            <a  href="{{ path('avis_show', { 'id': avi.id }) }}"><input style="background: dodgerblue; color: white;border-color: dodgerblue ; font-family: Bahnschrift SemiBold; text-shadow:none;border-radius: 5px;" type="submit" value=" Show "></a>
+    </li>
+
+
+
+    <li>   <a href="{{ path('avis_delete', { 'id': avi.id }) }}"><input style="background: red; color: white;border-color: red ; font-family: Bahnschrift SemiBold; text-shadow:none;border-radius: 5px;" type="submit" value="Delete"></a>
+
+    </li>
+
+
+                </td>
+            </tr>
+        {% endfor %}
+
+                </table>
+
+
+        </tbody>
+    </table>
+    <div style="margin-left: 310px" class="navigation">
+        {{ knp_pagination_render(avis) }}
+    </div>
+
+  <script src="{{ asset('js/jquery-min.js') }}"></script>
+   <script>
+       $(document).ready(function(){
+           $("#myInput").on("keyup", function() {
+               var value = $(this).val().toLowerCase();
+               $("#myTable .avis").filter(function() {
+                   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+               });
+           });
+       });
+
+   </script>
+
+{% endblock %}

@@ -1,3 +1,22 @@
 user_homepage:
     path:     /
     defaults: { _controller: UserBundle:Default:index }
+user_user:
+    path:     /user
+    defaults: { _controller: UserBundle:Default:user }
+
+user_insert:
+    path:     /insert
+    defaults: { _controller: UserBundle:User:insert }
+
+user_get:
+    path:     /get
+    defaults: { _controller: UserBundle:User:get }
+
+user_rech:
+    path:     /rech
+    defaults: { _controller: UserBundle:User:rech }
+
+user_mod:
+    path:     /mod
+    defaults: { _controller: UserBundle:User:mod }

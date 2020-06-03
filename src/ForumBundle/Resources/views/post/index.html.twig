@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <link href="{{ asset('css/forum/colo.css') }}" rel='stylesheet' type='text/css'  />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    <div class="index">
+        <h1 >Posts list</h1>
+
+        <input id="myInput" type="text" placeholder="Search..">
+        <div > <a href="#footer"class="oui">create a post</a></div>
+<div id="myTable">
+
+{% for post in posts %}
+<div class="post">
+ <div class="user">{{ post.user }}</div>
+ <div class="titre">{{ render(controller('ForumBundle:Post:censure',{'chaine':post.titre}) ) }}</div>
+ <div class="contenu">{{ render(controller('ForumBundle:Post:censure',{'chaine':post.contenu}) ) }}</div>
+    <div>{% if post.lienFich is not null %}<img src="{{ post.lienFich }}" > {% endif %}</div>
+
+ <div class="action">
+
+     <button class="show"> <a href="{{ path('post_show', { 'id': post.id }) }}">show</a></button>
+     <button class="show"> <a href="{{ path('discussion_new',{ 'id': post.id }) }}">discussions {{ render(controller('ForumBundle:Post:nombre',{'id':post.id}) ) }}</a></button>
+     {% if (app.user.username == post.user) or ( is_granted('ROLE_ADMIN') ) %}
+         <button class="delete"><a href="{{ path('post_delete', { 'id': post.id }) }}">delete</a></button>
+         <button class="edit"><a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a></button>{% endif %}
+ </div>
+ <div class="date">date: {% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+
+</div>
+
+        {% endfor %}
+</div>
+
+        <script src="{{ asset('js/jquery-min.js') }}"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable .post").filter(function() {
+                        $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1 );
+                    });
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        <div>
+            <a href="{{ path('post_new') }}" id="footer" class="ok">Create a new post</a>
+        </div>
+        <a href="#footer"></a>
+    </div>
+    {{ knp_pagination_render(posts) }}
+    </div>
+{% endblock %}
+

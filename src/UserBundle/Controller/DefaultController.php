@@ -10,4 +10,14 @@ class DefaultController extends Controller
     {
         return $this->render('@User/Default/index.html.twig');
     }
+    public function userAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $posts = $em->getRepository('UserBundle:User')->findAll();
+
+        return $this->render('@User/default/user.html.twig', array(
+            'posts' => $posts,
+        ));
+    }
 }

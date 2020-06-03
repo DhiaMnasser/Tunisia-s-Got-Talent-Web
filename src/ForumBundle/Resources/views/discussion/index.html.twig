@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Discussions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Texte</th>
+                <th>Lienimg</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for discussion in discussions %}
+            <tr>
+                <td><a href="{{ path('discussion_show', { 'id': discussion.id }) }}">{{ discussion.id }}</a></td>
+                <td>{{ discussion.titre }}</td>
+                <td>{{ discussion.texte }}</td>
+                <td>{{ discussion.lienImg }}</td>
+                <td></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('discussion_show', { 'id': discussion.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('discussion_edit', { 'id': discussion.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <a  href="{{ path('like_inc', { 'id': publication.id }) }}"><img src="{{ asset('pub/like.png') }}" alt="like"/></a>({{  publication.NbLikes }})</li>
+                        <li> <a  href="{{ path('dislike_inc', { 'id': publication.id  }) }}"><img src="{{ asset('pub/dislike.png') }}" alt="dlike"/></a>({{  publication.NbDisLikes }}) </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="#">Create a new discussion</a>
+        </li>
+    </ul>
+{% endblock %}

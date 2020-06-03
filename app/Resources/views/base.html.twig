@@ -42,10 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </a><br>
             <div>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-                    <a href="{{ path('fos_user_security_logout') }}">
-                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                    </a>
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}
+
                 {% endif %}
             </div>
         </div>
@@ -62,12 +60,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="file">
                         <a href="{{ path('publication_add') }}">Upload</a>
                     </div>
-                {% endif %}
+                    <div class="file">
+                        <a href="{{ path('lignecommande_index') }}">Panier</a>
+                    </div>
+                    <div class="Logout signin">
+                        <a href="{{ path('fos_user_security_logout') }}">Log out</a>
+                    </div>
+                {% else %}
                 <div class="signin">
                     <a href="{{ path('fos_user_registration_register')}}" class="play-icon popup-with-zoom-anim">Sign Up</a>
                     <a href="{{path('fos_user_security_login')}}" class="play-icon popup-with-zoom-anim">Sign In</a>
                 </div>
-
+                {% endif %}
             </div>
         </div>
         {% endblock %}
@@ -89,12 +93,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li class="active"><a href="{{path('publication_list')}}" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
             <li><a href="#" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Events</a></li>
             <li><a href="#" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Talent</a></li>
-            <li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Store<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-            <ul class="cl-effect-2">
-                <li><a href="movies.html">English</a></li>
-                <li><a href="movies.html">Chinese</a></li>
-                <li><a href="movies.html">Hindi</a></li>
+            <li><a href="{{ path('commande_index') }}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Mes Commandes</a></li>
+            <li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Store<span class="glyphicon glyphicon-menu-down" ></span></a></li>
+            <ul class="cl-effect-1">
+                <li><a href="{{ path('tgt_stock_homepage') }}">Nos Produits</a></li>
+                <li><a href="{{ path('categorie_read', { 'id': '1' }) }}">T-Shirt</a></li>
+                <li><a href="{{ path('categorie_read', { 'id': '2' }) }}">Accessoire</a></li>
+                <li><a href="{{ path('categorie_read', { 'id': '3' }) }}">Tickets</a></li>
+                <li><a href="{{ path('categorie_read', { 'id': '4' }) }}">Others</a></li>
             </ul>
+
             <!-- script-for-menu -->
             <script>
                 $( "li a.menu1" ).click(function() {
@@ -103,13 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     });
                 });
             </script>
-            <li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Sports<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-            <ul class="cl-effect-1">
-                <li><a href="sports.html">Football</a></li>
-                <li><a href="sports.html">Cricket</a></li>
-                <li><a href="sports.html">Tennis</a></li>
-                <li><a href="sports.html">Shattil</a></li>
-            </ul>
+
             <!-- script-for-menu -->
             <script>
                 $( "li a.menu" ).click(function() {
@@ -118,8 +120,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     });
                 });
             </script>
-            <li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Songs</a></li>
-            <li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>News</a></li>
+            <li><a href="{{ path('post_index') }}" class="menu"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Forum</a></li>
+            <ul class="cl-effect-1">
+                <li><a href="{{ path('notification_affich') }}">Notifications{{ render(controller('ForumBundle:Notification:countu')) }}</a></li>
+            </ul>
+            <li><a href="{{ path('notification_affich') }}" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Notifications{{ render(controller('ForumBundle:Notification:countu')) }}</a></li>
         </ul>
         <!-- script-for-menu -->
         <script>

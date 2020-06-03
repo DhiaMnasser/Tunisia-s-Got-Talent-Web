@@ -164,6 +164,49 @@
                 </div>
             </div>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapseFor" href="#" data-toggle="collapse" data-target="#collapseFor" aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Forum</span>
+            </a>
+            <div id="collapseFor" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Les Commentaires</h6>
+                    <a class="collapse-item" href="{{path('notification_show')}}">Notifications:{{ render(controller('ForumBundle:Notification:count'))}}</a>
+                    <a class="collapse-item" href="{{ path('user_user') }}">Statistiques</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapseProd" href="#" data-toggle="collapse" data-target="#collapseProd" aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Store</span>
+            </a>
+            <div id="collapseProd" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Les Commentaires</h6>
+                    <a class="collapse-item" href="{{ path('produit_new') }}">Ajouter un produit</a>
+                    <a class="collapse-item" href="{{ path('produit_index') }}">Liste des produits</a>
+                    <a class="collapse-item" href="{{ path('categorie_new') }}">Ajouter une categorie</a>
+                    <a class="collapse-item" href="{{ path('categorie_index') }}">Liste des categories</a>
+                    <a class="collapse-item" href="{{ path('stat') }}">Statistiques</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapseCmd" href="#" data-toggle="collapse" data-target="#collapseCmd" aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Commandes</span>
+            </a>
+            <div id="collapseCmd" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Les Commandes</h6>
+                    <a class="collapse-item" href="{{ path('commande_index2') }}">Liste des commandes</a>
+                    <a class="collapse-item" href="{{ path('commande_index3') }}">Traitée</a>
+                    <a class="collapse-item" href="{{ path('commande_index4') }}">En cours</a>
+                </div>
+            </div>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

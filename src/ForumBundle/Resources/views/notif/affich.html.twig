@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+    <link href="{{ asset('css/forum/b.css') }}" rel='stylesheet' type='text/css'  />
+
+    <table id="notifications">
+        {% for u in notifications %}
+            <tr>
+
+                <td class="t"> {{  u.title }} </td>
+
+                <td class="u"> {{  u.description }} </td>
+
+                <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
+                <td> <button class="delete"><a href="{{ path('notification_remove', { 'id': u.id } )}}">delete</a></button></td>
+
+            </tr>
+
+        {% else %}
+            <div>list is empty</div>
+        {% endfor %}
+    </table>
+{% endblock %}

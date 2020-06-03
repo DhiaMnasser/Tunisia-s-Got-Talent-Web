@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class="show-top-grids">
+    <div class="col-sm-8 single-left">
+        <div class="song">
+            <div class="song-info">
+                <h3>Tunisian Got Talent {{ evenement.nomevent }}</h3>
+            </div>
+            <div class="video-grid">
+                <a ><img src="{{ evenement.image }}" alt="" /></a>
+                <fieldset><legend>Informations</legend><b>Durée</b> : {{ evenement.duree }}</p>
+                <p class="views"><b>Participants</b> : {{ evenement.maxParticipants }}</p>
+                <p class="views"><b>Date de début</b> : {% if evenement.dateD %}{{ evenement.dateD|date('Y-m-d') }}{% endif %}</p>
+                <p class="views"><b>Date de fin</b>   : {% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</p>
+                <p class="views"><b>Gagnant</b> : {{ evenement.gagnant }}</p>
+                <p class="views"><b>Region</b> : {{ evenement.region }}</p>
+
+                    {% if evenement.dateF > date %}<form action=" {{ path('evenement_submit', { 'id': evenement.id }) }} "> <input type="submit" value="S'inscrire à l'événement" onclick="verifinscri()"></form>{% endif %}
+                </fieldset>
+            </div>
+        </div>
+        <div class="song-grid-right">
+            <div class="share">
+                <h5>Share this</h5>
+                <ul>
+                    <li><a href="#" class="icon fb-icon">Facebook</a></li>
+                    <li><a href="#" class="icon dribbble-icon">Dribbble</a></li>
+                    <li><a href="#" class="icon twitter-icon">Twitter</a></li>
+                    <li><a href="#" class="icon pinterest-icon">Pinterest</a></li>
+                    <li><a href="#" class="icon whatsapp-icon">Whatsapp</a></li>
+                    <li><a href="#" class="icon like">Like</a></li>
+                    <li><a href="#" class="icon comment-icon">Commentaires</a></li>
+                    <li class="view">200 Views</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

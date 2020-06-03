@@ -1,10 +1,10 @@
 evaluation:
     resource: "@EvaluationBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /evaluation
 
 tgt:
     resource: "@TgtBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /tgt
 
 gth_upload:
     resource: "@GthUploadBundle/Resources/config/routing.yml"
@@ -16,7 +16,7 @@ publication:
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /user
 
 app:
     resource: '@AppBundle/Controller/'
@@ -24,3 +24,86 @@ app:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+stock:
+    resource: '@StockBundle/Controller/'
+    type: annotation
+
+tgt_stock_produit:
+    resource: "@StockBundle/Controller/ProduitController.php"
+    type:     annotation
+
+tgt_stock:
+    resource: "@StockBundle/Resources/config/routing.yml"
+    prefix:   /store
+
+tgt_stock_categorie:
+    resource: "@StockBundle/Controller/CategorieController.php"
+    type:     annotation
+
+adesigns_calendar:
+    resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+
+achat_panier:
+    resource: "@AchatBundle/Controller/PanierController.php"
+    type:     annotation
+
+achat_ligne_commande:
+    resource: "@AchatBundle/Controller/LigneCommandeController.php"
+    type:     annotation
+
+achat_commande:
+    resource: "@AchatBundle/Controller/CommandeController.php"
+    type:     annotation
+
+forum:
+    resource: "@ForumBundle/Resources/config/routing.yml"
+    prefix:   /forum
+
+event_region:
+    resource: "@eventBundle/Controller/RegionController.php"
+    type:     annotation
+
+event_evenement:
+    resource: "@eventBundle/Controller/EvenementController.php"
+    type:     annotation
+
+event:
+    resource: "@eventBundle/Resources/config/routing.yml"
+    prefix:   /test
+
+fos_js_routing:
+  resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+event_Notif:
+  resource: "@eventBundle/Controller/NotifController.php"
+  type:     annotation
+
+assistance_avis:
+    resource: "@AssistanceBundle/Controller/AvisController.php"
+    type:     annotation
+
+assistance_appreciation:
+    resource: "@AssistanceBundle/Controller/AppreciationController.php"
+    type:     annotation
+
+assistance:
+    resource: "@AssistanceBundle/Resources/config/routing.yml"
+    prefix:   /assistance
+
+achat_panier_api:
+  resource: "@AchatBundle/Controller/ApiPanierController.php"
+  type:     annotation
+
+achat_ligne_commande_api:
+  resource: "@AchatBundle/Controller/ApiLigneCommandeController.php"
+  type:     annotation
+
+achat_commande_api:
+  resource: "@AchatBundle/Controller/ApiCommandeController.php"
+  type:     annotation
+
+
+
+
+

@@ -163,57 +163,56 @@ class Publication
     /**
      * @var int
      *
-     * @ORM\Column(name="like", type="integer")
+     * @ORM\Column(name="NbLike", type="integer")
      */
-    private $like;
-
-    /**
-     * @return int
-     */
-    public function getLike(): int
-    {
-        return $this->like;
-    }
-
-    /**
-     * @param int $like
-     * @return Publication
-     */
-    public function setLike(int $like): Publication
-    {
-        $this->like = $like;
-        return $this;
-    }
+    private $NbLike;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="unlike", type="integer")
+     * @ORM\Column(name="NbDislike", type="integer")
      */
-    private $unlike;
+    private $NbDislike;
 
     /**
      * @return int
      */
-    public function getUnlike(): int
+    public function getNbDislike(): int
     {
-        return $this->unlike;
+        return $this->NbDislike;
     }
 
     /**
-     * @param int $unlike
-     * @return Publication
+     * @return int
      */
-    public function setUnlike(int $unlike): Publication
+    public function getNbLike(): int
     {
-        $this->unlike = $unlike;
-        return $this;
+        return $this->NbLike;
     }
+
+    /**
+     * @param int $NbLike
+     */
+    public function setNbLike(int $NbLike)
+    {
+        $this->NbLike = $NbLike;
+    }
+
+    /**
+     * @param int $NbDislike
+     */
+    public function setNbDislike(int $NbDislike)
+    {
+        $this->NbDislike = $NbDislike;
+    }
+
+
+
 
     /**
      * @var string
      *
-     * @ORM\Column(name="categorie", type="string", length=255)
+     * @ORM\Column(name="Categorie", type="string", length=255)
      */
     private $categorie;
 
@@ -297,7 +296,7 @@ class Publication
     }
 
     /**
-     * Set categorie
+     * Set Categorie
      *
      * @param string $categorie
      *
@@ -311,7 +310,7 @@ class Publication
     }
 
     /**
-     * Get categorie
+     * Get Categorie
      *
      * @return string
      */
@@ -395,6 +394,10 @@ class Publication
     {
         $this->updatedAt= new \datetime('now');
         $this->nbrVote=0;
+        $this->valide=0;
+        $this->buz=0;
+        $this->NbLike=0;
+        $this->NbDislike=0;
     }
 
     public function setVideoFile($video)

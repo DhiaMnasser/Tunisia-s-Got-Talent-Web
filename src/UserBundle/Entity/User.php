@@ -38,6 +38,28 @@ class User extends BaseUser
     private $participant;
 
     /**
+     * @ORM\ManyToOne(targetEntity="eventBundle\Entity\Evenement")
+     * @ORM\JoinColumn(name="event_id",referencedColumnName="id")
+     */
+    private $event ;
+
+    /**
+     * @return mixed
+     */
+    public function getEvent()
+    {
+        return $this->event;
+    }
+
+    /**
+     * @param mixed $event
+     */
+    public function setEvent($event)
+    {
+        $this->event = $event;
+    }
+
+    /**
      * @return bool
      */
     public function isParticipant()
@@ -93,5 +115,6 @@ class User extends BaseUser
         // your own logic
         $this->jury= 0;
         $this->participant= 0;
+
     }
 }

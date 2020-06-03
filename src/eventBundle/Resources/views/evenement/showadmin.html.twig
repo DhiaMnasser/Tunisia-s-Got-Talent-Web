@@ -1,0 +1,101 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+    <h1>Evénement {{ evenement.nomevent }}</h1>
+
+    <table class="table">
+        <tbody>
+
+        <tr>
+            <th>Id</th>
+            <td>{{ evenement.id }}</td>
+        </tr>
+        <tr>
+            <th>Nom de l'événement</th>
+            <td>{{ evenement.nomevent }}</td>
+        </tr>
+        <tr>
+            <th>Durée</th>
+            <td>{{ evenement.duree }}</td>
+        </tr>
+        <tr>
+            <th>Maxparticipants</th>
+            <td>{{ evenement.maxParticipants }}</td>
+        </tr>
+        <tr>
+            <th>Dated</th>
+            <td>{% if evenement.dateD %}{{ evenement.dateD|date('Y-m-d') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Datef</th>
+            <td>{% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Gagnant</th>
+            <td>{{ evenement.gagnant }}</td>
+        </tr>
+        <tr>
+            <th>Etat</th>
+            <td>{{ evenement.etat }}</td>
+        </tr>
+        <tr>
+            <th>Region</th>
+            <td>{{ evenement.region }}</td>
+        </tr>
+        <tr>
+            <th>Image</th>
+            <td>{{ evenement.image }}</td>
+        </tr>
+        <tr>
+            <th>Liste des participants</th>
+
+            <td>{% for key, user in users %}
+                <br>
+
+                    {% if user.id == evenement.id %}
+
+                         {{ user.username }}
+
+
+
+                    {% endif %}
+
+
+                {% endfor %}
+
+            </td>
+
+        </tr>
+        <tr>
+            <th>Total des participants</th>
+            <td>
+
+                        {{ render(controller('eventBundle:Evenement:count',{'id':evenement.id}) ) }}
+
+
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+        <li>
+            <a href="{{ path('evenement_edit', { 'id': evenement.id }) }}" >Modifier</a>
+        </li>
+        <li>
+            <a href="{{ path('evenement_indexadmin') }}">Revenir à la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('evenement_imp', { 'id': evenement.id }) }}">Imprimer</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Supprimer" onclick="verif3()">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+
+    <h1 style="margin-top: 25px; color: #9f1447; font-family: Bahnschrift SemiBold">Avi</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>ID : </th>
+                <td>{{ avi.id }}</td>
+            </tr>
+            <tr>
+                <th>Contient : </th>
+                <td>{{ avi.texte }}</td>
+            </tr>
+            <tr>
+                <th>Envoyé le :</th>
+                <td>{% if avi.date %}{{ avi.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+<br>
+    <ul>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+        <br>
+        <li>
+            <a style="color: #9f1447" href="{{ path('avis_index') }}">Back to the list</a>
+        </li>
+
+
+    </ul>
+{% endblock %}

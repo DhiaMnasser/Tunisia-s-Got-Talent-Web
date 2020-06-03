@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+
+    <h1>Appreciations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dislike</th>
+                <th>Likes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for appreciation in appreciations %}
+            <tr>
+                <td><a href="{{ path('appreciation_show', { 'id': appreciation.id }) }}">{{ appreciation.id }}</a></td>
+                <td>{{ appreciation.dislike }}</td>
+                <td>{{ appreciation.likes }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('appreciation_show', { 'id': appreciation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('appreciation_edit', { 'id': appreciation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('appreciation_new') }}">Create a new appreciation</a>
+        </li>
+    </ul>
+{% endblock %}

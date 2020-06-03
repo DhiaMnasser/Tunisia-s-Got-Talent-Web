@@ -24,6 +24,19 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Gth\UploadBundle\GthUploadBundle(),
             new TgtBundle\TgtBundle(),
+            new StockBundle\StockBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+            new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            new SBC\NotificationsBundle\NotificationsBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new AchatBundle\AchatBundle(),
+            new Flosch\Bundle\StripeBundle\FloschStripeBundle(),
+            new ForumBundle\ForumBundle(),
+            new eventBundle\eventBundle(),
+            new AssistanceBundle\AssistanceBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

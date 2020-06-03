@@ -1,0 +1,147 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+
+
+
+
+    <!--   <div class="sidebar-search">
+
+            <div class="input-group custom-search-form">
+
+                 <label for="search"></label><input type="text" id="search" class="form-control" placeholder="Search here">
+             </div>
+              /input-group
+    </div>    -->
+    <ul class="nav" id="side-menu">
+        <li>
+
+            <a > <h4>Résultats trouvés</h4><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level" id="entitiesNav">
+            </ul>
+        </li>
+    </ul><br><br><br><br>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var searchRequest = null;
+            $("#input-31").keyup(function() {
+                var minlength = 1;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $("#entitiesNav").html('');
+                if (value.length >= minlength ) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('ajax_search') }}",
+                        data: {
+                            'p' : value
+                        },
+                        dataType: "text",
+                        success: function(msg){
+                            //we need to check if the value is the same
+                            if (value===$(that).val()) {
+
+                                var result = JSON.parse(msg);
+                                $.each(result, function(key, arr) {
+                                    $.each(arr, function(id, value) {
+                                        if (key === 'posts') {
+                                            if (id !== 'error') {
+                                                console.log(value[1]);
+                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="/TGT/web/app_dev.php/evenement/'+id+'">Afficher l\'événement</a></li>');
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <h1>Liste des événements</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom événement</th>
+            <th>Durée</th>
+            <th>Maxparticipants</th>
+            <th>Dated</th>
+            <th>Datef</th>
+            <th>Gagnant</th>
+            <th>Etat</th>
+            <th>Region</th>
+            <th>Image</th>
+
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for evenement in evenements %}
+            <tr>
+                <td><a href="{{ path('evenement_showadmin', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
+                <td>{{ evenement.nomevent }}</td>
+                <td>{{ evenement.duree }}</td>
+                <td>{{ evenement.maxParticipants }}</td>
+                <td>{% if evenement.dateD %}{{ evenement.dateD|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if evenement.dateF %}{{ evenement.dateF|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ evenement.gagnant }}</td>
+                <td>{{ evenement.etat }}</td>
+                <td>{{ evenement.region }}</td>
+                <td><a><img style="height: 70px; width: 70px;" src="{{ evenement.image }}" alt="" /></a></td>
+
+
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('evenement_showadmin', { 'id': evenement.id }) }}">Afficher</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('evenement_edit', { 'id': evenement.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ knp_pagination_render(evenements) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('evenement_new') }}">Créer nouvel événement</a>
+        </li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+{% endblock %}

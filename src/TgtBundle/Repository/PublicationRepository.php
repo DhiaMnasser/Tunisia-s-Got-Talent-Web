@@ -10,7 +10,7 @@ namespace TgtBundle\Repository;
  */
 class PublicationRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function myStat()
+    public function findByStat()
     {
         $ql=$this->getEntityManager()
             ->createQuery("SELECT p FROM TgtBundle:publication p WHERE p.valide=:val GROUP BY p.evenement ORDER BY p.nbrVote DESC")

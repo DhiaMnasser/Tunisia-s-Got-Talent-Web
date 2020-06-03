@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `avis` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categorie`
+-- Structure de la table `Categorie`
 --
 
 DROP TABLE IF EXISTS `categorie`;
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `categorie`
+-- Déchargement des données de la table `Categorie`
 --
 
 INSERT INTO `categorie` (`id`, `nomc`) VALUES
@@ -281,7 +281,7 @@ INSERT INTO `post` (`id`, `user_id`, `titre`, `date`, `lienFich`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produit`
+-- Structure de la table `Produit`
 --
 
 DROP TABLE IF EXISTS `produit`;
@@ -298,7 +298,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `produit`
+-- Déchargement des données de la table `Produit`
 --
 
 INSERT INTO `produit` (`id`, `cat_id`, `nom`, `qte`, `prix`, `etat`, `size`) VALUES
@@ -329,14 +329,14 @@ CREATE TABLE IF NOT EXISTS `publication` (
 --
 
 INSERT INTO `publication` (`id`, `titre`, `categorie`, `description`, `updated_at`, `video`, `autheur`, `valide`, `Nb_Vote`) VALUES
-(3, 'me', 'Chant', 'heum', '2020-02-19 22:31:07', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\original-turkish-man-yelling-meow-at-an-egg.mp4', '', 0, 0),
-(4, 'gloire', 'Chant', 'aDieu', '2020-02-19 22:33:42', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', '', 0, 0),
-(5, 'test2', 'Illusion', 'Le fameux', '2020-02-20 00:29:17', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', '', 1, 1),
-(6, 'dzd', 'Illusion', 'dz', '2020-02-20 01:03:56', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', '', 0, 0),
-(7, 'test3', 'Magie', 'ayioi', '2020-02-20 01:21:26', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', 'admin', 1, 1),
-(8, 'testValide', 'Illusion', 'sd', '2020-02-20 01:33:45', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', 'admin', 1, 0),
-(9, 'jour', 'Illusion', 'jour-j', '2020-02-20 08:26:45', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', 'gth', 1, 0),
-(10, 'test2', 'Chant', 'sdsd', '2020-02-20 10:57:58', 'C:\\wamp64\\www\\TGTOf/public/uploads/videos/publication\\test.mp4', 'gth1', 0, 0);
+(3, 'me', 'Chant', 'heum', '2020-02-19 22:31:07', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\original-turkish-man-yelling-meow-at-an-egg.mp4', '', 0, 0),
+(4, 'gloire', 'Chant', 'aDieu', '2020-02-19 22:33:42', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', '', 0, 0),
+(5, 'test2', 'Illusion', 'Le fameux', '2020-02-20 00:29:17', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', '', 1, 1),
+(6, 'dzd', 'Illusion', 'dz', '2020-02-20 01:03:56', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', '', 0, 0),
+(7, 'test3', 'Magie', 'ayioi', '2020-02-20 01:21:26', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', 'admin', 1, 1),
+(8, 'testValide', 'Illusion', 'sd', '2020-02-20 01:33:45', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', 'admin', 1, 0),
+(9, 'jour', 'Illusion', 'jour-j', '2020-02-20 08:26:45', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', 'gth', 1, 0),
+(10, 'test2', 'Chant', 'sdsd', '2020-02-20 10:57:58', 'C:\\wamp64\\www\\TGTOf/pub/uploads/videos/publication\\test.mp4', 'gth1', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -442,7 +442,7 @@ ALTER TABLE `post`
   ADD CONSTRAINT `FK_5A8A6C8DA76ED395` FOREIGN KEY (`user_id`) REFERENCES `fos_user` (`id`);
 
 --
--- Contraintes pour la table `produit`
+-- Contraintes pour la table `Produit`
 --
 ALTER TABLE `produit`
   ADD CONSTRAINT `FK_29A5EC27E6ADA943` FOREIGN KEY (`cat_id`) REFERENCES `categorie` (`id`);

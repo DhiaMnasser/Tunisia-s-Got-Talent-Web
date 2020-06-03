@@ -19,7 +19,7 @@ class PublicationType extends AbstractType
     {
         $builder->add('titre')
             ->add('description')
-            ->add('categorie',ChoiceType::class,array(
+            ->add('Categorie',ChoiceType::class,array(
                 'choices'=>array(
                     'Magie'=>'Magie',
                     'Chant'=>'Chant',

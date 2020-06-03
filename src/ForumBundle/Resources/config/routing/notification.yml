@@ -1,0 +1,16 @@
+notification_show:
+  path:     /notif
+  defaults: { _controller: "ForumBundle:Notification:notif" }
+notification_display:
+  path:     /display
+  defaults: { _controller: "ForumBundle:Notification:display" }
+notification_delete:
+  path:     /delete/{id}
+  defaults: { _controller: "ForumBundle:Notification:delete" }
+notification_affich:
+  path:     /affich
+  defaults: { _controller: "ForumBundle:Notification:affich" }
+
+notification_remove:
+  path:     /remove/{id}
+  defaults: { _controller: "ForumBundle:Notification:remove" }

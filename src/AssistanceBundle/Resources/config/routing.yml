@@ -1,0 +1,21 @@
+assistance_homepage:
+    path:     /
+    defaults: { _controller: AssistanceBundle:Default:index }
+
+assistance_avis:
+    path:     /
+    defaults: { _controller: AssistanceBundle:Avis:index }
+
+assistance_avis_delete:
+    path:     /delete/{id}
+    defaults: { _controller: AssistanceBundle:Avis:delete }
+
+assistance_apiavis_list:
+    path:     /api/list
+    defaults: { _controller: AssistanceBundle:Avis:indexApi }
+
+assistance_apiavis_new:
+    path:     /api/new
+    defaults: { _controller: AssistanceBundle:Avis:newApi }
+
+

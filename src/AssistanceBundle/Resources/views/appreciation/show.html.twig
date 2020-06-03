@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link href="{{ asset ('form.css') }}" rel='stylesheet' type='text/css' media="all" />
+
+    <h1>Appreciation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ appreciation.id }}</td>
+            </tr>
+            <tr>
+                <th>Dislike</th>
+                <td>{{ appreciation.dislike }}</td>
+            </tr>
+            <tr>
+                <th>Likes</th>
+                <td>{{ appreciation.likes }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('appreciation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('appreciation_edit', { 'id': appreciation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

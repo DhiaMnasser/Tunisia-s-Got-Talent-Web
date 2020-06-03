@@ -7,6 +7,9 @@ namespace EvaluationBundle\Controller;
 use EvaluationBundle\Entity\Publication;
 use EvaluationBundle\Entity\Vote;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 use UserBundle\Entity\User;
 
 class VoteController extends Controller
@@ -54,6 +57,43 @@ class VoteController extends Controller
 
         return $this->redirectToRoute('publication_comment', ['id' => $id]);
 
+    }
+    public function vote2Action($id,$idUser)
+    {
+        $vote= new Vote();
+        $em=$this->getDoctrine()->getManager();
+        $pub=$em->getRepository(Publication::class)->find($id);
+
+
+        $pub->setNbrVote($pub->getNbrVote()+1);
+
+
+        $vote->setPublication($id);
+        $vote->setUser($idUser);
+
+        $em->persist($vote);
+        $em->flush();
+
+
+    }
+
+    public function verifApiAction($id){
+        $em=$this->getDoctrine()->getManager();
+        $repository=$em->getRepository(Vote::class);
+        $user=$repository->findOneByUser($id);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
+        return new JsonResponse($formatted);
+    }
+
+    public function allAction()
+    {
+        $tasks =$this->getDoctrine()->getManager()
+            ->getRepository('EvaluationBundle:Vote')
+            ->findAll();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
     }
 
 }

@@ -1,0 +1,100 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+    <!--<div class="sidebar-search">
+
+        <div class="input-group custom-search-form">
+
+            <label for="search"></label><input type="text" id="search" class="form-control" placeholder="Search here">
+        </div>
+        /input-group
+    </div> -->
+    <ul class="nav" id="side-menu">
+        <li>
+            <a > <h4>Résultats trouvés</h4><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level" id="entitiesNav">
+            </ul>
+        </li>
+    </ul><br><br><br><br>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var searchRequest = null;
+            $("#input-31").keyup(function() {
+                var minlength = 1;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $("#entitiesNav").html('');
+                if (value.length >= minlength ) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('ajax_search2') }}",
+                        data: {
+                            'p' : value
+                        },
+                        dataType: "text",
+                        success: function(msg){
+                            //we need to check if the value is the same
+                            if (value===$(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function(key, arr) {
+                                    $.each(arr, function(id, value) {
+                                        if (key === 'posts') {
+                                            if (id !== 'error') {
+                                                console.log(value[1]);
+                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="/TGT/web/app_dev.php/region/'+id+'">Afficher la région</a></li>');
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <h1>Listes des Régions</h1>
+<table class="table">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Nbvilles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for region in regions %}
+            <tr>
+                <td><a href="{{ path('region_show', { 'id': region.id }) }}">{{ region.id }}</a></td>
+                <td>{{ region.nom }}</td>
+                <td>{{ region.nbVilles }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('region_show', { 'id': region.id }) }}">Afficher</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('region_edit', { 'id': region.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ knp_pagination_render(regions) }}
+    <ul>
+        <li>
+            <a href="{{ path('region_new') }}">Ajouter une Région</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% block body %}
+    <link href="{{ asset('css/forum/red.css') }}" rel='stylesheet' type='text/css'  />
+<div>
+    <div>{{ render(controller('ForumBundle:Post:shw',{'id':id}) ) }}</div>
+    <h1><b>discussion</b></h1>
+</div>
+
+
+
+    <div id="yTable">
+    {% for u in discussion %}
+        <div class="ost">
+            <div class="ser"> {{  u.user }} </div>
+            <div class="itre"> {{ render(controller('ForumBundle:Post:censure',{'chaine':u.titre}) ) }} </div>
+            <div class="ontenu"> {{ render(controller('ForumBundle:Post:censure',{'chaine':u.texte}) ) }} </div>
+            {% if u.lienImg is not null %}<img src="{{ u.lienImg }}"> {% endif %}
+
+            <div> {% if (app.user.username == u.user) or ( is_granted('ROLE_ADMIN') ) %}<a href="{{ path('discussion_edit', { 'id': u.id }) }}">edit</a>{% endif %}</div>
+            <div>{% if (app.user.username == u.user) or ( is_granted('ROLE_ADMIN') ) %}<a href="{{ path('discussion_delete', { 'id': u.id } )}}">delete</a>{% endif %}</div>
+            <div class="ate">Date{% if u.date %}{{ u.date|date('Y-m-d H:i:s') }}{% endif %}</div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div>
+
+
+
+</div>
+
+
+{% endblock %}

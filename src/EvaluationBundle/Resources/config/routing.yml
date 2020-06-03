@@ -35,3 +35,23 @@ publication_vote:
     path:     /publication/vote/{id}
     defaults: { _controller: EvaluationBundle:Vote:vote }
 
+publication_listApi:
+    path:     /publication/api/list
+    defaults: { _controller: EvaluationBundle:Publication:all }
+
+publication_voteApi:
+    path:     /publication/api/vote/{id}/{idUser}
+    defaults: { _controller: EvaluationBundle:Publication:voteApi }
+
+publication_addApi:
+    path:     /publication/api/new
+    defaults: { _controller: EvaluationBundle:Publication:addApi }
+
+vote_voteEfApi:
+    path:     /vote/api/verifVot/{id}
+    defaults: { _controller: EvaluationBundle:Vote:verifApi }
+
+vote_listApi:
+    path:     /vote/api/list
+    defaults: { _controller: EvaluationBundle:Vote:all }
+

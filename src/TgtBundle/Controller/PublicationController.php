@@ -68,8 +68,7 @@ class PublicationController extends Controller
 
     public function statAction()
     {
-        $rep=$this->getDoctrine()->getManager()->getRepository(Publication::class);
-        $stat=$rep->myStat();
+        $stat=$this->getDoctrine()->getRepository(Publication::class)->findAll();
 
         return $this->render("@Tgt\Statistique\listR.html.twig",array('stat'=>$stat));
     }

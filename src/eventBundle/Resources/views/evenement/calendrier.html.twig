@@ -1,0 +1,29 @@
+{% extends 'baseadmin.html.twig' %}
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Description Notiffication</th>
+            <th>Nom événement</th>
+            <th>Actions</th>
+        </tr></thead>
+        {% for u in noti %}
+            <tr>
+
+                <td > {{  u.title }} </td>
+
+                <td > {{  u.description }} </td>
+
+                <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
+
+
+            </tr>
+
+        {% else %}
+            <div>list is empty</div>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+

@@ -15,6 +15,12 @@ services:
         # if you need to do this, you can override this setting on individual services
         public: false
 
+    eventBundle.service.listener:
+        class: eventBundle\EventListener\CalendarEventListener
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        tags:
+            - { name: 'kernel.event_listener', event: 'calendar.load_events', method: loadEvents }
+
     # makes classes in src/AppBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     AppBundle\:
@@ -23,7 +29,7 @@ services:
         # but if a service is unused, it's removed anyway
         exclude: '../../src/AppBundle/{Entity,Repository,Tests}'
 
-    # controllers are imported separately to make sure they're public
+    # controllers are imported separately to make sure they're pub
     # and have a tag that allows actions to type-hint services
     AppBundle\Controller\:
         resource: '../../src/AppBundle/Controller'
@@ -53,5 +59,18 @@ services:
         class: UserBundle\Form\RegistrationType
         tags:
             - { name: form.type, alias: user_user_registration }
+
+    app.chart.data:
+        class: AppBundle\Chart\ChartData
+        arguments: ['@doctrine.orm.entity_manager']
+
+        app.chart:
+            class: AppBundle\Chart\Chart
+            arguments: ['@app.chart.data']
+
+    panier_services:
+        class: AchatBundle\Controller\PanierController
+        arguments: [ '@doctrine.orm.entity_manager' ]
+
 
 

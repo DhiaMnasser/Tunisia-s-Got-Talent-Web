@@ -1,0 +1,4 @@
+services:
+#    assistance.example:
+#        class: TGT\AssistanceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
