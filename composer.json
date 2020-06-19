@@ -20,6 +20,7 @@
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "flosch/stripe-bundle": "^2.1",
+        "friendsofsymfony/jsrouting-bundle": "^2.4",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "incenteev/composer-parameter-handler": "^2.0",
         "knplabs/knp-paginator-bundle": "^3.0",

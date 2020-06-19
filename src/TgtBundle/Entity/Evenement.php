@@ -51,13 +51,13 @@ class Evenement
     /**
      * @var string
      *
-     * @ORM\Column(name="Nom", type="string", length=255)
+     * @ORM\Column(name="nomevent", type="string", length=255)
      */
      private $nom;
 
     /**
      * @ORM\ManyToOne(targetEntity="TgtBundle\Entity\User")
-     * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
+     * @ORM\JoinColumn(name="id",referencedColumnName="id")
      */
      private $user;
 

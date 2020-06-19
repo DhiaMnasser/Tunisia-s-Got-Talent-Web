@@ -1,4 +1,4 @@
-{% extends 'baseadmin.html.twig' %}
+{% extends 'base2.html.twig' %}
 
 {% block body %}
     <!--<div class="sidebar-search">
@@ -46,7 +46,7 @@
                                         if (key === 'posts') {
                                             if (id !== 'error') {
                                                 console.log(value[1]);
-                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="/TGT/web/app_dev.php/region/'+id+'">Afficher la région</a></li>');
+                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="http://localhost:81/TGTOf/web/region/'+id+'">Afficher la région</a></li>');
                                             } else {
                                                 entitySelector.append('<li class="errorLi">'+value+'</li>');
                                             }

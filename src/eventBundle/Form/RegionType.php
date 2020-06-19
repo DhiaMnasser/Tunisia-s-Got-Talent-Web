@@ -14,7 +14,7 @@ class RegionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('nbVilles')->add('evenement')->add('captcha', CaptchaType::class);
+        $builder->add('nom')->add('nbVilles')->add('evenement');
     }/**
      * {@inheritdoc}
      */

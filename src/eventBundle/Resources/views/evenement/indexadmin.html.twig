@@ -1,19 +1,7 @@
-{% extends 'baseadmin.html.twig' %}
+{% extends 'base2.html.twig' %}
 
 {% block body %}
 
-
-
-
-
-    <!--   <div class="sidebar-search">
-
-            <div class="input-group custom-search-form">
-
-                 <label for="search"></label><input type="text" id="search" class="form-control" placeholder="Search here">
-             </div>
-              /input-group
-    </div>    -->
     <ul class="nav" id="side-menu">
         <li>
 
@@ -53,7 +41,7 @@
                                         if (key === 'posts') {
                                             if (id !== 'error') {
                                                 console.log(value[1]);
-                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="/TGT/web/app_dev.php/evenement/'+id+'">Afficher l\'événement</a></li>');
+                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="http://localhost:81/TGTOf/web/evenement/'+id+'">Afficher l\'événement</a></li>');
                                             } else {
                                                 entitySelector.append('<li class="errorLi">'+value+'</li>');
                                             }

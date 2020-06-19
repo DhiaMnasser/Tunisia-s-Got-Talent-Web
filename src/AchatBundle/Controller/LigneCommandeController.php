@@ -34,6 +34,7 @@ class LigneCommandeController extends Controller
         $ligneCommandes = $em->getRepository('AchatBundle:LigneCommande')->findAll();
 
 
+
         return $this->render('@Achat/lignecommande/index.html.twig', array(
             'ligneCommandes' => $ligneCommandes,
             'panier' => $panier

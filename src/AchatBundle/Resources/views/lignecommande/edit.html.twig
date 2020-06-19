@@ -30,11 +30,11 @@ img{
 }
 
 </style>
-    <a href="{{ path('lignecommande_index') }}">< precedent</a>
+    <h3><a href="{{ path('lignecommande_index') }}">< precedent</a></h3>
     <div class="pdt cart-sec simpleCart_shelfItem">
 
     <div class="cart-item cyc" >
-        <img src="{{ asset('Achat/images/tshirt.png') }}" class="img-responsive" alt="" width="100%" height="150px">
+        <img src="{{ asset( ligneCommande.idproduit.url) }}" class="img-responsive" alt="" width="100%" height="150px">
     </div>
     <br>
 <div class="cart-item-info">

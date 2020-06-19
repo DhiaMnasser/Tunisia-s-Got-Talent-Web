@@ -42,3 +42,7 @@ eventusers2_api:
 modif_api:
     path:   /api/modif
     defaults: {_controller: eventBundle:EvenementAPI:mod}
+
+calendar:
+    path:   /test
+    defaults: {_controller: eventBundle:Evenenement:mod}

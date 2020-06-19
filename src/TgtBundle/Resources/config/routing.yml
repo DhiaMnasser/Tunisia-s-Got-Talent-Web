@@ -4,19 +4,19 @@ tgt_homepageA:
 
 region_addA:
     path:     /admin/region/add
-    defaults: { _controller: TgtBundle:Region:add }
+    defaults: { _controller: eventBundle:Region:new }
 
 region_listA:
     path:     /admin/region/list
-    defaults: { _controller: TgtBundle:Region:list }
+    defaults: { _controller: eventBundle:Region:index }
 
 region_updateA:
     path:     /admin/region/update/{id}
-    defaults: { _controller: TgtBundle:Region:update }
+    defaults: { _controller: eventBundle:Region:edit }
 
 region_delA:
     path:     /admin/region/delete/{id}
-    defaults: { _controller: TgtBundle:Region:delete }
+    defaults: { _controller: eventBundle:Region:delete }
 
 event_addA:
     path:     /admin/evenement/add

@@ -55,6 +55,21 @@ class ApiPanierController extends Controller
         return new JsonResponse($formatted);
     }
 
+    /**
+     * Finds and displays a panier entity.
+     *
+     * @Route("/getById", name="api_panier_getById")
+     * @Method("GET")
+     */
+    public function getPanierById(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $panier = $em->getRepository('AchatBundle:Panier')->find($request->get('id'));
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($panier);
+        return new JsonResponse($formatted);
+    }
+
 
     /**
      * Deletes a panier entity.
