@@ -1,24 +1,12 @@
 Tunisia's Got Talent Web
 ========================
+
 Tunisia's Got Talent Website is a platform for talents where people can watch and vote for their best participants .
 
 
 What's inside?
 --------------
 
-The Symfony Standard Edition is configured with the following defaults:
-
-  * An AppBundle you can use to start coding;
-
-  * Twig as the only configured template engine;
-
-  * Doctrine ORM/DBAL;
-
-  * Swiftmailer;
-
-  * Annotations enabled for everything.
-
-It comes pre-configured with the following bundles:
 
   * **FrameworkBundle** - The core Symfony framework bundle
 
@@ -57,6 +45,12 @@ released under the MIT or BSD license.
 
 Enjoy!
 
+## License
+[MIT][16]
+
+
+
+
 [1]:  https://symfony.com/doc/3.4/setup.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 [7]:  https://symfony.com/doc/3.4/doctrine.html
@@ -67,3 +61,4 @@ Enjoy!
 [13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: https://symfony.com/doc/current/setup/built_in_web_server.html
 [15]: https://symfony.com/doc/current/setup.html
+[16]: https://github.com/DhiaMnasser/Tunisia-s-Got-Talent-Web/blob/master/LICENSE
