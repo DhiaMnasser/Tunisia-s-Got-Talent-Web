@@ -1,7 +1,7 @@
 Tunisia's Got Talent Web
 ========================
 
-Tunisia's Got Talent Website is a platform for talents where people can watch and vote for their best participants .
+Tunisia's Got Talent Website is a platform for talents where people can enroll, watch and vote for their best participants .
 
 
 What's inside?
